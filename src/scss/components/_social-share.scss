@@ -1,0 +1,21 @@
+.social-share {
+  text-align: center;
+}
+
+.social-share__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.social-share-item:not(:first-child) {
+  padding-right: 15px;
+}
+
+.social-share__icon {
+  width: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  fill: #22547c;
+}

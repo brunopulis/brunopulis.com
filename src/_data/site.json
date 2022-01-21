@@ -1,0 +1,13 @@
+{
+  "showThemeCredit": true,
+  "name": "Bruno Pulis",
+  "shortDesc": "Consultor, Palestrante e Especialista em Acessibilidade. Te ajudo a evoluir com acessibilidade digital.",
+  "url": "https://brunopulis.com",
+  "authorEmail": "contato@brunopulis.com",
+  "authorHandle": "@obrunopulis",
+  "authorName": "Bruno Pulis",
+  "enableThirdPartyComments": true,
+  "maxPostsPerPage": 5,
+  "paymentPointer": "$ilp.uphold.com/MggmnFEyQqhk",
+  "faviconPath": "/images/favicon.png"
+}
