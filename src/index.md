@@ -1,10 +1,12 @@
 ---
 layout: home
 title: Acessibilidade de forma descomplicada
+metaTitle: Home - Bruno Pulis
+metaDesc: Consultor, Palestrante e Especialista em Acessibilidade. Te ajudo a
+  evoluir com acessibilidade digital.
 postsHeading: Artigos recentes
 archiveButtonText: Todos os artigos
-metaDesc: 'Consultor, Palestrante e Especialista em Acessibilidade. Te ajudo a evoluir com acessibilidade digital.'
-socialImage: ''
+socialImage: ""
 ---
 
 Olá, eu sou o Bruno Pulis.
