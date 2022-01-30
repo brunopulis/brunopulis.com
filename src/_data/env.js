@@ -14,8 +14,8 @@ const dir = {
 }
 
 module.exports = {
-  siteName: 'your site name',
-  author: 'your name',
+  siteName: 'brunopulis.com',
+  author: 'Bruno Pulis',
   environment,
   isProd,
   folder,
@@ -24,6 +24,6 @@ module.exports = {
     img: `${baseUrl}${dir.img}`,
   },
   tracking: {
-    gtag: 'your_tracking_id',
+    gtag: 'G-F06KMBRSPE',
   },
 };
