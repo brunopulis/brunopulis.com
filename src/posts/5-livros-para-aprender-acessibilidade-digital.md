@@ -1,11 +1,11 @@
 ---
-title: "5 livros para aprender acessibilidade digital"
-date: "2021-07-01"
-categories: 
-  - "indicacoes"
-tags: 
-  - "dicas"
-  - "livros"
+title: 5 livros para aprender acessibilidade digital
+date: 2021-07-01
+categories:
+  - indicacoes
+tags:
+  - dicas
+  - livros
 ---
 
 Aprender os fundamentos é essencial para qualquer área de nossas vidas, por isso quando se trata de acessibilidade não poderia ser diferente. Neste artigo, irei recomendar 5 livros para aprendermos sobre acessibilidade digital.
@@ -14,7 +14,7 @@ Aprender os fundamentos é essencial para qualquer área de nossas vidas, por is
 
 Neste livro, Reinaldo Ferraz aborda o tema da acessibilidade na Web, desde os conceitos básicos, até as especificidades relativas aos seus diversos públicos, com uma introdução sobre as várias diretrizes e leis existentes. Você conhecerá as barreiras de acesso que temos de derrubar e quais as principais orientações para implementação, manutenção, avaliação, correção e divulgação, até as mais recentes e refinadas técnicas de acessibilidade para a rede.
 
-Escrevi [uma resenha](https://brunopulis.com/blog/livro-acessibilidade-web/) sobre a leitura do livro bem interessante.
+Escrevi [uma resenha](https://brunopulis.com/posts/livro-acessibilidade-web/) sobre a leitura do livro bem interessante.
 
 O valor do e-book atualmente está **R$29,00** reais.
 
