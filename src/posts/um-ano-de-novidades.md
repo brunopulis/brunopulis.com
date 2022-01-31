@@ -1,13 +1,13 @@
 ---
-title: "Um ano de novidades"
-date: "2021-02-10"
-categories: 
-  - "carreira"
-tags: 
-  - "automacao-mobile"
-  - "carreira"
-  - "iaap"
-  - "projetos"
+title: Um ano de novidades
+date: 2021-02-10
+categories:
+  - carreira
+tags:
+  - automacao-mobile
+  - carreira
+  - iaap
+  - projetos
 ---
 
 * * *
@@ -46,7 +46,7 @@ Inclusive ela possui certificações internacionais sobre o tema, provavelmente 
 
 ## Novos ares
 
-Em dezembro me despedi da Monetizze e topei fazer parte do time da Concrete. Não foi uma decisão fácil, porém, chega um momento que precisamos de encarar novas oportunidades e desafios que possam surgir.
+Em dezembro, me despedi da Monetizze e topei fazer parte do time da Concrete. Não foi uma decisão fácil, porém, chega um momento que precisamos de encarar novas oportunidades e desafios que possam surgir.
 
 ## Testes mobile e agora?
 
