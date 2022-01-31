@@ -31,7 +31,7 @@ Infelizmente a grande maioria dos donos de sites **desconhecem da importância d
 > 
 > artigo 63
 
-A maioria das barreiras à acessibilidade são causadas por um mau design e desenvolvimento. Escrevi o artigo [Repensando sobre o HTML](https://www.brunopulis.com/dev/repensando-sobre-o-html), que diz exatamente sobre isso.
+A maioria das barreiras à acessibilidade são causadas por um mau design e desenvolvimento. Escrevi o artigo [Repensando sobre o HTML](https://www.brunopulis.com/posts/repensando-sobre-o-html), que diz exatamente sobre isso.
 
 ## Pensando na melhor abordagem
 
@@ -70,7 +70,7 @@ Como um bom analista de qualidade, tenha em mente descrever o problema na melhor
 
 Forneca de modo claro a URL onde o problema ocorre. Inclua a URL, por exemplo:
 
-- [http://brunopulis.com/about](http://brunopulis.com/about)
+- [http://brunopulis.com/sobre](http://brunopulis.com/sobre)
 - [https://brunopulis.com/archive](https://brunopulis.com/archive)
 
 ### Qual é o problema
@@ -167,20 +167,6 @@ Se você acha que a organização não está resolvendo adequadamente o problema
 - Apresentar uma queixa formal com no Ministério Público;
 - Entre em contato com o departamento governamental responsável pelos direitos da pessoa com deficiência, pelos idosos ou pelos direitos humanos;
 - Considere uma ação legal. Por exemplo, com base nos requisitos de acessibilidade da Web em regulamentos antidiscriminação em seu país.
-
-## E-mail de exemplo
-
-Criei um PDF com um exemplo de comunicação para as empresas. Ele é bem simples, mas pode te nortear como descrever os problemas e informar eles de forma profissional e cordial.
-
-[
-
-Baixar modelo de e-mail
-
-Formato: PDF. Tamanho: 85kb
-
-
-
-](https://brunopulis.com/wp-content/uploads/2021/07/report_accessibility_example.pdf)
 
 ## Conclusão
 
