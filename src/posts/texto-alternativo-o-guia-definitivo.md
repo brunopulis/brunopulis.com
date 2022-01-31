@@ -9,6 +9,8 @@ tags:
   - "wcag"
 ---
 
+![aaaaa](/images/cute-cat.webp)
+
 Esta publicação contém tudo o que você precisa saber sobre texto alternativo! Quando usá-los e como desenhá-los perfeitamente. Por mim, Daniel, um desenvolvedor web com deficiência visual que usa um leitor de tela no meu dia-a-dia.
 
 * * *
