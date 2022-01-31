@@ -5,6 +5,8 @@ categories:
   - "acessibilidade-para-desenvolvedores"
 ---
 
+![](/images/code-html.jpg)
+
 ## Introdução
 
 O HTML é o bloco de construção mais básico da web. É o responsável por definir duas características importantíssimas: **significado** e a **estrutura** do conteúdo da web.
@@ -39,10 +41,13 @@ O problema é que a maioria desses frameworks possuem erros grotescos de html, a
 
 Um exemplo do framework Vuetify com o componente select:
 
+```js
 <v-select :items="items" label="Standard"></v-select>
+```
 
 Aparentemente é um componente simples e elegante, mas qual é sua saída no código HTML? Sua saída é parecida com isso:
 
+```html
 <div class="v-input theme--light v-text-field v-text-field--is-booted v-select"></div>
   <div class="v-input\_\_control">
     <div role="button" aria-haspopup="listbox" aria-expanded="false" aria-owns="list-1359" class="v-input\_\_slot">
@@ -67,15 +72,18 @@ Aparentemente é um componente simples e elegante, mas qual é sua saída no có
     </div>
   </div>
 </div>
+```
 
 Já no bom e velho HTML, o componente de select se parece com isso.
 
+```html
 <select>
   <option>Selecione uma opção</option>
   <option>1</option>
   <option>2</option>
   <option>3</option>
 </select>
+```
 
 **Simples, não?**
 
@@ -84,6 +92,7 @@ Exemplos assim, estão recheados aos montes pela web. A WebAIM uma empresa que p
 Abaixo uma tabela demonstrando os problemas mais recorrentes nas páginas.
 
 Falhas mais comuns de acessibilidade na web. Fonte: \[The WebAIM Million\](https://webaim.org/projects/million/#intro)
+
 | Tipo de falha da WCAG | % de home pages em Fevereiro de 2020 | % de home pages em Fevereiro de 2019 |
 | --- | --- | --- |
 | Baixo contraste | 86.3% | 85.3% |
@@ -148,13 +157,13 @@ Que tal refletirmos e escrevermos de forma semântica?
 
 Separei alguns links para aprender a escrever HTML semântico, espero que os ajude.
 
-\* [Recomendações de acessibilidade](http://emag.governoeletronico.gov.br/cursodesenvolvedor/desenvolvimento-web/recomendacoes-de-acessibilidade-definicao.html)  
-\* [HTML5 and CSS fundamentals](https://www.edx.org/course/html5-and-css-fundamentals)  
-\* [HTML5 Coding Essentials and best pratices](https://www.edx.org/course/html5-coding-essentials-and-best-practices)  
-\* [Referência da MDN sobre HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+* [Recomendações de acessibilidade](http://emag.governoeletronico.gov.br/cursodesenvolvedor/desenvolvimento-web/recomendacoes-de-acessibilidade-definicao.html)  
+* [HTML5 and CSS fundamentals](https://www.edx.org/course/html5-and-css-fundamentals)  
+* [HTML5 Coding Essentials and best pratices](https://www.edx.org/course/html5-coding-essentials-and-best-practices)  
+* [Referência da MDN sobre HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 
 ## Referências:
 
-\* [Referência da MDN sobre HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)  
-\* [Pesquisa WebAIM](https://webaim.org/projects/million/)  
-\* [Vuetify Select](https://vuetifyjs.com/en/components/selects/)
+* [Referência da MDN sobre HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)  
+* [Pesquisa WebAIM](https://webaim.org/projects/million/)  
+* [Vuetify Select](https://vuetifyjs.com/en/components/selects/)
