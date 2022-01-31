@@ -1,11 +1,11 @@
 ---
-title: "Como é ser um QA de acessibilidade?"
-date: "2021-08-22"
-categories: 
-  - "a11y"
-tags: 
-  - "a11y"
-  - "carreira"
+title: Como é ser um QA de acessibilidade?
+date: 2021-08-22
+categories:
+  - a11y
+tags:
+  - a11y
+  - carreira
 ---
 
 Recentemente me tornei um **QA de acessibilidade**. Não foi uma decisão fácil, mas aceitei o desafio de participar do time de acessibilidade que mais cresce no Brasil.
@@ -27,8 +27,6 @@ Hoje atendo mais de uma squad por vez. Nossas demandas de testes são menores em
 ### Relacionamento com os times
 
 ![Squad de futebol americano](/images/squad-team.jpeg)
-
-Photo by football wife on [Pexels.com](https://www.pexels.com/photo/football-player-huddled-together-in-field-1349339/)
 
 Sempre procuramos manter um bom relacionamento com o time, os QAs funcionais sempre são bastante solícitos e curiosos sobre o tema, acessibilidade.
 
@@ -106,12 +104,3 @@ Concordo com o comentário, pois as empresas, estão despertando para o tema e e
 Ser um QA de acessibilidade é olhar de uma forma mais humana e contribuir com o acesso igualitário para todas as pessoas, independente de sua deficiência.
 
 E sair de uma zona de conforto e se importar pelo outro, talvez seja por isso que a acessibilidade me encanta tanto.
-
-* * *
-
-_E você tem mais curiosidades sobre trabalhar com acessibilidade?_  
-Me Conta nos comentários
-
-* * *
-
-Esse conteúdo de ajudou em algo? [Considere apoiar meu trabalho](https://brunopulis.com/apoie/).
