@@ -3,6 +3,8 @@ title: Como criar um Github Profile
 date: 2020-07-26
 categories:
   - carreira
+tags:
+  - github
 ---
 
 ## Introdução ao artigo
@@ -18,8 +20,6 @@ Uma dessas boas impressões foi o lançamento da funcionalidade de _destaque dos
 Para configurar seu Github Profile é bem simples, crie um repositório com o nome do seu usuário no Github, e adicione o arquivo README.md, nele conterá as informações do seu perfil.
 
 O meu perfil ficou assim:
-
-
 
 ![](/images/github-profile.webp)
 
@@ -45,7 +45,7 @@ Assim, sua apresentação fica mais completa e pode chamar atenção de recrutad
 
 ## Status do Github
 
-Conversando um dia com o [Phiter Fernandes abre em uma nova aba](https://github.com/phiter), ele me mostrou o [Github Readme Stats abre em uma nova aba](https://github.com/anuraghazra/github-readme-stats) uma ferramenta para buscar as suas contribuições feitas no Github.
+Conversando um dia com o [Phiter Fernandes](https://github.com/phiter), ele me mostrou o [Github Readme Stats](https://github.com/anuraghazra/github-readme-stats) uma ferramenta para buscar as suas contribuições feitas no Github.
 
 Ele consulta as informações através da API do Github, e gera um gráfico feito em SVG. O resultado é parecido com isso:
 
@@ -85,7 +85,7 @@ O Github Profile, permite várias possibilidades para deixar seu perfil mais pro
 
 Na minha pesquisa para esse artigo encontrei um lista com diversos Github Profiles criados. Deixo aqui alguns perfis que achei bem legal.
 
-- [Beto Muniz abre em uma nova aba](https://github.com/obetomuniz)
-- [Davidson Fellipe abre em uma nova aba](https://github.com/davidsonfellipe)
-- [Marco Vincit abre em uma nova aba](https://github.com/marcovincit)
-- [Templates de Github Profile abre em uma nova aba](https://github.com/elangosundar/awesome-README-templates)
+- [Beto Muniz](https://github.com/obetomuniz)
+- [Davidson Fellipe](https://github.com/davidsonfellipe)
+- [Marco Vincit](https://github.com/marcovincit)
+- [Templates de Github Profile](https://github.com/elangosundar/awesome-README-templates)
