@@ -3,9 +3,11 @@ title: Como criar um Github Profile
 date: 2020-07-26
 categories:
   - carreira
+metaTitle: Como criar um Github Profile
+metaDesc: github, github profile
+socialImage: /images/github-profile.png
 tags:
   - github
-  - github profile
 ---
 
 ## Introdução ao artigo
@@ -75,6 +77,12 @@ Isso irá servir como seu portfólio, no meu perfil existem alguns projetos que 
 É interessante também manter uma sessão com os seus contatos e redes sociais. Mantenha essa lista atualizada.
 
 Particularmente eu coloquei somente as que atuo com mais frequência, não há necessidade de colocar todas, coloque somente aquelas que você é capaz de responder.
+
+## Listando posts do blog
+
+Essa é uma dica bônus, existe a possibilidade de criar uma integração graças ao Github Actions. Ela se baseia em consultar o RSS do seu site e listar os últimos três posts.
+
+Em breve vou escrever como fazer essa integração que é simples e bem legal.
 
 ## Conclusão
 
