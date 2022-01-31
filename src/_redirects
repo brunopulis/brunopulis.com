@@ -1,2 +1,4 @@
 # Redirect to 301
 /atributo-lang-pequeno-mas-poderoso  /posts/atributo-lang/
+
+/blog/*  /posts/:splats
