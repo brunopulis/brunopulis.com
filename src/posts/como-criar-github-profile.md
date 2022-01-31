@@ -1,13 +1,13 @@
 ---
-title: "Como criar um Github Profile"
-date: "2020-07-26"
-categories: 
-  - "carreira"
+title: Como criar um Github Profile
+date: 2020-07-26
+categories:
+  - carreira
 ---
 
 ## Introdução ao artigo
 
-O [Github abre em uma nova aba](https://github.com), a rede social mais adorada por pessoas desenvolvedoras vem se reinventando, desde que, foi adquirida pela [Microsoft abre em uma nova aba](https://microsoft.com).
+O [Github](https://github.com), a rede social mais adorada por pessoas desenvolvedoras vem se reinventando, desde que, foi adquirida pela [Microsoft](https://microsoft.com).
 
 Lembro quando vi o anúncio da compra do Github pela Microsoft, fiquei pensando em como seria essa nova etapa.
 
@@ -19,7 +19,9 @@ Para configurar seu Github Profile é bem simples, crie um repositório com o no
 
 O meu perfil ficou assim:
 
-![](https://brunopulis.com/wp-content/uploads/2021/04/github-profile.webp)
+
+
+![](/images/github-profile.webp)
 
 Usei uma estrutura baseada em tópicos, pois é mais fácil de organizar e deixar claro cada sessão. O meu Github Profile, está divido da seguinte forma:
 
