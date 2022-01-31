@@ -1,7 +1,10 @@
 ---
-title: 'Sobre'
-permalink: '/sobre/index.html'
-layout: 'layouts/page.njk'
+layout: layouts/page.njk
+title: Sobre
+permalink: /sobre/index.html
+metaTitle: Sobre Bruno Pulis
+metaDesc: Sobre a trajetória profissional e contribuições de Bruno Pulis para a
+  comunidade
 ---
 
 Olá, meu nome é Bruno Pulis, porém, você pode me chamar de **Pulis**. Sou um consultor de acessibilidade digital e desenvolvedor front-end de Belo Horizonte.
@@ -40,4 +43,4 @@ Em meu tempo livre, me dedico a escrever sobre acessibilidade e qualidade de sof
 ## Contato
 
 Quer em chamar para tomar um café, bater um papo ou até mesmo me convidar para palestrar? 
-Me mande um e-mail no [contato@brunopulis.com](contato@brunopulis.com).
+Me mande um e-mail no [contato@brunopulis.com](mailto:contato@brunopulis.com).
