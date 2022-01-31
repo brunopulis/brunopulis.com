@@ -4,6 +4,7 @@ date: 2020-07-26
 categories:
   - carreira
 metaTitle: Como criar um Github Profile
+metaDesc: github, github profile
 socialImage: /images/github-profile.png
 tags:
   - github
