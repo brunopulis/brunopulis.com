@@ -24,7 +24,7 @@ Para configurar seu Github Profile é bem simples, crie um repositório com o no
 
 O meu perfil ficou assim:
 
-![](/images/github-profile.webp)
+![](/images/github-profile.png)
 
 Usei uma estrutura baseada em tópicos, pois é mais fácil de organizar e deixar claro cada sessão. O meu Github Profile, está divido da seguinte forma:
 
