@@ -60,7 +60,9 @@ Essa é uma funcionalidade é interessante, pois exibe suas contribuições no G
 
 Para configurar o seu Github Status, copie o código abaixo, e cole no seu conteúdo markdown.
 
-[![Bruno Pulis github stats](https://github-readme-stats.vercel.app/api?username=brunopulis)](https://github.com/brunopulis/github-readme-stats)
+```html
+https://github-readme-stats.vercel.app/api?username=brunopulis
+```
 
 Um detalhe importante é trocar para o seu usuário `?username=` pelo o nome do seu usuário do Github.
 
