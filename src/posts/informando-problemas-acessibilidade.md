@@ -3,15 +3,13 @@ title: "Informando empresas sobre problemas de acessibilidade"
 date: "2018-05-18"
 categories: 
   - "a11y"
+  - "negócios"
 ---
 
-* * *
 
 Você está navegando num famoso _e-commerce_ e descobre que ele possui algumas inconsistências de acessibilidade. Como informar para a empresas sobre os problemas que voce encontrou?
 
 Neste artigo, irei dar algumas dicas de como fazer isso de forma simples e profissional.
-
-* * *
 
 ## Introdução
 
@@ -31,7 +29,7 @@ Infelizmente a grande maioria dos donos de sites **desconhecem da importância d
 > 
 > artigo 63
 
-A maioria das barreiras à acessibilidade são causadas por um mau design e desenvolvimento. Escrevi o artigo [Repensando sobre o HTML](https://www.brunopulis.com/posts/repensando-sobre-o-html), que diz exatamente sobre isso.
+A maioria das barreiras à acessibilidade são causadas por um mau design e desenvolvimento. Escrevi o artigo [Repensando sobre o HTML](https://www.brunopulis.com/posts/repensando-sobre-html/), que diz exatamente sobre isso.
 
 ## Pensando na melhor abordagem
 
