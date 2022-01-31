@@ -51,7 +51,7 @@ Resultado de uma avalição das cores: `#ccc` para textos do tamanho de fonte 16
 
 Tendo o resultado em mãos, você pode reportar as inconsistências. Essa correções são feitas alterando as CSS, e com poucas linhas de código o problema é sanado.
 
-Você pode encontrar uma lista delas no [Awesome A11y](https://github.com/brunopulis/awesome-a11y/blob/master/topics/validators.md#colors-and-contrast). 🔥
+Você pode encontrar uma lista delas no [Awesome A11y](https://github.com/brunopulis/awesome-a11y/blob/master/topics/tools.md#colors-and-contrast). 🔥
 
 * * *
 
