@@ -8,13 +8,9 @@ tags:
   - "motivacional"
 ---
 
-* * *
-
-![](https://brunopulis.com/wp-content/uploads/2021/02/talk.webp)
+![](/images/talk.jpg)
 
 Antes de mais nada, me vejo no dever de deixar claro que este post não é uma forma de doutrinar ninguém a fé cristã ou qualquer outra. Apenas estou fazendo um paralelo entre o estudo teológico e seus desdobramentos e o que isso contribuiu para mim.
-
-* * *
 
 ## Introdução
 
