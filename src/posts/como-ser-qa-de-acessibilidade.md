@@ -89,7 +89,7 @@ Outro fato legal, a acessibilidade é considerada desde a concepção do design.
 
 ## Desafios
 
-Os desafios que enfrentamos geralmente, são relacionados ao desconhecimento da WCAG e das direitrizes de acessibilidade. Também da escrita incorreta do HTML, esse já foi um tópico de outro [artigo no blog](https://brunopulis.com/blog/repensando-sobre-html/).
+Os desafios que enfrentamos geralmente, são relacionados ao desconhecimento da WCAG e das direitrizes de acessibilidade. Também da escrita incorreta do HTML, esse já foi um tópico de outro [artigo no blog](https://brunopulis.com/posts/repensando-sobre-html/).
 
 Outro ponto importante, é demonstrar quão crucial a acessibilidade é para o produto que está sendo desenvolvido.
 
