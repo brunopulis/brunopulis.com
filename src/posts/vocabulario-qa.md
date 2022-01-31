@@ -1,13 +1,15 @@
 ---
-title: "Vocabulário de QA"
-date: "2020-08-18"
-categories: 
-  - "qualidade-de-software"
+title: Vocabulário de QA
+date: 2020-08-18
+categories:
+  - qualidade-de-software
+metaTitle: Conheça o vocabulário de um QA
+metaDesc: Desmistifique o vocabulário de um QA de uma vez por todas, te ensino
+  os jargões mais utilizados no cotidiano.
+tags:
+  - qa
 ---
-
-* * *
-
-> Este artigo é uma tradução e adaptação livre do artigo "QA Testing Vocabulary" que pode ser acessado no [blog abre em uma nova aba](https://www.mindfulqa.com/qa-vocabulary/). O autor foi notificado e houve permissão para realizar a tradução..
+> Este artigo é uma tradução e adaptação livre do artigo "QA Testing Vocabulary" que pode ser acessado no [blog](https://www.mindfulqa.com/qa-vocabulary/). O autor foi notificado e houve permissão para realizar a tradução.
 
 ## Vocabulário de um QA
 
@@ -21,10 +23,10 @@ Essa lista deve ajudá-lo a ter uma compreensão básica do vocabulário que um 
 
 ## Tipos de teste
 
-- **Teste manual:**  significa testar o aplicativo ou site manualmente. Por exemplo, abrir um navegador e navegar manualmente para diferentes seções de um site, procurando por problemas de [experiência do usuário](https://www.mindfulqa.com/what-is-user-experience/&usg=ALkJrhhjBC-hQ_OAkzgzB4aZRXcRSKJODQ) ou bugs. (Para mais informações, consulte [O que é teste manual?](https://www.mindfulqa.com/what-is-manual-testing/&usg=ALkJrhj4xGgkgrsThHtcvGVqdIOHQMahkw));
-- **Teste automatizado** significa usar uma linguagem de programação (como Java) para escrever scripts que irão navegar em um site ou aplicativo. Esses scripts podem gerar relatórios para problemas como links quebrados, texto ausente, etc. (para mais informações sobre as diferenças entre manual e automatizado, consulte [Teste manual vs. automatizado](https://www.mindfulqa.com/manual-vs-automated/&usg=ALkJrhhmX0XJ_UzPlm0JE6Beg0sOXNRuVg) .);
-- **[Teste de API](https://www.mindfulqa.com/api-testing-services/&usg=ALkJrhik6SVVfzdTXP3ZD-HVf4IxjbSC0g)** significa verificar a qualidade/precisão de uma API. As APIs enviam solicitações e respostas de/para servidores remotos.
-- **[O teste de desempenho](https://www.mindfulqa.com/performance-testing/&usg=ALkJrhiHAmmx-BYQ89BpUBkD2T-V0DA_Fg):**  envolve verificar o tempo de resposta de um aplicativo ou site em cenários de uso típicos;
+- **Teste manual:**  significa testar o aplicativo ou site manualmente. Por exemplo, abrir um navegador e navegar manualmente para diferentes seções de um site, procurando por problemas de [experiência do usuário](https://www.mindfulqa.com/what-is-user-experience) ou bugs. (Para mais informações, consulte [O que é teste manual?](https://www.mindfulqa.com/what-is-manual-testing);
+- **Teste automatizado** significa usar uma linguagem de programação (como Java) para escrever scripts que irão navegar em um site ou aplicativo. Esses scripts podem gerar relatórios para problemas como links quebrados, texto ausente, etc. (para mais informações sobre as diferenças entre manual e automatizado, consulte [Teste manual vs. automatizado](https://www.mindfulqa.com/manual-vs-automated);
+- **[Teste de API](https://www.mindfulqa.com/api-testing-services)** significa verificar a qualidade/precisão de uma API. As APIs enviam solicitações e respostas de/para servidores remotos.
+- **[O teste de desempenho](https://www.mindfulqa.com/performance-testing):**  envolve verificar o tempo de resposta de um aplicativo ou site em cenários de uso típicos;
 - **O teste de carga:** é muito semelhante ao teste de desempenho, mas com ainda mais foco em encontrar o ponto exato em que um aplicativo ou site travaria, ou cairia.
 
 ## Métodos de teste
