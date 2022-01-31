@@ -1,15 +1,16 @@
 ---
-title: "Adeus Notion, bem-vindo de volta Evernote"
-date: "2021-04-01"
-categories: 
-  - "produtividade"
-tags: 
-  - "produtividade"
+title: Adeus Notion, bem-vindo de volta Evernote
+date: 2021-04-01
+categories:
+  - produtividade
+metaTitle: Adeus Notion, bem-vindo de volta Evernote
+tags:
+  - produtividade
 ---
 
 Fala pessoal, sempre fui fã de ferramentas e metódos de produtividade. Já testei diversos metódos e ferramentas e durante um bom tempo eu usei o Notion, nesse artigo vou contar os motivos que me fizeram desistir dele e porque voltei para o Evernote.
 
-Continuando falando sobre metódos de produtividade, eu já testei diversos como: GTD, Pomodoro, Kanban. Comentei aqui no blog sobre o [metódo PARA](https://brunopulis.com/blog/metodo-para/), é um metódo bem eficaz que eu mesclo a estrutura lógica dele com algumas outras coisas e tem me ajudado bastante.
+Continuando falando sobre metódos de produtividade, eu já testei diversos como: GTD, Pomodoro, Kanban. Comentei aqui no blog sobre o [metódo PARA](https://brunopulis.com/posts/metodo-para/), é um metódo bem eficaz que eu mesclo a estrutura lógica dele com algumas outras coisas e tem me ajudado bastante.
 
 ## Visão geral do Notion
 
