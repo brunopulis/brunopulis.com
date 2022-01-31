@@ -1,12 +1,12 @@
 ---
-title: "18 extensões essenciais para o Chrome"
-date: "2020-04-02"
-categories: 
-  - "produtividade"
+title: Extensões essenciais para o Chrome
+date: 2020-04-02
+categories:
+  - produtividade
+metaTitle: Extensões essenciais para o Chrome
+tags:
+  - extensoes
 ---
-
-* * *
-
 Fala pessoal, nesse artigo gostaria de compartilhar com vocês as extensões que utilizo no meu cotidiano e me ajudam ficar mais focado e ser mais produtivo.
 
 ## Propagandas e mais propagandas
@@ -35,33 +35,29 @@ Para todos que me conhecem sabem que eu sou um pouco empolgado com acessibilidad
 
 O [AXE](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?hl=pt-BR) é desenvolvido pelo o pessoal da Deque Systems, é uma ferramenta altamente competente naquilo que se propõe. Possuí um relatório muito conciso dos problemas relacionados a acessibilidade e documentação clara e concisa. O AXE também tem uma versão PRO, onde é possível gerar relatórios das inconsistências encontradas. Recomendo sem medo de errar.
 
-### ChromeVox
-
-A proposta do [ChromeVox](https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=pt-BR) é fazer testes de acessibilidade como se fosse uma tecnologia assistiva como um leitor de telas. Eu gosto de realizar alguns testes rápidos com ele, uma dica que dou é sempre que precisar de validar algo no leitor de tela utilize um mais consolidado como o o NVDA ou JAWS.
-
 ### Colorblinding
 
 Para validar problemas relacionados a daltonismo eu uso o [Colorblinding](https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa?hl=pt-BR), por ser uma ferramenta de rápida verificação e ser bastante simples de utilizar ela.
 
 ### Headingsmap
 
-A estratégia do [Headings Maps](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=pt-BR) é bem simples mapear a hierarquia de títulos de um site. Essa extensão é boa porque vai diretamente no foco do teste, certificar se existe inconsistências entre a hierarquia de títulos, sendo ela, um dos fatores de alto impacto na acessibilidade.
+A estratégia do [Headings Maps](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=pt-BR) é bem simples mapear a hierarquia de títulos de um site. 
+
+Essa extensão é boa porque vai diretamente no foco do teste, certificar se existe inconsistências entre a hierarquia de títulos, sendo ela, um dos fatores de alto impacto na acessibilidade.
 
 ### NoCoffee Visual Simulator
 
-O [NoCoffee](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl?hl=pt-BR) é mais uma ferramenta mais robusta que além de reportar problemas de daltonismo, também simula outras deficiências visuais, como: glaucoma e mácula degenerativa.
+O [NoCoffee](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl?hl=pt-BR) é mais uma ferramenta robusta que além de reportar problemas de daltonismo, também simula outras deficiências visuais, como: glaucoma e mácula degenerativa.
 
 Inclusive eu gravei um vídeo explicando sobre como usar a ferramenta, você pode conferir [no meu canal do Youtube](https://www.youtube.com/watch?v=EqBwK3BJcPY). Aproveita e dá aquele like maroto.
+
+> Obs: o Chrome retirou a extensão de sua loja. Porém, atualmente ele possuí recursos nativos para simular algumas deficiências.
 
 ## Desenvolvimento em geral
 
 ### Jira Template Injector
 
 O Jira Template Injector permite criar templates para aumentar sua produtividade com o JIRA é possível criar templates para estórias, bug, spikes e todos os outros tipos de issues do JIRA. Com ele instalado após configurado o template ao criar um bug, por exemplo, ele automaticamente preenche os campos que foram definidos.
-
-### Vue.js devtools
-
-Como no projeto que atuo é escrito em Vue, o [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=pt-BR) é um devtools digamos vitaminado para aplicações escritas em Vue.
 
 ### Privacy Badger
 
@@ -87,9 +83,15 @@ O [Nimbus](https://chrome.google.com/webstore/detail/nimbus-screenshot-screen/bp
 
 ### Notion
 
-O [Notion](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk?hl=pt-BR) é um dos meus queridinhos, ele é um ambiente com diversos serviços que usamos. Muitos de nós desenvolvedores usamos: trello, todo list, drive, dropbox e uma infinidade de serviços a proposta do Notion é integrar isso em uma única ferramenta para facilitar nosso dia a dia.
+![Dashboard de tarefas do Notion](/images/tasks.png)
+
+O [Notion](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk?hl=pt-BR) é um dos meus queridinhos, ele é um ambiente com diversos serviços que usamos. Muitos de nós desenvolvedores usamos: Trello, todo list, Drive, Dropbox e uma infinidade de serviços. 
+
+A proposta do Notion é integrar todas ferramentas em um único local, para facilitar nosso dia a dia.
 
 Essa extensão é um web clipper onde ele irá guardar links na sua conta do Notion.
+
+> Atualmente não utilizo mais o Notion, [explico nesse post](https://brunopulis.com/posts/adeus-notion-bem-vindo-evernote/) os meus motivos. 
 
 ### OneTab
 
