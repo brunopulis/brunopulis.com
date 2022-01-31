@@ -1,25 +1,26 @@
 ---
 title: "Review: Global Accessibility Awarenss Day 17"
-date: "2017-09-11"
-categories: 
-  - "reviews"
+date: 2017-09-11
+categories:
+  - reviews
+tags:
+  - review
 ---
-
-* * *
-
 ## Introdução
 
-Fala pessoal, nesse post vou contar um pouco de como foi participar no Global Acessibility Awarenss da edição de Belo Horizonte promovido pelo [IXDABH](http://bhz.ixda.org.br/)
+Fala pessoal, nesse post vou contar um pouco de como foi participar no Global Acessibility Awarenss da edição de Belo Horizonte promovido pelo IXDABH.
 
 ## Objetivos do evento
 
-Divulgar/Disseminar/Discutir/Pensar/Aprender práticas ou experiências com metodologias usadas no mercado ou desenvolvidas por conta própria, que promovam a acessibilidade e inclusão digital (web, softwares, celulares, etc) e pessoas com necessidades diferentes.
+O objetivo é promover conversas sobre acessibilidade com metodologias usadas no mercado ou desenvolvidas por conta própria, que promovam a acessibilidade e inclusão digital (web, softwares, celulares, etc) e pessoas com necessidades diferentes.
 
-O Global Acessibility Awarness Day ou #GAAD2017 é um evento mundial na data de 18 de marco, sobre conscientização e promoção da Acessibilidade no meio digital.
+O Global Acessibility Awarness Day ou #GAAD2017 é um evento mundial na data de 18 de Março, sobre conscientização e promoção da Acessibilidade no meio digital.
 
 ## História do evento
 
-A ideia do GAAD começou com um [post em um blog](https://mysqltalk.wordpress.com/2011/11/27/challenge-accessibility-know-how-needs-to-go-mainstream-with-developers-now/) escrito pelo [Joe Devon](http://globalaccessibilityawarenessday.org/joe_devon.html)um desenvolvedor de web de Los Angeles, [Jennison Asuncion](https://www.linkedin.com/in/jennison/), um profissional de acessibilidade de Toronto, descobriu o post do blog do Joe por acidente, através do Twitter. Depois de ler o post, Jennison contactou Joe imediatamente e eles uniram as forças, impulsionando a respeitada e extensa network de ambos para realizar o evento
+A ideia do GAAD começou com um [post em um blog](https://mysqltalk.wordpress.com/2011/11/27/challenge-accessibility-know-how-needs-to-go-mainstream-with-developers-now/) escrito pelo Joe Devon um desenvolvedor de web de Los Angeles, [Jennison Asuncion](https://www.linkedin.com/in/jennison/), um profissional de acessibilidade de Toronto, descobriu o post do blog do Joe por acidente, através do Twitter. 
+
+Depois de ler o post, Jennison contactou Joe imediatamente e eles uniram as forças, impulsionando a respeitada e extensa network de ambos para realizar o evento.
 
 ## Eventos Online
 
@@ -45,7 +46,7 @@ A ideia do GAAD começou com um [post em um blog](https://mysqltalk.wordpress.co
 - Inglaterra
 - Suécia.
 
-[Acesse os locais atualizados do GAAD17](http://globalaccessibilityawarenessday.org/events.html)
+[Acesse os locais atualizados do GAAD17](http://globalaccessibilityawarenessday.org/events/)
 
 ## O convite
 
@@ -74,11 +75,11 @@ A seguir, vou compartilhar as estória das personas que criamos para aplicar o t
 
 Beatriz adora ficar de bobeira na internet. Aos 36 anos de idade, às vezes ela passa horas no Facebook, ou mesmo, lendo textões no Medium. Ela também gosta de saber o que está acontecendo com o mundo, por meio dos grandes portais de notícias como El Paìs e BBC Brasil. Ou seja, Beatriz é uma internauta típica, exceto por um detalhe: Beatriz é cega.
 
-Sendo uma internauta experiente (sim, ela já teve um email do BOL, usou internet discada e pesquisou no Cadê), Beatriz tem uma grande desenvoltura com as tecnologias assistivas como leitores de tela, teclas de atalho e até displays em Braile. Mas isso não quer dizer que sua vida na Web seja fácil. A grande parte dos sites de hoje são pesados e cheios de barreiras de acessibilidade.
+Sendo uma internauta experiente (sim, ela já teve um e-mail do BOL, usou internet discada e pesquisou no Cadê), Beatriz tem uma grande desenvoltura com as tecnologias assistivas como leitores de tela, teclas de atalho e até displays em Braile. Mas isso não quer dizer que sua vida na Web seja fácil. A grande parte dos sites de hoje são pesados e cheios de barreiras de acessibilidade.
 
 > _Minha mão chega a doer de tanto apertar o Tab. Pra quê tanto menu, gente? Eu só quero chegar ao texto! Isso sem falar quando o texto não está estruturado corretamente:_
 > 
-> _Outro dia, eu tava com uma dúvida sobre imposto de renda e achei um site do governo com todas as instruções que eu queria. Mas aí, fui procurar o título do texto, porém só encontrava o nome do site._
+> _Outro dia, eu estava com uma dúvida sobre imposto de renda e achei um site do governo com todas as instruções que eu queria. Mas aí, fui procurar o título do texto, porém só encontrava o nome do site._
 
 #### Estória do Roberto
 
