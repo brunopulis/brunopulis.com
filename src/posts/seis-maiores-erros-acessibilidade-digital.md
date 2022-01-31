@@ -122,10 +122,6 @@ Com essa abordagem os validadores de acessibilidade não encontrarão nenhum pro
 
 Nem sempre ter um conteúdo oculto é uma boa solução. É preciso haver uma compreensão visual de qual é o conteúdo e os links para usuários videntes, bem como para usuários de leitores de tela.
 
-🔥 Aprenda a usar o [Font Awesome do jeito certo](/drops/font-awesome-semantico/)
-
-* * *
-
 ## Labels de formulários ausentes
 
 55% dos 4,2 milhões de formulário identificados na pesquisa do WebAIM, não estavam usando o elemento `<label>` ou `aria-label` ou `aria-labelledby`.  
