@@ -1,8 +1,8 @@
 ---
-title: "6 maiores erros de acessibilidade digital"
-date: "2020-09-02"
-categories: 
-  - "a11y"
+title: 6 maiores erros de acessibilidade digital
+date: 2020-09-02
+categories:
+  - a11y
 ---
 
 A acessibilidade digital é o assunto do momento, a pandemia evidenciou bastante, nesse post eu trato sobre alguns erros que são bem comuns no mundo digital.
@@ -20,7 +20,7 @@ Sumário
 
 ## Texto com baixo contraste
 
-Diariamente sofro na pele com isso, para quem não me acompanha ou está chegando por agora no blog, eu possuo [ceratocone](https://drauziovarella.uol.com.br/doencas-e-sintomas/ceratocone/#:~:text=Ceratocone%20%C3%A9%20uma%20enfermidade%20n%C3%A3o,a%20frente%20do%20globo%20ocular.),uma doença na córnea que aumenta o grau exponencialmente. Algumas combinações de cores e informações ficam bastante confusas para mim.
+Diariamente sofro na pele com isso, para quem não me acompanha ou está chegando por agora no blog, eu possuo [ceratocone](https://drauziovarella.uol.com.br/doencas-e-sintomas/ceratocone/),uma doença na córnea que aumenta o grau exponencialmente. Algumas combinações de cores e informações ficam bastante confusas para mim.
 
 Para amenizar esse problema eu adotei algumas práticas:
 
@@ -39,15 +39,15 @@ Para aplicarmos as correções de maneira efetiva, devemos consultar as recomend
 
 ### Ferramentas para verificação
 
-Após compreendermos as regras relacionadas ao constraste, devemos elencar ferramentas para corrigir o problema.
+Após compreendermos as regras relacionadas ao contraste, devemos elencar ferramentas para corrigir o problema.
 
 Atualmente estou usando o [Accessible Colors](https://accessible-colors.com/) gosto dele pela simplicidade, provavelmente escreverei sobre ele.
 
-Para exemplificar, imagine que você foi contratado para validar o contraste do menu de um site. Você iria inspecionar a cor usada no background do menu e as cores decada item de menu, usando o Acessible Colors, o resultado será semelhante a:
+Para exemplificar, imagine que você foi contratado para validar o contraste do menu de um site. Você iria inspecionar a cor usada no background do menu e as cores de cada item de menu, usando o Acessible Colors, o resultado será semelhante a:
 
 ![](/images/accessible-colors.png)
 
-Resultado de uma avalição das cores: #ccc para textos do tamanho de fonte 16px e background do site #fff
+Resultado de uma avalição das cores: `#ccc` para textos do tamanho de fonte 16px e background do site `#fff`.
 
 Tendo o resultado em mãos, você pode reportar as inconsistências. Essa correções são feitas alterando as CSS, e com poucas linhas de código o problema é sanado.
 
@@ -57,11 +57,9 @@ Você pode encontrar uma lista delas no [Awesome A11y](https://github.com/brunop
 
 ## Imagens sem texto alternativo
 
-![Imagem quebrada](https://brunopulis.com/wp-content/uploads/2021/02/noimage.webp)
-
 Segundo uma pesquisa do [Web AIM](https://webaim.org/projects/million/#wcag), em uma amostragem de **1 milhão** de páginas iniciais dos sites mais populares do mundo. Foram encontradas **38,426,701** imagens, ou **38.4%** por página inicial em média.
 
-Cerca de **31.3%** de todas as páginas iniciais (12 por página em média) **não possuiam texto alternativo** (sem contar o `alt=""`) que é uma forma válida. **Mais da metade das imagens sem texto alternativo**.
+Cerca de **31.3%** de todas as páginas iniciais (12 por página em média) **não possuíam texto alternativo** (sem contar o `alt=""`) que é uma forma válida. **Mais da metade das imagens sem texto alternativo**.
 
 ![Fundo degradê roxo com um homem negro vestindo um terno cinza e blusa salmão, colocando as mãos na cabeça se sentindo surpreso. Escrito em branco ao centro 'Oh, lord, Jesus. What!?'](/images/giphy.gif)
 
@@ -73,11 +71,11 @@ De forma prática a correção desse erro é uma das mais **banais**, basta pree
 
 Ex:
 
-```
+```html
 <img src="/imagens/duck.png" alt="Pato de borracha amarelo olhando fixamente" />
 ```
 
-🔥 Consulte o artigo: [Texto alternativo: o guia definitivo](/texto-alternativo-o-guia-definitivo)
+🔥 Consulte o artigo: [Texto alternativo: o guia definitivo](/posts/texto-alternativo-o-guia-definitivo)
 
 * * *
 
@@ -87,7 +85,7 @@ Links vazios, são um dos maiores erros que já encontrei em avaliações de ace
 
 Para entendermos isso, vamos consultar a definição do propósito do elemento `<a>`:
 
-> O elemento `<a>` em HTML (ou elemento âncora), com o atributo href cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada `<a>` **precisará indicar o destino do link**.
+> O elemento `<a>` em HTML (ou elemento âncora), com o atributo `href` cria-se um hiperligação nas páginas web, arquivos, endereços de e-mails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada `<a>` **precisará indicar o destino do link**.
 
 Além de descumprir com a especificação do HTML, descumpre também a recomendação [2.4.4 - Finalidade do link (em contexto) \[A\] - WCAG 2.0 (em inglês)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context).
 
@@ -95,7 +93,7 @@ Além de descumprir com a especificação do HTML, descumpre também a recomenda
 
 Existem duas soluções que podemos aplicar, quando preciso usar um ícone e somente ele ser exibido, posso usar essa abordagem:
 
-```
+```html
 <a href="https://twitter.com/obrunopulis">
   <i class="fa fa-twitter"></i>
 </a>
@@ -103,15 +101,15 @@ Existem duas soluções que podemos aplicar, quando preciso usar um ícone e som
 
 Qualquer validador de acessibilidade que se deparar com esse elemento, encontrará uma inconsistência, pois ele informa um elemento `<a>` sem um conteúdo textual, descumprindo com o propósito de uso dele. Sem nenhum texto isso fica confuso para usuários de leitores de tela.
 
-Nesse exemplo especifíco, um leitor de tela poderia ler o link da da URL ou o conteúdo do pseudo elemento `:before` que seria `f002`. f002 não quer dizer pesquisa ou nenhuma outra informação. não é mesmo?
+Nesse exemplo especifico, um leitor de tela poderia ler o link da da URL ou o conteúdo do pseudo-elemento `:before` que seria `f002`. f002 não quer dizer pesquisa ou nenhuma outra informação. não é mesmo?
 
 Uma abordagem seria adicionar o texto visualmente ao lado dos ícones, pois eles nem sempre são tão claros para os usuários quanto pensamos. No caso dos ícones sociais, acho que é bastante claro o que são e o padrão é usado com bastante frequência. Nesse caso, você pode adicionar conteúdo visualmente oculto.
 
 ### Corrigindo
 
-Queremos adicionar texto para ser lido por um leitor de tela e ter certeza de que o conteúdo adicionado via css não seja lido.
+Queremos adicionar texto para ser lido por um leitor de tela e ter certeza de que o conteúdo adicionado via CSS não seja lido.
 
-```
+```html
 <a href="https://twitter.com/obrunopulis">
   <span class="fa fa-twitter" aria-hidden="true"></span>
   <span class="sr-only">Perfil de Bruno Pulis no twitter</span>
@@ -142,7 +140,7 @@ Uma das coisas que percebo muito com formulários é o uso inadequado do placeho
 
 ### Exemplo incorreto
 
-```
+```html
 <form>
   <input type="email" placeholder="insira o seu melhor e-mail" />
 </form>
@@ -156,7 +154,7 @@ Nota: O atributo placeholder não é semanticamente útil como outras maneiras d
 
 ### Exemplo correto
 
-```
+```html
 <form>
   <label for="email">E-mail</label>
   <input type="email" id="email" placeholder="insira o seu melhor e-mail" />
@@ -174,7 +172,7 @@ Além disso, essa violação fere duas recomendações da WCAG:
 
 O exemplo a seguir, demonstra o problema de um botão sem informação textual.
 
-```
+```html
 <button type="submit">
   <svg id="search" viewBox="0 0 16 16.9">
     <path d="M16, 15.7L11.3,11C12.4,9.8,13, 8.2,13,6.5C13"></path>
@@ -184,7 +182,7 @@ O exemplo a seguir, demonstra o problema de um botão sem informação textual.
 
 Qualquer validador de acessibilidade notificará a inconsistência da violação das guidelines citadas acima, Para eles não existe um conteúdo textual definido, uma abordagem para correção seria inserir o elemento `<title>` no SVG, pois ele garante que SVGs sejam acessíveis. Scott O'Hara escreveu um artigo [imagens acessíveis e SVGS (em inglês)](https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html).
 
-```
+```html
 <button type="submit">
   <svg
     id="search"
@@ -208,7 +206,7 @@ Além dessa confusão linguística, ele descumpre a recomendação [3.1.1 - Idio
 
 ### Corrigindo
 
-```
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
   ...
@@ -219,11 +217,13 @@ Para descobrir mais sobre o atributo lang, acesse: [explorando o atributo lang](
 
 ## Conclusão
 
-Bom se fosse chegou até aqui parabéns! Concluímos a maratona dos seis maiores erros de acessibilidade digital. Vimos detalhamente cada erro e quais recomendações eles ferem, também possíveis soluções para cada um.
+Bom se fosse chegou até aqui parabéns! Concluímos a maratona dos seis maiores erros de acessibilidade digital. 
 
-A conclusão que chego é que existe um défict enorme sobre os padrões web na comunidade de desenvolvedores. A maioria dos problemas de acessibilidade são problemas estruturais e educacionais.
+Vimos detalhamente cada erro e quais recomendações eles ferem, também possíveis soluções para cada um.
 
-Reciclar nosso conhecimento sobre os fundamentos é sempre importante, pois os frameworks da moda irão passar, mas os velhos amigos HTML, CSS e JavaScript estarão por ai.
+A conclusão que chego é que existe um déficit enorme sobre os padrões web na comunidade de desenvolvedores. A maioria dos problemas de acessibilidade são problemas estruturais e educacionais.
+
+Reciclar nosso conhecimento sobre os fundamentos é sempre importante, pois os frameworks da moda irão passar, mas os velhos amigos HTML, CSS e Javascript estarão por ai.
 
 E para reflexão gostaria de deixar uma frase do Tim Berners-Lee:
 
@@ -237,6 +237,6 @@ O que podemos fazer para mudar essa situação? Deixe sua sugestão do que podem
 - [Pesquisa do WebAIM](https://webaim.org/projects/million/#errors)
 - [Accessible Colors](https://accessible-colors.com/)
 - [Empty link example](https://blog.pope.tech/2020/03/13/empty-link-example/)
-- [Documentação do elementro A](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a)
+- [Documentação do elemento A](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a)
 - [Documentação do atributo placeholder](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-placeholder)
 - [Explorando o atributo alt](http://reinaldoferraz.com.br/explorando-o-atributo-alt/)
