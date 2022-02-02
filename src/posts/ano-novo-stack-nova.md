@@ -105,9 +105,9 @@ Aproveitando o gancho, troquei de serviço de newsletter também, estou experime
 
 E se você não faz parte da minha newsletter, [considere assiná-la](https://buttondown.email/brunopulis). 
 
-Bom, acredito que isso seja tudo (por enquanto) novas modificações irei comentar posteriormente. 
+Bom, acredito que isso seja tudo (por enquanto) novas modificações serão comentadas posteriormente. 
 
-Algo que quero experimentar é o uso de WebMentions, porém, isso é assunto de um próximo post. 
+Algo que almejo é experimentar o uso de WebMentions, porém, isso é assunto para um próximo post. 
 
 Até lá,
 Pulis. 
