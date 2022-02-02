@@ -8,8 +8,6 @@ tags:
 ---
 ![](/images/happy-new-year.jpg)
 
-
-
 Um ano novo começou e seguimos o velho mantra de todos os anos, aquele famoso ditado popular:  
 
 > Ano novo, vida nova.
@@ -37,13 +35,13 @@ Comecei a perceber que estava com certas burocracias no Wordpress que me impedia
 
 ## Escolhendo a stack
 
-Confesso que já namorava com uma stack que tem bastante popularidade entre os frontenders, a JamStack. 
+Existem tecnologias que ficamos pensando "um dia vou experimentar você", o meu namoro com a **Jamstack** durou muito tempo. Entretanto, esse ano decidi utilizá-la. 
 
 ### O que é a JamStack?
 
-Segundo o site da [JamStack](https://jamstack.org)
+Segundo o próprio site da [JamStack](https://jamstack.org), ela é:
 
-> Jamstack é uma arquitetura projetada para tornar a Web mais rápida, mais segura e mais fácil de dimensionar. Ele se baseia em muitas das ferramentas e fluxos de trabalho que os desenvolvedores adoram e que trazem o máximo de produtividade.
+> Uma arquitetura projetada para tornar a Web mais rápida, mais segura e mais fácil de dimensionar. Ele se baseia em muitas das ferramentas e fluxos de trabalho que os desenvolvedores adoram e que trazem o máximo de produtividade.
 
 Existem diversas vantagens ao utilizar essa arquitetura, dentre elas, podemos destacar: 
 
@@ -54,32 +52,46 @@ Existem diversas vantagens ao utilizar essa arquitetura, dentre elas, podemos de
 * portabilidade;
 * experiência de desenvolvimento (DX).
 
-### Pontos positivos
+## Pontos positivos
 
-Realmente a stack traz uma experiência bem agradável para quem curte colocar a mão na massa. Me lembrei bastante do tempo que era frontend. 
+A experiência de usar a stack é bem agradável, o desenvolvedor se sente confortável e pelo menos eu, me senti bastante produtivo.
 
-Eu curto ter controle do meu código e fazer algumas intervenções necessárias. Além disso, realizar alguns ajustes de acessibilidade foram necessárias mas nada tão gritante. 
+Além disso, o nível de controle de código é total, facilitando assim o controle e privacidade de dados.
 
-que pesquisei bastante até encontrar a stack atual, que basicamente é: o Eleventy, Netlify e Github. 
+### Tecnologias utilizadas
 
-O [Eleventy](https://www.11ty.dev/) um gerador de site estático, bastante flexível e extremamente rápido. 
+Para realizar essa transição escolhi três tecnologias que contribuíram bastante:
 
-Algumas empresas bastantes conhecidas utilizam ele, dentre elas: 
+* [Eleventy](https://www.11ty.dev/) um gerador de site estático; 
+* [Netlify](https://www.netlify.com/);
+* [Github](http://github.com/).
 
-* Chrome Dev Summit;
-* A11y Project;
-* CSS Tricks;
-* ESlint;
-* Google V8;
-* web.dev.  
+#### Eleventy
 
-Um tempo atrás, me aventurei com o Jekyll, um outro gerador de site estático e me surpreendi pela semelhança. Por sua vez o Eleventy é feito em Javascript, já o Jekyll em Ruby.
+Ele é um gerador de sites estáticos bastante famoso, open source e prioriza a privacidade dos dados. Alguns projetos de empresas de renome utilizam ele. 
 
-O [Netlify](https://www.netlify.com/) utilizo como ferramenta de deploy e o GitHub como repositório. 
+Entre elas podemos destacar:
 
-Inclusive o código fonte está disponível. Essa arquitetura faz parte da famosa [JamStack](https://www.netlify.com/jamstack/) que basicamente é desacoplar o frontend do backend e entregar website mais rápidos e escaláveis.
+* [Chrome Dev Summit](https://developer.chrome.com/devsummit/);
+* [A11y Project](https://www.a11yproject.com/);
+* [CSS Tricks](https://css-tricks.com/);
+* [ESlint](https://eslint.org/);
+* [Google V8](https://v8.dev/);
+* [web.dev](https://web.dev/).
 
-## Jamstack e privacidade
+Sua flexibilidade e praticidade me impressionaram, me lembrou bastante o Jekyll que é escrito em Ruby.
+
+#### Netlify
+
+O [Netlify](https://www.netlify.com/) utilizo como ferramenta de deploy, com ele conseguimos subir um site estático em questão de segundos. 
+
+Além disso, conta com diversas ferramentas que valem muito a pena experimentar.
+
+#### GitHub
+
+Na minha stack utilizo o GitHub como versionamento de código e de certa forma como uma "hospedagem" tradicional. 
+
+Tenho controle total do código e posso criar **Actions** para automatizar diversas tarefas que posso julgar necessárias.
 
 Sou uma pessoa que preza bastante por ter controle das minhas informações na rede, após o escândalo da Cambridge Analytics e diversas notícias relacionadas a privacidade de dados passei a ter maior cuidado sobre isso. 
 
