@@ -93,13 +93,21 @@ Na minha stack utilizo o GitHub como uma "hospedagem" tradicional.
 
 Tenho controle total do código e posso criar **Actions** para automatizar diversas tarefas que posso julgar necessárias.
 
-Sou uma pessoa que preza bastante por ter controle das minhas informações na rede, após o escândalo da Cambridge Analytics e diversas notícias relacionadas a privacidade de dados passei a ter maior cuidado sobre isso. 
+## Privacidade
 
-E sabendo que algumas ferramentas conhecidas como o Google Analytics, por exemplo, são uma fonte de espionar meus passos decidi não utilizar mais. 
+Depois do escândalo da Cambridge Analytica, comecei a prestar mais atenção na questão de privacidade. 
 
-Tanto que estou abandonando aos poucos o Gmail, Analytics, Google Photos não tenho mais. 
+Minha meta é cada vez utilizar menos o Google e suas ferramentas, existe até um [tutorial passo a passo de como fazer isso](https://impossiblehq.com/complete-guide-leaving-google/).
 
-Referências
+Pensando nesse sentido, resolvi testar o [Plausible Analytics](https://plausible.io/), um serviço de Analytics para sites com a promessa de não perseguir os usuários com propagandas e coletar dados.
 
-* [JamStack](https://jamstack.org/)
-*
+Aproveitando o gancho, troquei de serviço de newsletter também, estou experimentando o [Buttondown Email](https://buttondown.email/).
+
+E se você não faz parte da minha newsletter, [considere assiná-la](https://buttondown.email/brunopulis). 
+
+Bom, acredito que isso seja tudo (por enquanto) novas modificações irei comentar posteriormente. 
+
+Algo que quero experimentar é o uso de WebMentions, porém, isso é assunto de um próximo post. 
+
+Até lá,
+Pulis. 
