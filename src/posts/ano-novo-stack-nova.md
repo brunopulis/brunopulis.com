@@ -89,7 +89,7 @@ Além disso, conta com diversas ferramentas que valem muito a pena experimentar.
 
 #### GitHub
 
-Na minha stack utilizo o GitHub como versionamento de código e de certa forma como uma "hospedagem" tradicional. 
+Na minha stack utilizo o GitHub como uma "hospedagem" tradicional. 
 
 Tenho controle total do código e posso criar **Actions** para automatizar diversas tarefas que posso julgar necessárias.
 
