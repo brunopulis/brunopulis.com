@@ -16,13 +16,13 @@ Nesse artigo, irei contar para vocês algumas mudanças que fiz no meu site.
 
 Se você me acompanha há um tempo percebeu que o layout mudou, não é mesmo? 
 
-Além da parte visual, algumas coisas na arquitetura também foram modificadas.  Então vem comigo que vou detalhar todo o processo.
+Além da parte visual, algumas coisas na arquitetura também foram modificadas.  Então, vem comigo que vou detalhar todo o processo.
 
 ## Início de tudo
 
 Em meados de 2017, decidi criar um blog para escrever sobre diversos assuntos, ainda não tinha uma linha editorial definida. Na maior parte do tempo, utilizei o Wordpress hospedado em um domínio próprio. 
 
-Dessa forma eu tinha controle do código de ponta a ponta, a stack que utilizei por muito tempo foi:
+Dessa forma, eu tinha controle do código de ponta a ponta, a stack que utilizei por muito tempo foi:
 
 * Wordpress;
 * MySQL;
@@ -31,7 +31,7 @@ Dessa forma eu tinha controle do código de ponta a ponta, a stack que utilizei 
 
 Nunca tive problemas com essa *stack*, porém, em 2022 queria algo mais minimalista. 
 
-Comecei a perceber que estava com certas burocracias no Wordpress, elas me impediam ser mais criativo e produtivo com meu conteúdo.
+Comecei a perceber que estava com certas burocracias no Wordpress, as quais impediam de ser mais criativo e produtivo com o conteúdo.
 
 ## Escolhendo a stack
 
