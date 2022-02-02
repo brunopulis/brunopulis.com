@@ -70,7 +70,7 @@ Para realizar essa transição escolhi três tecnologias que contribuíram basta
 
 É um gerador de sites estáticos bastante famoso, open source e prioriza a privacidade dos dados, onde alguns projetos de empresas de renome utilizam.
 
-Entre elas podemos destacar:
+Podemos destacar:
 
 * [Chrome Dev Summit](https://developer.chrome.com/devsummit/);
 * [A11y Project](https://www.a11yproject.com/);
