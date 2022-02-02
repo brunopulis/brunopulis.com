@@ -21,7 +21,7 @@ Por longas datas utilizava a seguinte stack:
 * Hospedagem compartilhada;
 * FTP 🤣
 
-Nunca tive problemas com essa stack, porém, queria algo mais minimalista. Particularmente gosto bastante do Wordpress. há muito tempo, gosto dele, entre os motivos estão: 
+Nunca tive problemas com essa stack, porém, queria algo mais minimalista. Particularmente gosto bastante do Wordpress, ele possui inúmeras vantagens como:
 
 * praticidade de uso;
 * *self hosting*;
@@ -29,11 +29,19 @@ Nunca tive problemas com essa stack, porém, queria algo mais minimalista. Parti
 * customização;
 * privacidade de dados. 
 
-Porém, percebi que queria algo mais minimalista, por isso decidi pesquisar uma stack nova para esse ano.
-
 ## Escolhendo a stack
 
-Confesso que pesquisei bastante até encontrar a stack atual, que basicamente é: o Eleventy, Netlify e Github. 
+Confesso que já namorava com uma stack que tem bastante popularidade entre os frontenders, a JamStack. 
+
+### O que é a JamStack? 
+
+Segundo o site da [JamStack](https://jamstack.org)
+
+> Jamstack é uma arquitetura projetada para tornar a Web mais rápida, mais segura e mais fácil de dimensionar. Ele se baseia em muitas das ferramentas e fluxos de trabalho que os desenvolvedores adoram e que trazem o máximo de produtividade.
+
+é uma arquitetura criada para construir sites mais rápidos, que escalam com facilidade e que são mais seguros. Essa stack se baseia exclusivamente no ecossistema Javascript, uma das grandes vantagens é a utilização de gerados de sites estáticos. 
+
+que pesquisei bastante até encontrar a stack atual, que basicamente é: o Eleventy, Netlify e Github. 
 
 O [Eleventy](https://www.11ty.dev/) um gerador de site estático, bastante flexível e extremamente rápido. 
 
