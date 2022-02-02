@@ -35,7 +35,7 @@ Comecei a perceber que estava com certas burocracias no Wordpress, elas me imped
 
 ## Escolhendo a stack
 
-Existem tecnologias que ficamos pensando "um dia vou experimentar você", o meu namoro com a **Jamstack** durou muito tempo. Entretanto, esse ano decidi utilizá-la. 
+Existem tecnologias que ficamos pensando "**um dia vou experimentar você**", o meu namoro com a **Jamstack** durou muito tempo. Entretanto, esse ano decidi utilizá-la. 
 
 ### O que é a JamStack?
 
