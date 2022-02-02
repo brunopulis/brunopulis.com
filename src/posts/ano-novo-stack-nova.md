@@ -56,7 +56,7 @@ Existem diversas vantagens ao utilizar essa arquitetura, dentre elas, podemos de
 
 A experiência de usar a stack é bem agradável, o desenvolvedor se sente confortável e pelo menos eu, me senti bastante produtivo.
 
-Além disso, o nível de controle de código é total, facilitando assim o controle e privacidade de dados.
+Além disso, o nível de controle de código é total, facilitando assim a sua privacidade.
 
 ### Tecnologias utilizadas
 
