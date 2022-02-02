@@ -12,14 +12,16 @@ Nesse artigo irei contar os pontos positivos, as dificuldades e o resultado fina
 
 --- 
 
-Utilizava a seguinte stack: 
+## O que eu usava
+
+Por longas datas utilizava a seguinte stack:
 
 * Wordpress;
 * MySQL;
 * Hospedagem compartilhada;
 * FTP 🤣
 
-Wordpress há muito tempo, gosto dele, entre os motivos estão: 
+Nunca tive problemas com essa stack, porém, queria algo mais minimalista. Particularmente gosto bastante do Wordpress. há muito tempo, gosto dele, entre os motivos estão: 
 
 * praticidade de uso;
 * *self hosting*;
