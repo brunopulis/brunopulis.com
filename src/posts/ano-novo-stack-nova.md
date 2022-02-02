@@ -41,7 +41,7 @@ Existem tecnologias que ficamos pensando "**um dia vou experimentar você**", o 
 
 Segundo o próprio site da [JamStack](https://jamstack.org), ela é:
 
-> Uma arquitetura projetada para tornar a Web mais rápida, mais segura e mais fácil de dimensionar. Ele se baseia em muitas das ferramentas e fluxos de trabalho que os desenvolvedores adoram e que trazem o máximo de produtividade.
+> Uma arquitetura projetada para tornar a Web **mais rápida**, **mais segura** e **mais fácil** de dimensionar. Ele se baseia em muitas das ferramentas e fluxos de trabalho que os desenvolvedores adoram e que trazem o máximo de produtividade.
 
 Existem diversas vantagens ao utilizar essa arquitetura, dentre elas, podemos destacar: 
 
