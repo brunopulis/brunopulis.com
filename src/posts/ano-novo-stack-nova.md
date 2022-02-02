@@ -62,7 +62,7 @@ Além disso, o nível de controle de código é total, facilitando assim a sua p
 
 Para realizar essa transição escolhi três tecnologias que contribuíram bastante:
 
-* [Eleventy](https://www.11ty.dev/) um gerador de site estático; 
+* [Eleventy](https://www.11ty.dev/); 
 * [Netlify](https://www.netlify.com/);
 * [Github](http://github.com/).
 
