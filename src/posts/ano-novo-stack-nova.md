@@ -14,7 +14,7 @@ Um ano novo começou e seguimos o velho mantra de todos os anos, aquele famoso d
 
 Nesse artigo, irei contar para vocês algumas mudanças que fiz no meu site. 
 
-Se você me acompanha há um tempo percebeu que o layout dele mudou, não é mesmo? 
+Se você me acompanha há um tempo percebeu que o layout mudou, não é mesmo? 
 
 Além da parte visual, algumas coisas na arquitetura também foram modificadas.  Então vem comigo que vou detalhar todo o processo.
 
