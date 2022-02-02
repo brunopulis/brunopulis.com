@@ -20,7 +20,7 @@ Além da parte visual, algumas coisas na arquitetura também foram modificadas. 
 
 ## Início de tudo
 
-Em meados de 2017, decidi criar um blog para escrever sobre acessibilidade e outros assuntos. Na maior parte do tempo, utilizei o Wordpress hospedado em um domínio próprio. 
+Em meados de 2017, decidi criar um blog para escrever sobre diversos assuntos, ainda não tinha um norte sobre uma linha editorial que iria seguir. Na maior parte do tempo, utilizei o Wordpress hospedado em um domínio próprio. 
 
 Dessa forma eu tinha controle do código de ponta a ponta, a stack que utilizei por muito tempo foi:
 
