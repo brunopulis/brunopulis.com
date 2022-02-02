@@ -31,7 +31,7 @@ Dessa forma eu tinha controle do código de ponta a ponta, a stack que utilizei 
 
 Nunca tive problemas com essa *stack*, porém, em 2022 queria algo mais minimalista. 
 
-Comecei a perceber que estava com certas burocracias no Wordpress que me impediam ser mais criativo e produtivo com meu conteúdo.
+Comecei a perceber que estava com certas burocracias no Wordpress, elas me impediam ser mais criativo e produtivo com meu conteúdo.
 
 ## Escolhendo a stack
 
