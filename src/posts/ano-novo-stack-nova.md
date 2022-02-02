@@ -10,7 +10,9 @@ tags:
 
 
 
-Seguindo o ditado popular "ano novo, vida nova", resolvi mudar drasticamente a *stack* do meu blog.
+Um ano novo começou e seguimos no mantra: 
+
+\> Ano novo, vida nova.
 
 Nesse artigo irei contar os pontos positivos, as dificuldades e o resultado final. 
 
@@ -77,4 +79,9 @@ Sou uma pessoa que preza bastante por ter controle das minhas informações na r
 
 E sabendo que algumas ferramentas conhecidas como o Google Analytics, por exemplo, são uma fonte de espionar meus passos decidi não utilizar mais. 
 
-Tanto que estou abandonando aos poucos o Gmail, Analytics, Google Photos não tenho mais.
+Tanto que estou abandonando aos poucos o Gmail, Analytics, Google Photos não tenho mais. 
+
+Referências
+
+* [JamStack](https://jamstack.org/)
+*
