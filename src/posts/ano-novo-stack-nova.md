@@ -54,7 +54,7 @@ Existem diversas vantagens ao utilizar essa arquitetura, dentre elas, podemos de
 
 ## Pontos positivos
 
-A experiência de usar a stack é bem agradável, o desenvolvedor se sente confortável, me senti bem mais produtivo.
+A experiência de usar a stack é bem agradável, o desenvolvedor se sente confortável, no meu caso, senti bem mais produtivo.
 
 Além disso, o nível de controle de código é total, facilitando assim a sua privacidade.
 
@@ -68,7 +68,7 @@ Para realizar essa transição escolhi três tecnologias que contribuíram basta
 
 #### Eleventy
 
-Ele é um gerador de sites estáticos bastante famoso, open source e prioriza a privacidade dos dados. Alguns projetos de empresas de renome utilizam ele. 
+É um gerador de sites estáticos bastante famoso, open source e prioriza a privacidade dos dados, onde alguns projetos de empresas de renome utilizam.
 
 Entre elas podemos destacar:
 
