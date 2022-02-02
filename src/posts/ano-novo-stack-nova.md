@@ -10,24 +10,30 @@ tags:
 
 
 
-Um ano novo começou e seguimos no mantra: 
+Um ano novo começou e seguimos o velho mantra de todos os anos, aquele famoso ditado popular:  
 
-\> Ano novo, vida nova.
+> Ano novo, vida nova.
 
-Nesse artigo irei contar os pontos positivos, as dificuldades e o resultado final. 
+Nesse artigo, irei contar para vocês algumas mudanças que fiz no meu site. 
 
-- - -
+Se você me acompanha há um tempo percebeu que o layout dele mudou, não é mesmo? 
 
-## O que eu usava
+Além da parte visual, algumas coisas na arquitetura também foram modificadas.  Então vem comigo que vou detalhar todo o processo.
 
-Por longas datas utilizava a seguinte stack:
+## Início de tudo
+
+Em meados de 2017 decidi criar um blog para escrever sobre acessibilidade e outros assuntos. Na maior parte do tempo, utilizei o Wordpress hospedado em um domínio próprio. 
+
+Dessa forma eu tinha controle do código de ponta a ponta, a stack que utilizei por muito tempo foi:
 
 * Wordpress;
 * MySQL;
 * Hospedagem compartilhada;
 * FTP 🤣
 
-Nunca tive problemas com essa stack, porém, queria algo mais minimalista. Algo que conseguisse utilizar de modo bem prático. 
+Nunca tive problemas com essa *stack*, porém, em 2022 queria algo mais minimalista. 
+
+Comecei a perceber que estava com certas burocracias no Wordpress que me impediam ser mais criativo e produtivo com meu conteúdo.
 
 ## Escolhendo a stack
 
