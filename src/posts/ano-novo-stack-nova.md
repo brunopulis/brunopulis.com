@@ -39,9 +39,9 @@ Existem várias tecnologias as quais ficamos pensando "**um dia vou experimentar
 
 ### O que é a JamStack?
 
-Segundo o próprio site da [JamStack](https://jamstack.org), ela é:
+Segundo o próprio site da [JamStack](https://jamstack.org),é:
 
-> Uma arquitetura projetada para tornar a Web **mais rápida**, **mais segura** e **mais fácil** de dimensionar. Ele se baseia em muitas das ferramentas e fluxos de trabalho que os desenvolvedores adoram e que trazem o máximo de produtividade.
+> Uma arquitetura projetada para tornar a Web **mais rápida**, **mais segura** e **mais fácil** de dimensionar. Se baseia em muitas das ferramentas e fluxos de trabalho que os desenvolvedores adoram e que trazem o máximo de produtividade.
 
 Existem diversas vantagens ao utilizar essa arquitetura, dentre elas, podemos destacar: 
 
@@ -54,7 +54,7 @@ Existem diversas vantagens ao utilizar essa arquitetura, dentre elas, podemos de
 
 ## Pontos positivos
 
-A experiência de usar a stack é bem agradável, o desenvolvedor se sente confortável e pelo menos eu, me senti bastante produtivo.
+A experiência de usar a stack é bem agradável, o desenvolvedor se sente confortável, me senti bem mais produtivo.
 
 Além disso, o nível de controle de código é total, facilitando assim a sua privacidade.
 
