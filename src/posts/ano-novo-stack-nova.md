@@ -1,11 +1,13 @@
 ---
 layout: layouts/post.njk
 title: "Wordpress vs Eleventy: minhas impressões pessoais"
-metaDesc: ""
+metaTitle: "Wordpress vs Eleventy: minhas impressões pessoais"
+metaDesc: Impressões pessoais do uso do Wordpress e Eleventy e suas diferenças
 socialImage: /images/migrando.png
 date: 2022-02-02T15:35:58.545Z
 tags:
   - wordpress
+  - eleventy
 ---
 ![](/images/happy-new-year.jpg)
 
