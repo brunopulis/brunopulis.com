@@ -31,14 +31,3 @@
 {% if site.paymentPointer %}
   <meta name="monetization" content="{{ site.paymentPointer }}"/>
 {% endif %}
-{% if env.isProd %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ env.tracking.gtag }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', '{{ env.tracking.gtag }}');
-  </script>
-{% endif %}
