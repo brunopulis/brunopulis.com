@@ -1,7 +1,8 @@
 ---
 layout: layouts/post.njk
-title: "Ano novo, stack nova "
+title: "Wordpress vs Eleventy: minhas impressões pessoais"
 metaDesc: ""
+socialImage: /images/migrando.png
 date: 2022-02-02T15:35:58.545Z
 tags:
   - wordpress
