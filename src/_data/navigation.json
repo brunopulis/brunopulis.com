@@ -8,7 +8,12 @@
     {
       "text": "Sobre",
       "url": "/sobre",
-      "external": true
+      "external": false
+    },
+    {
+      "text": "Palestras",
+      "url": "/palestras",
+      "external": false
     },
     {
       "text": "Contato",
