@@ -1,6 +1,6 @@
 ---
 title: 'Obrigado'
-permalink: '/thank-you/index.html'
+permalink: '/obrigado/index.html'
 ---
 
 Obrigado por entrar em contato comigo, em breve retorno. <span aria-hidden="true">🙂</span>
