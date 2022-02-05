@@ -45,4 +45,4 @@ Eventos beneficentes, organizações sem fins lucrativos, *meetups* e comunidade
 
 Entretanto, para empresas e palestras personalizadas cobro um valor para a produção do conteúdo.
  
-Para maiores informações entre em contato no [meu e-mail](mailto:contato@brunopulis.com?subject=Convite de palestra).
+Para maiores informações entre em contato no [meu e-mail](mailto:contato@brunopulis.com).
