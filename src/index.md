@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Acessibilidade de forma descomplicada
+title: Olá, eu sou o Pulis
 metaTitle: Home - Bruno Pulis
 metaDesc: Consultor, Palestrante e Especialista em Acessibilidade. Te ajudo a
   evoluir com acessibilidade digital.
@@ -8,8 +8,6 @@ postsHeading: Artigos recentes
 archiveButtonText: Todos os artigos
 socialImage: ""
 ---
-Olá, eu sou o Bruno Pulis.
-
 Sou consultor de acessibilidade, produtor de conteúdo, palestrante e autor do [Awesome A11y](https://github.com/brunopulis/awesome-a11y).
 
-Estou disponível no [LinkedIn](https://www.linkedin.com/in/pulis) e [Twitter](https://twitter.com/obrunopulis) para te ajudar com acessibilidade.
+Gosto de ajudar as pessoas com acessibilidade digital.
