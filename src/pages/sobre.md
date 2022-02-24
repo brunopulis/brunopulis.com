@@ -34,7 +34,17 @@ Sempre fui interessado em compartilhar conhecimento, por isso, desde cedo, incen
 
 Conheci pessoas incríveis por causa da comunidade, e também pude contribuir significativamente, sendo um dos co-fundadores do Minas Dev.
 
-Além disso, ajudei a organizar meetups e eventos em Belo Horizonte. e também contribui em organização de eventos e meetups em Belo Horizonte.
+Além disso, ajudei a organizar meetups e eventos em Belo Horizonte.
+
+Algumas ações que contribuo atualmente:
+
+- Parceiro do [Movimento Web para Todos](https://mwpt.com.br);
+- Revisor na [Revista TSPI](https://medium.com/revista-tspi) e [Revista DTAR](https://medium.com/revista-dtar);
+- Idealizador dos projetos: 
+   - [Awesome A11y](https://github.com/brunopulis/awesome-a11y), 
+   - [Awesome Cypress](https://github.com/brunopulis/awesome-cypress), 
+   - [Acessibilidade Vagas Brasil](https://github.com/acessibilidade-brasil/vagas)
+   - [QA Vagas Brasil](https://github.com/qa-brasil/vagas)
 
 ## Curiosidades
 
