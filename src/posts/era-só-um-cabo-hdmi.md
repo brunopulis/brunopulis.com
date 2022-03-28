@@ -7,64 +7,50 @@ date: 2022-03-28T03:00:25.124Z
 ---
 ![](/images/cables.jpg)
 
-
-
 Todo mundo já passou por situações que ficamos sem saber o que fazer, não é mesmo? Na grande maioria das vezes, tentamos diversas soluções complexas e esquecemos da simplicidade. 
 
-Neste texto, vou compartilhar com vocês algo que trouxe uma lição valiosa para mim. 
+Neste texto, quero contar uma pequena história que aconteceu antes de viajar. O caso em si é banal, mas me ensinou algo valioso e queria compartilhar com vocês.
 
 - - -
 
-## Era uma bela sexta-feira
+## Era uma vez
 
-Um dia antes de viajar para Petrópolis para visitar minha namorada, meu computador resolveu parar de funcionar. O mais curioso, estava funcionamento normalmente no dia anterior.
+Um dia qualquer, onde um jovem liga seu computador e não funciona, procura diversas soluções e não consegue solução.
 
-Após uma avaliação prévia, identifiquei que o problema era o vídeo que não estava funcionando. Tentei diversas coisas, entre elas: limpei as memórias, placa de vídeo, placa mãe e vi diversos tutoriais do YouTube e **nada resolvia**.
+Tomado pelo cansaço e com raiva por não conseguir arrumar, decidi tentar outra hora. Tinha uma viagem programada e não se importou em consertar posteriormente.
 
-Como tinha pouco tempo hábil para identificar, decidi deixar para olhar com mais cuidado quando voltaria. 
+## Novas tentativas
 
-## A saga continua
+Ao retornar de sua viagem, tenta com a esperança de o problema miraculosamente ser resolvido. Nada resolvido. 
 
-Retornei sábado e continuei os testes, nada funcionava. Já estava decidido em procurar uma assistência técnica para avaliar e identificar o problema. 
+A frustração sobe ao peito, pensa pelo pior. Gastar dinheiro em uma assistência técnica para identificar o problema. 
 
-E consequentemente gastar mais dinheiro. 
+Mas seu irmão sabiamente diz: *"já trocou os cabos?".* Ocorre em sua mente que não tinha tentando outrora esssa solução. 
 
-Temia pelo o pior, entretanto, meu irmão me perguntou se eu tinha trocado o cabo HDMI para testar. Confesso: não tinha pensando nisso, uma solução simples. 
+Como em um truque de mágica, o computador volta a funcionar. Ocorre uma sensação de estupidez misturada com decepção.
 
-Após a troca dos cabos não que o danado resolveu funcionar? 😂 
+Todavia, o problema foi sanado e viveram felizes para sempre. 
 
-## Além de cabos, algo há mais
+## Moral da história
 
-Meu problema era estupidamente simples, um cabo que não estava em seu pleno funcionamento. 
+Vivemos em um mundo conectado, mas andamos tão desconectados. 
 
-Quantas vezes, andamos com nossos cabos desconectados da vida? Preferimos seguir o lema *"deixa a vida me levar, vida leva eu".* 
+Criamos problemas que não são problemas e alimentamos medos que outrora não eram medos. 
 
-Relacionamentos, oportunidades profissionais são deixadas por termos alguns cabos soltos... 
+> O que aconteceu conosco? \
+> Aonde nos perdemos?
 
-Somos impulsionados pelo espírito moderno em adotar uma postura de delivery. 
+A modernidade engoliu nossa capacidade de resolver conflitos em diversas áreas da vida. 
 
-## A cultura delivery
+A solução? \
+Compramos coisas, com um dinheiro que não temos para impressionar pessoas que não gostamos.
 
-Existe uma tendência que outrora era subliminar e hoje não mais, baseava-se em:
+Felizmente, ainda existe tempo, talvez um dos meios para se curar dessa loucura tecnológica seja ser mais analógico. 
 
-> *Não funciona, compre outro.*
+***Quando foi a última vez que desfrutou do seu café, sem se preocupar com a próxima reunião?*** 
 
-O espírito moderno diz que é mais fácil adquirir do que consertar. Muitos caem em 
+Talvez devemos, desacelerar e tornamos mais analógicos e menos digitais. Podemos ainda, tomar controle das nossas vidas, antes que, seja tarde demais. 
 
- um espírito consumista, não funciona? Compre outro diz o outdoor. 
+E como diria Chico Anysio em seu monólogo intítulado de "Mundo Moderno".
 
-Sem Temos uma tendência maligna, não gostamos de consertar, mas sim gastar em algo novo. 
-
-Relacionamentos quebrados levam tempo para se consertar 
-
-Confesso, gastei muito esforço mental e **não enxerguei o primordial**. 
-
- 
-
-Esse exemplo, demonstra claramente como estamos preocupados com coisas supérfulas e banais. Afinal, o
-
- 
-
-Quantas vezes, em nossas vidas tentamos resolver situações com técnicas extremamente complicadas e o problema, de fato, é extremamente sempre. 
-
-Fiquei refletindo em como por natureza somos complicados, ousamos em reclamar de barriga cheia.
+> Mundo moderno, melhore...
