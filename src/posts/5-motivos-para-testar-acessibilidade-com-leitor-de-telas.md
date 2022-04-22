@@ -7,35 +7,58 @@ date: 2022-02-04T12:23:57.788Z
 tags:
   - leitor-de-telas
 ---
-# 5 motivos para testar acessibilidade com um leitor de telas
+Testar acessibilidade é quase uma arte, ela encontra-se nos detalhes. Alguns comportamentos são reconhecidos somente com muita prática e experiência. 
 
-Assim como o eslint é uma ferramenta de checagem estática de um arquivo Javascript, o leitor de telas é algo similar para pessoas com deficiência que utilizam tal tecnologia assistiva. 
+Os leitores de telas, de modo geral, tem comportamentos padrões para determinados componentes e as pessoas que os utilizam identificam de forma natural.
 
-Esse artigo irá te dar 5 motivos para testar com um leitor de telas
-Vamos lá?
+Neste artigo irei mostrar 5 motivos para testar com um leitor de telas. Vamos lá?
 
-## Porque devo testar com um leitor de telas?
+---
 
-Essa pergunta é extremamente pertinente e válida. Leitores de telas, são tecnologias que visam facilitar a vida de pessoas com deficiência. 
+## O que são leitores de telas?
 
-chamada pro CTA
-Escrevi um artigo contendo detalhes sobre a forma de navegacao, dos leitores disponiveis
+Bom, se você nunca ouviu falar sobre leitores de telas eles são softwares construídos para auxiliar pessoas com deficiência visual para utilizar um computador/smartphone e navegar na web.
 
-## 1. Prevenir bugs de acessibilidade
+Sua função básica é converter a informação, através de um API que lê a estrutura do HTML e realiza a conversão para texto.
 
-Quem nunca pegou um bug de acessibilidade chatinho para resolver, não é mesmo? Na grande parte, são bugs bobos que viram uma bola de neve. 
+Existem diversos leitores de telas no mercado, esses são os mais conhecidos:
 
-Um exemplo que encontro no meu cotidiano são botões sem rótulo. Por padrão cada botão da tela ter duas informações extremamente importantes: **rótulo** e **semântica** adequada. 
+* NVDA;
+* Jaws;
+* Talkback;
+* VoiceOver.
 
-No exempo a seguir vou simular um botão sem o rótulo adequado 
+---
+
+Tendo em vista que, definimos o que são os leitores de tela irei apresentar para vocês, os **5 motivos para testar acessibilidade com leitor de telas**.
+
+E se você gosta do meu conteúdo e quer receber em primeira mão, assine a [minha newsletter](https://buttondown.email/brunopulis). 
+
+## Primeiro motivo: Prevenir bugs de acessibilidade
+
+Pode parecer óbvio, entretanto uma interface impecavél visualmente, pode conter erros grotescos de acessibilidade.
+
+Na grande maioria das vezes, esses bugs são erros de marcação HTML que poderiam ser evitados.
+
+Um exemplo banal que encontro no meu cotidiano são botões sem rótulo. Por padrão todo elemento HTML deve ser **usado para seu propósito**. 
+
+Cada elemento possuí duas informações extremamente importantes: **rótulo** e **semântica** adequada. 
+
+No exempo a seguir, temos um botão que representa uma ação de fechar, porém, ele não está rotulado corretamente.
 
 ```html
 <button>X</button>
 ```
 
-Nesse exemplo, o leitor de telas iria ler algo como "Botão X", mas afinal o que seria botão X? 
+Dessa forma compromete drasticamente a experiência de quem usa leitor de telas. O leitor iria verbalizar algo como: **botão X**.
 
-Além disso, quebra as duas diretrizes da WCAG **2.5.3** e **3.3.2**.
+> Mas afinal o que seria o botão X?
+
+
+Além disso, esse inocente botão fere as diretrizes da WCAG 2.1: 
+
+* [2.5.3 - Rótulo no Nome acessível [A]](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name); 
+* **3.3.2**.
 
 A 2.5.3 nos diz:
 
