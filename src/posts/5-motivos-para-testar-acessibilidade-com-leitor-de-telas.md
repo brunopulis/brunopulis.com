@@ -36,15 +36,15 @@ Se você gostou do meu conteúdo e quer receber em primeira mão, assine a [minh
 
 ## Primeiro motivo: Prevenção de bugs
 
-Pode parecer óbvio, entretanto uma interface impecavél visualmente, pode conter erros grotescos de acessibilidade.
+Pode parecer óbvio, entretanto, uma interface impecavél visualmente, pode conter erros grotescos de acessibilidade.
 
 Na grande maioria das vezes, esses bugs são erros de marcação HTML que poderiam ser evitados.
 
-Um exemplo banal que encontro no meu cotidiano são botões sem rótulo. Por padrão todo elemento HTML deve ser **usado para seu propósito**. 
+Um exemplo banal são botões sem rótulo. Por padrão todo elemento HTML deve ser **usado para seu propósito**. 
 
 Cada elemento possuí duas informações extremamente importantes: **rótulo** e **semântica** adequada. 
 
-No exempo a seguir, temos um botão que representa uma ação de fechar, porém, ele não está rotulado corretamente.
+No exempo a seguir, temos um botão que representa a ação de fechar, porém, ele não está rotulado corretamente.
 
 ```html
 <button>X</button>
@@ -72,7 +72,7 @@ Fica nítido que o descumprimento de uma diretriz afeta a outra proporcionalment
 
 ### Como resolvemos?
 
-Uma das possíveis soluções é adicionar um atributo da WAI-ARI o **aria-label**, dessa forma o leitor de tela receberá o *feedback* apropriado.
+Uma das possíveis soluções é adicionar um atributo da WAI-ARIA o **aria-label**, dessa forma o leitor de tela receberá o *feedback* apropriado.
 
 O exemplo a seguir adotamos a técnica com o uso do *aria-label* 
 
@@ -92,13 +92,13 @@ Esses itens diversas vezes são ignorados pelos desenvolvedores, costumo chamar 
 
 Dessa forma pessoas que utilizam somente o teclado ficam extremamente prejudicadas e ignoradas.
 
-> Dica: sempre pense nessa possibilidade de navegar somente via teclado. Afinal quando utilizamos um smartphone, usamos somente o teclado. 
+> Dica: sempre pense na possibilidade de navegar somente via teclado. Afinal quando utilizamos um smartphone, usamos somente o teclado. 
 
 ## Terceiro motivo: HTML semântico
 
-O leitor de telas é amigo íntimo de um HTML, como um fiel amigo ele informa **exatamente** como foi escrito. 
+O leitor de telas é amigo íntimo do HTML, como um fiel amigo ele informa **exatamente** como foi escrito. 
 
-É de extrema importância desenvolvedores escreverem um HTML decente. Já cansei de realizar testes e identifiquei uma tendência: a grande maioria dos desenvolvedores **ignoram uma escrita correta de HTML**. 
+É de extrema importância desenvolvedores escreverem um HTML decente. Já cansei de realizar testes e identificar um problema: a grande maioria dos desenvolvedores **ignoram uma escrita correta de HTML**. 
 
 > Como podemos construir uma casa sem um bom fundamento? O primeiro temporal leva nosso esforço aos ares.
 
@@ -110,9 +110,9 @@ Usando leitores de telas para testes de acessibilidade eu aprendi uma coisa:
 
 > de feedback ao usuário o mais rápido possível.
 
-Imagina a seguinte situação um formulário apra apliocar em uma vaga de emprego. Esse formulário possuí 20 campos que não informam em tempo real se os dados estão corretos. 
+Imagina a seguinte situação, um formulário para aplicar em uma vaga de emprego. Esse formulário possuí 20 campos que não informam em tempo de preenchimento se os dados estão corretos. 
 
-Somente no momento do envio e também não possui mensagens claras dos erros. Uma pessoa que usa um leitor de telas provavelmente vai tentar ou desistir da candidatura.
+Somente no momento do envio e também não possui mensagens claras dos erros. Uma pessoa que usa um leitor de telas provavelmente vai tentar novamente ou desistir da candidatura.
 
 ### Possibilidades
 
@@ -128,12 +128,12 @@ Usando leitores de telas para testes de acessibilidade, conseguimos captar a exp
 
 ## Conclusão
 
-Recomendo fortemente enquanto você desenvolvedor, estiver fazendo suas interfaces use algum leitor de telas para identifcar possíveis problemas.
+Recomendo fortemente você desenvolvedor, enquanto estiver fazendo suas interfaces use algum leitor de telas para identifcar possíveis problemas.
 
 Dessa forma, você irá "sentir na pele" como é uma navegação com tecnologia assistiva. E isso pode contribuir significamente em sua carreira. 
 
 Com esses conhecimentos, poderá explorar novos horizontes e quem sabe se tornar um especialista em desenvolvimento acessível. 
 
-Tudo depende de você e como diria o Tio Ben do Homem Aranha: 
+Tudo depende de você e como diria o Tio Ben: 
 
 > Com grandes poderes, vem grandes responsabilidades 
