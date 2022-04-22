@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: 5 motivos para testar acessibilidade com leitor de telas
 metaTitle: 5 motivos para testar acessibilidade com leitor de telas
 metaDesc: Aprenda 5 motivos principais para testar acessibilidade com leitor de telas
+socialImage: /images/screen-reader.jpeg
 date: 2022-02-04T12:23:57.788Z
 tags:
   - leitor-de-telas
