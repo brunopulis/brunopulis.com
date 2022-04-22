@@ -32,9 +32,9 @@ Existem diversos leitores de telas no mercado, podemos citar alguns:
 
 Tendo em vista que, definimos o que são os leitores de tela irei apresentar para vocês, os **5 motivos para testar acessibilidade com leitor de telas**.
 
-E se você gosta do meu conteúdo e quer receber em primeira mão, assine a [minha newsletter](https://buttondown.email/brunopulis). 
+Se você gostou do meu conteúdo e quer receber em primeira mão, assine a [minha newsletter](https://buttondown.email/brunopulis). 
 
-## Primeiro motivo: Prevenir bugs de acessibilidade
+## Primeiro motivo: Prevenção de bugs
 
 Pode parecer óbvio, entretanto uma interface impecavél visualmente, pode conter erros grotescos de acessibilidade.
 
