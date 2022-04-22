@@ -21,7 +21,7 @@ Bom, se você nunca ouviu falar sobre leitores de telas eles são softwares cons
 
 Sua função básica é converter a informação, através de um API que lê a estrutura do HTML e converte o texto em aúdio.
 
-Existem diversos leitores de telas no mercado, esses são os mais conhecidos:
+Existem diversos leitores de telas no mercado, podemos citar alguns:
 
 * NVDA;
 * Jaws;
