@@ -18,63 +18,47 @@
 		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 	<?php endif; ?>
 	<?php wp_head(); ?>
+  <link rel="stylesheet" href="<?php echo TEMPLATE_PATH; ?>/assets/css/custom.css">
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(''); ?> style="min-height: 478px;">
 	<?php if ( function_exists( 'wp_body_open' ) ) {
 		wp_body_open();
 	} ?>
 
-	<a id="skippy" class="visually-hidden sr-only-focusable" href="#content">
+	<a class="skip-to-content contrast" ref="#content">
 		<div class="container">
 			<span class="skiplink-text"><?php _e( 'Skip to content', 'odin' ); ?></span>
 		</div>
 	</a>
 
-  <?php get_template_part( 'template-parts/top', 'bar' ); ?>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="contrast">
+              Bruno Pulis
+            </a>
+          </li>
+        </ul>
 
-  <header id="header" class="d-flex align-items-center bg-dark">
-    <div class="container d-flex justify-content-between">
-      <div class="logo">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-          <img src="<?php echo TEMPLATE_PATH; ?>/assets/images/logo.png" alt="" class="img-fluid">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-
-      <nav class="collapse navbar-collapse navbar-main-navigation" id="navbar">
         <?php
           wp_nav_menu(
             array(
               'theme_location' => 'main-menu',
               'depth'          => 2,
               'container'      => false,
-              'menu_class'     => 'nav navbar-nav',
+              'menu_class'     => '',
               'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
               'walker'         => new Odin_Bootstrap_Nav_Walker()
             )
           );
-				?>
+        ?>
+
+        <ul class="icons">
+          <li><a href="#" class="btn-primary">Agendar consultoria</a></li>
+        </ul>
       </nav>
     </div>
-  </header><!-- End Header -->
->
-	<section class="hero">
-		<div class="container">
-			<div class="row">
-        <div class="col-xs-12 col-md-6">
-            <h1 class="">Olá, eu sou <span class="" rel="me">Bruno Pulis.</span></h1>
-            <p class="lead">Ajudo você a construir, testar e prototipar interfaces acessíveis.</p>
-        </div>
-
-        <div class="col-xs-12 col-md-6">
-
-        </div>
-			</div>
-		</div>
-	</section>
-
-	<div id="wrapper" class="container">
-		<div class="row">
+  </header>
