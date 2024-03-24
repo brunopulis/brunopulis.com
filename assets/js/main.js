@@ -1,21 +1,27 @@
-jQuery(document).ready(function($) {
-	// fitVids.
-	$( '.entry-content' ).fitVids();
+jQuery(document).ready(function ($) {
+  let formNewsletter = $('#form-newsletter');
 
-	// Responsive wp_video_shortcode().
-	$( '.wp-video-shortcode' ).parent( 'div' ).css( 'width', 'auto' );
+  formNewsletter.on('submit', function (event) {
+    event.preventDefault();
 
-	/**
-	 * Odin Core shortcodes
-	 */
+    let responseText = document.querySelector('.response');
 
-	// Tabs.
-	$( '.odin-tabs a' ).click(function(e) {
-		e.preventDefault();
-		$(this).tab( 'show' );
-	});
+    const url =
+      'https://assets.mailerlite.com/jsonp/321590/forms/102787660366481364/subscribe';
 
-	// Tooltip.
-	$( '.odin-tooltip' ).tooltip();
+    let formData = $(this);
 
+    $.ajax({
+      url: url,
+      type: 'POST',
+      data: formData.serialize(),
+      dataType: 'json',
+      success: function (data) {
+        responseText.innerHTML = 'E-mail cadastrado';
+      },
+      error: function (data) {
+        responseText.innerHTML = 'Ocorreu um erro, tente novamente';
+      }
+    });
+  });
 });

@@ -1,0 +1,42 @@
+// ====================================================
+// Newsletter
+// ====================================================
+
+.c-newsletter {
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  margin: 3rem 0 0 0;
+  padding: 1.5rem 0;
+}
+
+.c-newsletter__form {
+  padding: 2rem 0;
+
+  &-field {
+    min-width: 80%;
+
+    &:first-child {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.c-newsletter-container {
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.c-newsletter__form-button {
+  background: var(--pulis-color-wheat);
+  color: var(--pulis-color-black);
+  font-weight: 600;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background: transparent;
+    border: 1px solid var(--pulis-color-wheat);
+    color: var(--pulis-color-white);
+  }
+}

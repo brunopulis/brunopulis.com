@@ -8,9 +8,16 @@
  * @since 1.9.0
  */
 ?>
-<section id="comments" class="content-wrap" itemscope itemtype="http://schema.org/Comment">
-	<?php if ( post_password_required() ) : ?>
-		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view all comments.', 'odin' ); ?></p>
+<section  class="content-wrap" id="comments" itemscope itemtype="http://schema.org/Comment">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <?php if ( post_password_required() ) : ?>
+          <p class="nopassword">
+            <?php _e( 'This post is password protected. Enter the password to view all comments.', 'odin' ); ?>
+          </p>
+      </div>
+    </div>
 </section><!-- #comments -->
 		<?php
 		return;
@@ -70,4 +77,6 @@
 			'class_submit' 			=> 'submit btn btn-default'
 		));
 	?>
+    </div>
+  </div>
 </section><!-- #comments -->

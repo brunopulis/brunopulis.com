@@ -1,0 +1,33 @@
+.pill {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: .5rem;
+  border: 1px solid var(--pulis-card-background-color);
+  background: transparent;
+  color: var(--pulis-white);
+  font-weight: 700;
+  font-size: clamp(.88rem,.83rem + .24vw,1rem);
+  line-height: 1;
+  text-decoration: none;
+  text-decoration-color: currentcolor;
+  text-transform: capitalize;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background: var(--pulis-wheat);
+    color: var(--pulis-black);
+    text-decoration: none;
+  }
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 45rem;
+  margin: 0 auto;
+    margin-top: 0px;
+  gap: .3rem;
+}

@@ -1,0 +1,48 @@
+// =================================================================
+// Functions
+// =================================================================
+
+$browser-context: 16; // Default
+
+/// Convert px to em
+///
+/// @author Bruno Pulis <hello@brunopulis.com>
+/// @group helpers
+/// @param {Pixel | Number} $pixel
+/// @example em
+///     em(16);
+@function em($pixels, $context: $browser-context) {
+	@return calc($pixels/$context) + em;
+}
+
+
+/**
+ #rem
+ */
+@function rem($pixels, $context: $browser-context) {
+	@return calc($pixels/$context) + rem;
+}
+
+
+/**
+ #px
+ */
+@function px($target, $context: $browser-context) {
+	@return calc($target*$context) + px;
+}
+
+
+/**
+ #Return a number without a unit
+ */
+@function number($target, $context: $browser-context) {
+	@return calc($target/$context);
+}
+
+
+/**
+ #Remove any unit present to return a unitless number
+ */
+@function unitless($number) {
+	@return calc($number / ($number * 0 + 1));
+}

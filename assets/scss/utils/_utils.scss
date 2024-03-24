@@ -1,0 +1,42 @@
+//===============================================
+// Utils
+//===============================================
+
+.skip-to-content {
+  z-index: 999;
+  position: absolute;
+  top: calc(var(--pico-spacing)* .75);
+  left: calc(var(--pico-spacing)* .75);
+  transform: translateY(-1000%);
+  --pico-box-shadow: var(--pico-card-box-shadow);
+  opacity: 0;
+}
+
+.screen-reader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container--small {
+  max-width: 850px;
+  margin: 0 auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.support-me {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+}
+
+.no-article .grid {
+  grid-template-columns: 2fr 1fr;
+}

@@ -1,0 +1,86 @@
+// ========================================================
+// Body
+// ========================================================
+
+html {
+	height: 100%;
+}
+
+/**
+ Typographical styles for fonts are in 40-base/_typography.scss
+ */
+body {
+	background-color: $body-bg;
+	color: $body-color;
+	min-height: 100%;
+	overflow-x: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/**
+Styles needed for a sticky footer
+ */
+.grid-wrap {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr auto;
+	min-height: 100vh;
+}
+
+main {
+  padding: 3rem 0;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 1rem;
+
+  h2 {
+    max-width: 22ch;
+  }
+
+  &--left {
+    justify-content: flex-start;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: var(--pulis-wheat);
+  }
+}
+
+svg {
+	fill: currentColor;
+	height: auto;
+}
+
+svg:not([class]) {
+	width: 100%;
+}
+
+.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 0.07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+
+.entry-header > .entry-meta,
+.archive-header {
+  padding-bottom: 2rem;
+}
+

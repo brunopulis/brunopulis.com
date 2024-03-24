@@ -232,14 +232,14 @@ function odin_breadcrumbs( $homepage = '' ) {
 	! empty( $homepage ) || $homepage = __( 'Home', 'odin' );
 
 	// Default html.
-	$current_before = '<li class="active">';
+	$current_before = '<li class="active" aria-current="page">';
 	$current_after  = '</li>';
 
 	if ( ! is_home() && ! is_front_page() || is_paged() ) {
 
 		// First level.
-		echo '<ol id="breadcrumbs" class="breadcrumb">';
-		echo '<li><a href="' . home_url() . '" rel="nofollow">' . $homepage . '</a></li>';
+		echo '<nav><ol  class="breadcrumb" id="breadcrumbs">';
+		echo '<li class="breadcrumb-item"><a href="' . home_url() . '" rel="nofollow">' . $homepage . '</a></li>';
 
 		// Single post.
 		if ( is_single() && ! is_attachment() ) {
@@ -381,7 +381,7 @@ function odin_breadcrumbs( $homepage = '' ) {
 		} elseif ( is_author() ) {
 			$userdata = get_userdata( $author );
 
-			echo $current_before . __( 'Posted by', 'odin' ) . ' ' . $userdata->display_name . $current_after;
+			echo $current_before . __( 'Postador por', 'odin' ) . ' ' . $userdata->display_name . $current_after;
 
 		// Archives per days.
 		} elseif ( is_day() ) {
@@ -439,7 +439,7 @@ function odin_breadcrumbs( $homepage = '' ) {
 			echo ' (' . sprintf( __( 'Page %s', 'abelman' ), get_query_var( 'paged' ) ) . ')';
 		}
 
-		echo '</ol>';
+		echo '</ol></nav>';
 	}
 }
 
