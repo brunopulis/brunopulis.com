@@ -12043,12 +12043,11 @@ svg:not([class]) {
   padding-bottom: 2rem;
 }
 
-/*------------------------------------*\
-    #Lists
-\*------------------------------------*/
-/**
-Remove default list styles on lists with a class name (e.g. 'nav-list')
- */
+ol,
+ul {
+  list-style: none;
+}
+
 ol[class],
 ul[class] {
   list-style: none;
@@ -12060,7 +12059,7 @@ ol:not([class]),
 ol.counter {
   margin-block-end: 1em;
   margin-block-start: 1em;
-  padding-inline-start: 2.4em;
+  padding-inline-start: 0;
 }
 ul:not([class]) > * + *,
 ul:not([class]) li ul,
@@ -12082,9 +12081,6 @@ ol.counter ::marker {
   display: block;
 }
 
-/**
-Description lists / Definition lists
- */
 dl {
   margin-block-end: 1em;
   margin-block-start: 1em;
@@ -12287,6 +12283,30 @@ input[type=submit].button {
   margin: 15px 0;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 10vw;
+}
+
+.button__cta {
+  border-radius: var(--pulis-border-radius);
+  text-decoration: none;
+}
+
+.button--wheat {
+  background: var(--pulis-color-wheat);
+  border: 1px solid var(--pulis-color-wheat);
+  color: var(--pulis-color-black) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all ease 0.2s;
+}
+
 .submit {
   background: wheat;
   color: black;
@@ -12308,6 +12328,7 @@ input[type=submit].button {
   border-radius: var(--pulis-border-radius);
   background: var(--pulis-card-background-color);
   box-shadow: var(--pulis-card-box-shadow);
+  min-height: 30vh;
 }
 
 .c-card__body {
@@ -12317,7 +12338,23 @@ input[type=submit].button {
 }
 
 .c-card__title {
+  color: var(--pulis-color-wheat);
   margin-bottom: var(--pulis-block-spacing-horizontal);
+  font-size: 1.5625rem;
+  padding: 1.5rem 1.75rem 1.5rem 0;
+  border-bottom: 1px solid var(--pulis-color-wheat);
+}
+
+.c-card__link {
+  color: var(--pulis-color-wheat);
+  text-decoration: none;
+}
+.c-card__link:hover, .c-card__link:focus {
+  text-decoration: none;
+}
+.c-card__link:focus-visible {
+  background: var(--pulis-color-wheat);
+  color: var(--pulis-color-black);
 }
 
 .c-card__time {
@@ -12351,13 +12388,9 @@ input[type=submit].button {
 .nav-link {
   color: #fff;
 }
-.nav-link:hover, .nav-link:focus {
-  color: var(--pulis-wheat);
+.nav-link:hover, .nav-link:focus, .nav-link:focus-visible {
+  color: var(--pulis-color-wheat);
   text-decoration: underline;
-}
-
-:focus-visible {
-  outline: 1px solid var(--pulis-wheat);
 }
 
 .c-newsletter {
