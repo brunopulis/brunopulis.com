@@ -8,6 +8,7 @@
   border-radius: var(--pulis-border-radius);
   background: var(--pulis-card-background-color);
   box-shadow: var(--pulis-card-box-shadow);
+  min-height: 30vh;
 }
 
 .c-card__body {
@@ -17,7 +18,26 @@
 }
 
 .c-card__title {
+  color: var(--pulis-color-wheat);
   margin-bottom: var(--pulis-block-spacing-horizontal);
+  font-size: rem(25);
+  padding: 1.5rem 1.75rem 1.5rem 0;
+  border-bottom: 1px solid var(--pulis-color-wheat);
+}
+
+.c-card__link {
+  color: var(--pulis-color-wheat);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    background: var(--pulis-color-wheat);
+    color: var(--pulis-color-black);
+  }
 }
 
 .c-card__time {

@@ -10,18 +10,20 @@
   text-align: center;
   margin: 0 auto;
   max-width: 10vw;
+}
 
-  &--letters {
-    background: var(--pulis-color-wheat);
-    color: var(--pulis-color-black);
-    transition: all ease .2s;
+.button__cta {
+  border-radius: var(--pulis-border-radius);
+  text-decoration: none;
+}
 
-    &:focus,
-    &:focus-visible,
-    &:hover {
-
-    }
-  }
+.button--wheat {
+  background: var(--pulis-color-wheat);
+  border: 1px solid var(--pulis-color-wheat);
+  color: var(--pulis-color-black) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all ease .2s;
 }
 
 .submit {
