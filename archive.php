@@ -51,8 +51,9 @@ get_header(); ?>
             </p>
           </article>
         <?php endwhile; ?>
-        <?php odin_paging_nav(); ?>
+
         <?php wp_reset_postdata(); ?>
+        <?php wp_pagenavi(); ?>
         <?php endif; ?>
       </div>
     </div>

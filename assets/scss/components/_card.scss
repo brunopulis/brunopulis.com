@@ -25,6 +25,16 @@
   border-bottom: 1px solid var(--pulis-color-wheat);
 }
 
+.c-card--donate {
+  min-height: auto;
+}
+
+.c-card__title--donate {
+  padding: 0;
+  color: var(--pulis-color-black);
+  border-bottom: none;
+}
+
 .c-card__link {
   color: var(--pulis-color-wheat);
   text-decoration: none;
@@ -58,4 +68,9 @@
   width: 80%;
   border: 1px solid;
 background: var(--pulis-color-white);
+}
+
+.donate {
+  color: var(--pulis-color-black) !important;
+  text-decoration: underline;
 }

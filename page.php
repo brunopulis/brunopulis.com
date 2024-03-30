@@ -15,6 +15,7 @@ get_header(); ?>
 <main id="content">
   <div class="container">
     <div class="row">
+      <div class="col-md-8 mx-auto">
       <?php
         while ( have_posts() ) : the_post();
           get_template_part( 'content', 'page' );
@@ -24,6 +25,7 @@ get_header(); ?>
           endif;
         endwhile;
       ?>
+      </div>
     </div>
   </div>
 </main>

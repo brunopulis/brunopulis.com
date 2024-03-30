@@ -2,3 +2,22 @@
   background: $body-bg;
   padding: 0.8rem 0;
 }
+
+.sidebar {
+  border-left: .06rem solid var(--soft-gray);
+    width: 25.75rem;
+    min-width: 25.75rem;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    position: relative;
+}
+
+.post-date {
+  text-transform: uppercase;
+  color: var(--pulis-color-wheat);
+}
+
+.entry-content {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}

@@ -10,11 +10,7 @@
 get_header(); ?>
 
 <main id="content">
-  <?php
-    while ( have_posts() ) : the_post();
-      get_template_part( 'content', 'blog' );
-    endwhile;
-  ?>
+  <?php get_template_part( 'content', 'blog' ); ?>
 </main>
 <?php
 get_footer();

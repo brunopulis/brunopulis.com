@@ -12043,107 +12043,12 @@ svg:not([class]) {
   padding-bottom: 2rem;
 }
 
-ol,
-ul {
-  list-style: none;
+.entry-meta {
+  padding: 1rem 0;
 }
-
-ol[class],
-ul[class] {
-  list-style: none;
-  padding: 0;
-}
-
-ul:not([class]),
-ol:not([class]),
-ol.counter {
-  margin-block-end: 1em;
-  margin-block-start: 1em;
-  padding-inline-start: 0;
-}
-ul:not([class]) > * + *,
-ul:not([class]) li ul,
-ul:not([class]) li ol,
-ol:not([class]) > * + *,
-ol:not([class]) li ul,
-ol:not([class]) li ol,
-ol.counter > * + *,
-ol.counter li ul,
-ol.counter li ol {
-  margin-top: 0.75em;
-}
-
-ol.counter ::marker {
-  content: counters(list-item, ".") ". ";
-}
-
-.clean-list li {
-  display: block;
-}
-
-dl {
-  margin-block-end: 1em;
-  margin-block-start: 1em;
-}
-dl dt {
-  font-weight: bold;
-}
-dl dd + dt {
-  margin-top: 0.5em;
-}
-dl dt + dd,
-dl dd + dd {
-  margin-top: 0.25em;
-}
-
-dl.inline div {
-  align-items: baseline;
-  display: flex;
-  flex-wrap: wrap;
-}
-dl.inline div dt, dl.inline div dd {
-  margin-inline-start: 0;
-}
-dl.inline div dt::after {
-  content: ": ";
-}
-dl.inline div dd:not(:last-child):after {
-  content: ", ";
-}
-
-@supports (grid-row-start: auto) {
-  dl.grid {
-    column-gap: 1rem;
-    display: grid;
-    grid-template-columns: max-content;
-    grid-template-rows: 1fr;
-    row-gap: 1rem;
-  }
-  dl.grid dd + dt,
-  dl.grid dt + dd,
-  dl.grid dd + dd {
-    margin-top: 0;
-  }
-  dl.grid dt {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-  dl.grid dd {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-}
-
-.category__item {
-  margin-bottom: var(--pulis-block-spacing-vertical);
-  padding: var(--pulis-block-spacing-vertical) var(--pulis-block-spacing-horizontal);
-  border-radius: var(--pulis-border-radius);
-  background: var(--pulis-card-background-color);
-  box-shadow: var(--pulis-card-box-shadow);
-}
-
-.category__link {
-  font-size: 1.5rem;
+.entry-meta .cat-links a {
+  color: var(--pulis-color-wheat);
+  text-decoration: underline;
 }
 
 /*------------------------------------*\
@@ -12345,6 +12250,16 @@ input[type=submit].button {
   border-bottom: 1px solid var(--pulis-color-wheat);
 }
 
+.c-card--donate {
+  min-height: auto;
+}
+
+.c-card__title--donate {
+  padding: 0;
+  color: var(--pulis-color-black);
+  border-bottom: none;
+}
+
 .c-card__link {
   color: var(--pulis-color-wheat);
   text-decoration: none;
@@ -12375,6 +12290,11 @@ input[type=submit].button {
   width: 80%;
   border: 1px solid;
   background: var(--pulis-color-white);
+}
+
+.donate {
+  color: var(--pulis-color-black) !important;
+  text-decoration: underline;
 }
 
 .navbar-brand {
@@ -12430,6 +12350,25 @@ input[type=submit].button {
 .site-header {
   background: #13171f;
   padding: 0.8rem 0;
+}
+
+.sidebar {
+  border-left: 0.06rem solid var(--soft-gray);
+  width: 25.75rem;
+  min-width: 25.75rem;
+  padding-top: 4rem;
+  padding-left: 4rem;
+  position: relative;
+}
+
+.post-date {
+  text-transform: uppercase;
+  color: var(--pulis-color-wheat);
+}
+
+.entry-content {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .footer-content {

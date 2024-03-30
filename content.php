@@ -9,9 +9,14 @@
  */
 ?>
 
-<div class="col-xs-12 col-sm-12 col-md-8 mx-auto">
+<div class="col-xs-12 col-sm-12 col-md-8">
   <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
     <div class="entry-header">
+      <p class="post-date">
+        <time class="time" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+          <?php echo get_the_date('F j, Y'); ?>
+        </time>
+      </p>
       <?php
         if ( is_single() ) :
           the_title( '<h1 class="entry-title">', '</h1>' );
@@ -19,13 +24,7 @@
           the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
         endif;
       ?>
-
-      <?php if ( 'post' == get_post_type() ) : ?>
-        <div class="entry-meta">
-          <?php odin_posted_on(); ?>
-        </div><!-- .entry-meta -->
-      <?php endif; ?>
-    </div><!-- .entry-header -->
+    </div>
 
     <?php if ( is_search() ) : ?>
       <div class="entry-summary">
@@ -60,4 +59,7 @@
       <?php get_template_part( 'template-parts/newsletter' ); ?>
     <?php endif; ?>
   </article>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-4">
+  <?php get_sidebar(); ?>
 </div>

@@ -84,3 +84,11 @@ svg:not([class]) {
   padding-bottom: 2rem;
 }
 
+.entry-meta {
+  padding: 1rem 0;
+
+  .cat-links a {
+    color: var(--pulis-color-wheat);
+    text-decoration: underline;
+  }
+}

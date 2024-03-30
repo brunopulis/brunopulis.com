@@ -24,6 +24,7 @@ get_header(); ?>
               <li class="category__item"><a href="<?php the_permalink() ?>" class="category__link" rel="bookmark"><?php the_title(); ?></a></li>
             <?php endwhile; ?>
           </ul>
+          <?php wp_pagenavi(); ?>
         <?php else: ?>
           <p>Desculpe, não encontramos nenhum post.</p>
         <?php endif; ?>
