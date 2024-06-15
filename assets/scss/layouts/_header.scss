@@ -3,6 +3,26 @@
   padding: 0.8rem 0;
 }
 
+.navbar-brand {
+  color: var(--pulis-color-blue);
+  font-size: toRem(24);
+  font-weight: var(--pulis-font-weight-900);
+  line-height: toRem(32);
+  font-family: var(--pulis-font-family-roboto);
+  letter-spacing: 0;
+}
+
+.nav-item.active > .nav-link {
+  color: var(--pulis-color-blue);
+  font-weight: var(--pulis-font-weight-600);
+  text-decoration: underline;
+  padding-bottom: 1px;
+}
+
+.nav-link {
+  font-size: toRem(16);
+}
+
 .sidebar {
   border-left: .06rem solid var(--soft-gray);
     width: 25.75rem;

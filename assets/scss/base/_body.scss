@@ -4,12 +4,13 @@
 
 html {
 	height: 100%;
-  font-size: rem(20);
+  font-size: toRem(16);
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-	background-color: $body-bg;
-	color: $body-color;
+	background-color: var(--bs-body-bg);
+	color: var(--pulis-color-black);
 	min-height: 100%;
 	overflow-x: hidden;
 	-moz-osx-font-smoothing: grayscale;

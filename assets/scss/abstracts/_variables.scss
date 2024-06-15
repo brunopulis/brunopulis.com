@@ -1,14 +1,25 @@
-$body-bg: #13171f;
-$body-color: #fff;
-
 :root {
+  --pulis-color-white: #ffffff;
+  --pulis-color-black: #0a0a0a;
   --pulis-color-blue: #274c77;
+  --pulis-color-grey: #e7ecef;
+  --pulis-color-pink: #E6427E;
+  --pulis-color-magenta: #782761;
+  --transition: all ease-in .3s;
   --pulis-color-tiny-blue: #6096ba;
   --pulis-color-orange: #ea9010;
-  --pulis-color-black: #0a0a0a;
-  --pulis-color-white: #ffffff;
+  --bs-body-bg: var(--pulis-color-white);
+  --pulis-font-family-roboto: Roboto;
+  --pulis-font-style-normal: normal;
+  --pulis-font-weight-600: 600;
+  --pulis-font-weight-900: 900;
+  --pulis-font-size-54: 54px;
+  --pulis-character-spacing-0: 0px;
+  --pulis-line-spacing-72: 72px
+
+
   --pulis-color-wheat: #f5deb3;
-  --pulis-color-grey: #e7ecef;
+
   --bs-nav-link-color: --color-white;
   --pulis-block-spacing-vertical: 1rem;
   --pulis-block-spacing-horizontal: 1rem;
@@ -17,13 +28,16 @@ $body-color: #fff;
   --pulis-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(7, 9, 12, 0.01698), 0.0335rem 0.067rem 0.402rem rgba(7, 9, 12, 0.024), 0.0625rem 0.125rem 0.75rem rgba(7, 9, 12, 0.03), 0.1125rem 0.225rem 1.35rem rgba(7, 9, 12, 0.036), 0.2085rem 0.417rem 2.502rem rgba(7, 9, 12, 0.04302), 0.5rem 1rem 6rem rgba(7, 9, 12, 0.06), 0 0 0 0.0625rem rgba(7, 9, 12, 0.015);
   --pulis-card-box-shadow: var(--pulis-box-shadow);
   --pulis-typography-spacing-vertical: 1rem;
-
+  --facebook: #3b5998;
+  --instagram: #405de6;
+  --linkedin: #0077b5;
+  --pinterest: #bd081c;
+  --twitter: #1da1f2;
+  --whatsapp: #25d366;
+  --youtube: #ff0000;
 }
 
-$black: #000;
-$off-black: #111; /* 1 */
-$white: #fff;
-$off-white: #fafafa; /* 1 */
+
 
 $maroon: #85144b;
 $red: #ff4136;

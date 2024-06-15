@@ -59,12 +59,12 @@
 .c-card__title {
   color: var(--pulis-color-wheat);
   margin-bottom: var(--pulis-block-spacing-horizontal);
-  font-size: rem(25);
+  font-size: totoRem(25);
   padding: 1.5rem 1.75rem 1.5rem 0;
 
   @media(max-width: 480px) {
     padding: 0;
-    font-size: rem(16);
+    font-size: totoRem(16);
   }
 }
 
@@ -128,7 +128,7 @@
   }
 
   li > article > a {
-    font-size: rem(24);
+    font-size: toRem(24);
   }
 }
 

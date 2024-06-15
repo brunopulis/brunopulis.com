@@ -2,3 +2,28 @@
 // Hero
 // =======================================================
 
+.c-hero {
+  background: var(--pulis-color-grey);
+  padding: 40px 0;
+  min-height: 440px;
+}
+
+.c-hero__lead {
+  font-size: toRem(24);
+  font-weight: 500;
+  line-height: toRem(32);
+  padding-bottom: 33px;
+}
+
+.c-hero__link {
+  color: var(--pulis-color-black);
+  font-size: toRem(24);
+  font-weight: 500;
+  line-height: toRem(32);
+  text-decoration: underline;
+  transition: var(--transition);
+  &:hover,
+  &:focus {
+    color: var(--pulis-color-blue);
+  }
+}

@@ -4,9 +4,9 @@
 
 .button {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  border-radius: rem(5);
+  border-radius: toRem(5);
   font-weight: 600;
-  padding: rem(5) rem(15);
+  padding: toRem(5) toRem(15);
 
   @media(max-width: 480px) {
     max-width: 100%;
@@ -25,9 +25,9 @@
 
 .gwolle-gb-write-button .button {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  border-radius: rem(5);
+  border-radius: toRem(5);
   font-weight: 600;
-  padding: rem(5) rem(15);
+  padding: toRem(5) toRem(15);
 
   &:focus-visible {
     border: 1px solid var(--pulis-color-wheat);
