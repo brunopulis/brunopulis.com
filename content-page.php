@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
 	<div class="entry-content">
 		<?php
 			the_content();

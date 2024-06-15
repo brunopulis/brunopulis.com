@@ -4,11 +4,9 @@
 
 html {
 	height: 100%;
+  font-size: rem(20);
 }
 
-/**
- Typographical styles for fonts are in 40-base/_typography.scss
- */
 body {
 	background-color: $body-bg;
 	color: $body-color;
@@ -18,43 +16,31 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-/**
-Styles needed for a sticky footer
- */
-.grid-wrap {
-	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: 1fr auto;
-	min-height: 100vh;
-}
-
 main {
   padding: 3rem 0;
 }
 
 .headline {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  padding: 1rem 0;
   margin-bottom: 1rem;
 
   h2 {
     max-width: 22ch;
   }
 
-  &--left {
-    justify-content: flex-start;
+  @media(max-width: 480px) {
+    padding: 0;
   }
 }
 
 a {
-  color: #fff;
-  text-decoration: none;
+  color: var(--pulis-color-white);
+  text-decoration: underline;
 
   &:hover,
   &:focus {
-    text-decoration: underline;
-    color: var(--pulis-wheat);
+    text-decoration: none;
+    color: var(--pulis-color-wheat);
   }
 }
 
@@ -84,3 +70,72 @@ svg:not([class]) {
   padding-bottom: 2rem;
 }
 
+.entry-meta {
+  padding: 1rem 0;
+
+  .cat-links a {
+    color: var(--pulis-color-wheat);
+    text-decoration: underline;
+  }
+}
+
+.entry-content {
+  p {
+    margin-top: 1.5em;
+  }
+
+  ul, ol {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  ul > *+* {
+    margin-top: 1.5em;
+  }
+}
+
+article {
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+
+  li::marker {
+    color: var(--pulis-color-wheat);
+    font-weight: 900;
+  }
+
+  time {
+    margin-top: 1rem;
+  }
+}
+
+blockquote {
+  padding: 2ch;
+  border-left: 7.5px solid var(--wp--preset--color--vivid-red);
+  background-color: #f0f0f0;
+}
+
+blockquote p {
+  color: var(--pulis-color-black);
+  font-weight: 600;
+}
+
+blockquote cite {
+  display: block;
+  font-size: 90%;
+  line-height: 2em;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+  width: 95%;
+}
+
+main [role=note] {
+  background-color: var(--primary-soft);
+  padding: 2%;
+  border-left: 7.5px solid var(--primary-glare);
+  width: 90%;
+  margin: 1.5em auto;
+}

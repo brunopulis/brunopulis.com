@@ -7,17 +7,25 @@
  */
 ?>
 
-<p><strong>Procurando algo especifíco?</strong> Procure entre meus artigos, guias e ferramentas.</p>
-<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-  <div class="grid">
-    <input
-      type="search"
-      name="s"
-      id="s"
-      value="<?php echo get_search_query(); ?>"
-      placeholder="Pesquise nesse site" />
-    </span><!-- /input-group-btn -->
-    </div><!-- /input-group -->
-    <button>Pesquisar</button>
+<form method="get" class="c-search" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+  <fieldset>
+    <legend class="text-center">Procure nos meus artigos</legend>
+
+    <div class="row g-3">
+      <div class="col-sm-7">
+        <input
+          type="search"
+          name="s"
+          class="form-control form-control-l"
+          id="s"
+          value="<?php echo get_search_query(); ?>"
+          placeholder="Pesquise nesse site" />
+        </span><!-- /input-group-btn -->
+      </div><!-- /input-group -->
+      <div class="col-sm-5">
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+      </div>
+    </div>
+  </fieldset>
 </form>
 

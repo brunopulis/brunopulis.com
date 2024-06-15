@@ -48,20 +48,18 @@
                 'theme_location' => 'main-menu',
                 'depth'          => 2,
                 'container'      => false,
-                'menu_class'     => 'navbar-nav flex-row flex-wrap mx-auto',
+                'menu_class'     => 'navbar-nav mx-auto',
                 'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
                 'walker'         => new Odin_Bootstrap_Nav_Walker()
               )
             );
           ?>
 
-          <form method="get" class="d-flex" action="<?php echo esc_url( home_url( '/pesquisa' ) ); ?>" role="search">
-            <label for="navbar-search" class="visually-hidden">
-              <?php _e( 'Search:', 'odin' ); ?>
-            </label>
-            <input type="search" value="<?php echo get_search_query(); ?>" placeholder="digite sua pesquisa" class="form-control me-2" name="s" id="navbar-search" />
-            <button type="submit" class="btn btn-primary"><?php _e( 'Pesquisar', 'odin' ); ?></button>
-          </form>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item cta-btn">
+              <a class="nav-link button__cta button--wheat" href="https://subscribepage.io/cartas">Assinar newsletter</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

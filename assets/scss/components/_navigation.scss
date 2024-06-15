@@ -16,12 +16,13 @@
   color: $body-color;
 
   &:hover,
-  &:focus {
-    color: var(--pulis-wheat);
+  &:focus,
+  &:focus-visible {
+    color: var(--pulis-color-wheat);
     text-decoration: underline;
   }
 }
 
-:focus-visible {
-  outline: 1px solid var(--pulis-wheat);
+.navbar-toggler {
+  background-color: var(--pulis-color-wheat);
 }

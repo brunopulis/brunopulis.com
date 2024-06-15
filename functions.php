@@ -25,11 +25,11 @@ if ( ! isset( $content_width ) ) {
  */
 require_once get_template_directory() . '/core/classes/class-bootstrap-nav.php';
 require_once get_template_directory() . '/core/classes/class-shortcodes.php';
-//require_once get_template_directory() . '/core/classes/class-shortcodes-menu.php';
+require_once get_template_directory() . '/core/classes/class-shortcodes-menu.php';
 require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.php';
 // require_once get_template_directory() . '/core/classes/class-theme-options.php';
-// require_once get_template_directory() . '/core/classes/class-options-helper.php';
-// require_once get_template_directory() . '/core/classes/class-post-type.php';
+require_once get_template_directory() . '/core/classes/class-options-helper.php';
+require_once get_template_directory() . '/core/classes/class-post-type.php';
 // require_once get_template_directory() . '/core/classes/class-taxonomy.php';
 // require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
@@ -37,8 +37,10 @@ require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.p
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
 // require_once get_template_directory() . '/core/classes/class-user-meta.php';
 // require_once get_template_directory() . '/core/classes/class-post-status.php';
-//require_once get_template_directory() . '/core/classes/class-term-meta.php';
+// require_once get_template_directory() . '/core/classes/class-term-meta.php';
 
+// CPT
+require_once get_template_directory() . '/inc/functions/cpt.php';
 /**
  * Odin Widgets.
  */
@@ -52,15 +54,10 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 	 * @since 2.2.0
 	 */
 	function odin_setup_features() {
-
-		/**
-		 * Add support for multiple languages.
-		 */
+    // Add support for multiple languages.
 		load_theme_textdomain( 'odin', get_template_directory() . '/languages' );
 
-		/**
-		 * Register nav menus.
-		 */
+    // Register nav menus.
 		register_nav_menus(
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' )
@@ -71,6 +68,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 * Add post_thumbnails suport.
 		 */
 		add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'letter-thumbnails', 440, 250, true );
 
 		/**
 		 * Add feed link.
@@ -122,9 +120,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			)
 		);
 
-		/**
-		 * Add support for Post Formats.
-		 */
+    // Add support for Post Formats.
 		// add_theme_support( 'post-formats', array(
 		//     'aside',
 		//     'gallery',
@@ -137,10 +133,8 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		//     'chat'
 		// ) );
 
-		/**
-		 * Support The Excerpt on pages.
-		 */
-		// add_post_type_support( 'page', 'excerpt' );
+    // Support The Excerpt on pages.
+		add_post_type_support( 'page', 'excerpt' );
 
 		/**
 		 * Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -222,21 +216,13 @@ function odin_enqueue_scripts() {
 	// Loads Odin main stylesheet.
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 
-	// Html5Shiv
-	wp_enqueue_script( 'html5shiv', $template_url . '/assets/js/html5.js' );
-	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
+  wp_enqueue_script( 'jquery' );
 
 	// General scripts.
-	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-		// Main.
-		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
-	} else {
-		// Grunt main file with Bootstrap, FitVids and others libs.
-		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
-	}
-
-	// Grunt watch livereload in the browser.
-	// wp_enqueue_script( 'odin-livereload', 'http://localhost:35729/livereload.js?snipver=1', array(), null, true );
+  wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/vendor/bootstrap.min.js', array( 'jquery' ) );
+  wp_enqueue_script( 'bootstrap-jquery', $template_url . '/assets/js/vendor/jquery.min.js' );
+  wp_enqueue_script( 'custom-scripts', $template_url . '/assets/js/custom/main.js', '', '', true );
+	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
 
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
@@ -311,3 +297,5 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/functions.php';
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
+
+

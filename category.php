@@ -13,7 +13,7 @@ get_header(); ?>
 <main id="primary" class="site-content">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 mx-auto">
+      <div class="col-md-8">
         <?php if ( have_posts() ) : ?>
           <header class="archive-header">
             <h1 class="archive-title"><?php the_archive_title(); ?></h1>
@@ -24,6 +24,7 @@ get_header(); ?>
               <li class="category__item"><a href="<?php the_permalink() ?>" class="category__link" rel="bookmark"><?php the_title(); ?></a></li>
             <?php endwhile; ?>
           </ul>
+          <?php wp_pagenavi(); ?>
         <?php else: ?>
           <p>Desculpe, não encontramos nenhum post.</p>
         <?php endif; ?>

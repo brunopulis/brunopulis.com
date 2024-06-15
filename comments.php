@@ -11,7 +11,7 @@
 <section  class="content-wrap" id="comments" itemscope itemtype="http://schema.org/Comment">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 mx-auto">
+      <div class="col-xs-12 col-sm-12 col-md-8">
         <?php if ( post_password_required() ) : ?>
           <p class="nopassword">
             <?php _e( 'This post is password protected. Enter the password to view all comments.', 'odin' ); ?>
