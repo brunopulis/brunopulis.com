@@ -2,19 +2,58 @@
 // Card
 // ===========================================
 
+// TODO: Refactor this
 .c-card {
   margin-bottom: var(--pulis-block-spacing-vertical);
-  padding: var(--pulis-block-spacing-vertical) var(--pulis-block-spacing-horizontal);
+  padding: var(--pulis-block-spacing-vertical) 0;
   border-radius: var(--pulis-border-radius);
   background: var(--pulis-card-background-color);
   box-shadow: var(--pulis-card-box-shadow);
-  min-height: 30vh;
+}
+
+.c-card--transparent {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+
+  .c-card__title {
+    padding: 0;
+    color: var(--pulis-color-white);
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: var(--pulis-color-wheat);
+    }
+  }
+}
+
+.c-card--episode {
+  grid-column-gap: 1.5rem;
+  color: var(--primary--darkblue);
+  border: 1px #000;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-decoration: none;
+  display: flex;
+}
+
+.c-card__episodies {
+  color: var(--light-gray);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Flecha S, sans-serif;
+  font-size: 2rem;
+  display: flex;
 }
 
 .c-card__body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 0 var(--pulis-block-spacing-horizontal);
 }
 
 .c-card__title {
@@ -22,7 +61,18 @@
   margin-bottom: var(--pulis-block-spacing-horizontal);
   font-size: rem(25);
   padding: 1.5rem 1.75rem 1.5rem 0;
-  border-bottom: 1px solid var(--pulis-color-wheat);
+
+  @media(max-width: 480px) {
+    padding: 0;
+    font-size: rem(16);
+  }
+}
+
+.c-card__image {
+  display: block;
+  width: 100%;
+  min-height: 195px;
+  background-size: cover;
 }
 
 .c-card--donate {
@@ -63,6 +113,29 @@
   color: var(--pulis-color-black);
 }
 
+.c-card--blog {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+
+  li {
+    margin-bottom: 3rem;
+  }
+
+  li > article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li > article > a {
+    font-size: rem(24);
+  }
+}
+
+.c-card__list {
+  margin-bottom: 3rem;
+}
+
 #webmention-source {
   padding: 10px;
   width: 80%;
@@ -73,4 +146,11 @@ background: var(--pulis-color-white);
 .donate {
   color: var(--pulis-color-black) !important;
   text-decoration: underline;
+}
+
+
+.c-card__episodies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

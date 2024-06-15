@@ -1,6 +1,8 @@
-<section class="categories">
-  <div class="headline">
-    <h2 class="display-4">Explore as categorias</h2>
+<section class="categories" id="categories" aria-labelledby="categories-title">
+  <div class="headline p-4">
+    <div class="container">
+      <h2 id="categories-title text-center">Explore as categorias</h2>
+    </div>
   </div>
 
   <div class="container">

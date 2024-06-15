@@ -18,10 +18,8 @@ get_header(); ?>
 
 <main id="content">
   <?php get_template_part( 'template-parts/home', 'hero' ); ?>
-  <?php get_template_part( 'template-parts/home', 'services' ); ?>
-  <?php get_template_part( 'template-parts/home', 'letters' ); ?>
   <?php get_template_part( 'template-parts/home', 'blog' ); ?>
-  <?php get_template_part( 'template-parts/home', 'categories' ); ?>
+  <?php get_template_part( 'template-parts/home', 'letters' ); ?>
 </main>
 <?php
 get_footer();

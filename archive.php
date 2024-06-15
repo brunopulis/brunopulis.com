@@ -18,10 +18,10 @@
 
 get_header(); ?>
 
-<main id="content" class="">
+<main id="content">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 mx-auto">
+      <div class="col-md-8">
         <header class="page-header">
           <h1><?php the_archive_title(); ?></h1>
         </header>

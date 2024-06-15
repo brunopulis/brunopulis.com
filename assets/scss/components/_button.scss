@@ -3,18 +3,41 @@
 // ====================================================
 
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: rem(5);
   font-weight: 600;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 10vw;
+  padding: rem(5) rem(15);
+
+  @media(max-width: 480px) {
+    max-width: 100%;
+  }
 }
 
-.button__cta {
-  border-radius: var(--pulis-border-radius);
-  text-decoration: none;
+.button--center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+// Button sizes
+// .button--small {}
+// .button-medium {}
+// .button--large {}
+
+.gwolle-gb-write-button .button {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: rem(5);
+  font-weight: 600;
+  padding: rem(5) rem(15);
+
+  &:focus-visible {
+    border: 1px solid var(--pulis-color-wheat);
+  }
+
+  @media(max-width: 480px) {
+    max-width: 100%;
+  }
+
+  @extend .button--wheat;
 }
 
 .button--wheat {
@@ -25,6 +48,13 @@
   text-decoration: none;
   transition: all ease .2s;
 }
+
+.button__cta {
+  border-radius: var(--pulis-border-radius);
+  text-decoration: none;
+}
+
+
 
 .submit {
   background: wheat;

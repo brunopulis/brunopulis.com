@@ -28,8 +28,8 @@ require_once get_template_directory() . '/core/classes/class-shortcodes.php';
 require_once get_template_directory() . '/core/classes/class-shortcodes-menu.php';
 require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.php';
 // require_once get_template_directory() . '/core/classes/class-theme-options.php';
-// require_once get_template_directory() . '/core/classes/class-options-helper.php';
-// require_once get_template_directory() . '/core/classes/class-post-type.php';
+require_once get_template_directory() . '/core/classes/class-options-helper.php';
+require_once get_template_directory() . '/core/classes/class-post-type.php';
 // require_once get_template_directory() . '/core/classes/class-taxonomy.php';
 // require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
@@ -37,8 +37,10 @@ require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.p
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
 // require_once get_template_directory() . '/core/classes/class-user-meta.php';
 // require_once get_template_directory() . '/core/classes/class-post-status.php';
-//require_once get_template_directory() . '/core/classes/class-term-meta.php';
+// require_once get_template_directory() . '/core/classes/class-term-meta.php';
 
+// CPT
+require_once get_template_directory() . '/inc/functions/cpt.php';
 /**
  * Odin Widgets.
  */
@@ -52,15 +54,10 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 	 * @since 2.2.0
 	 */
 	function odin_setup_features() {
-
-		/**
-		 * Add support for multiple languages.
-		 */
+    // Add support for multiple languages.
 		load_theme_textdomain( 'odin', get_template_directory() . '/languages' );
 
-		/**
-		 * Register nav menus.
-		 */
+    // Register nav menus.
 		register_nav_menus(
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' )
@@ -71,6 +68,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 * Add post_thumbnails suport.
 		 */
 		add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'letter-thumbnails', 440, 250, true );
 
 		/**
 		 * Add feed link.
@@ -122,9 +120,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			)
 		);
 
-		/**
-		 * Add support for Post Formats.
-		 */
+    // Add support for Post Formats.
 		// add_theme_support( 'post-formats', array(
 		//     'aside',
 		//     'gallery',
@@ -137,9 +133,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		//     'chat'
 		// ) );
 
-		/**
-		 * Support The Excerpt on pages.
-		 */
+    // Support The Excerpt on pages.
 		add_post_type_support( 'page', 'excerpt' );
 
 		/**
@@ -222,21 +216,13 @@ function odin_enqueue_scripts() {
 	// Loads Odin main stylesheet.
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 
-	// Html5Shiv
-	wp_enqueue_script( 'html5shiv', $template_url . '/assets/js/html5.js' );
-	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
+  wp_enqueue_script( 'jquery' );
 
 	// General scripts.
-	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-		// Main.
-		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
-	} else {
-		// Grunt main file with Bootstrap, FitVids and others libs.
-		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
-	}
-
-	// Grunt watch livereload in the browser.
-	// wp_enqueue_script( 'odin-livereload', 'http://localhost:35729/livereload.js?snipver=1', array(), null, true );
+  wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/vendor/bootstrap.min.js', array( 'jquery' ) );
+  wp_enqueue_script( 'bootstrap-jquery', $template_url . '/assets/js/vendor/jquery.min.js' );
+  wp_enqueue_script( 'custom-scripts', $template_url . '/assets/js/custom/main.js', '', '', true );
+	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
 
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
@@ -312,70 +298,4 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
 
-function wpbeginner_numeric_posts_nav() {
 
-    if( is_singular() )
-        return;
-
-    global $wp_query;
-
-    /** Stop execution if there's only 1 page */
-    if( $wp_query->max_num_pages <= 1 )
-        return;
-
-    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-    $max   = intval( $wp_query->max_num_pages );
-
-    /** Add current page to the array */
-    if ( $paged >= 1 )
-        $links[] = $paged;
-
-    /** Add the pages around the current page to the array */
-    if ( $paged >= 3 ) {
-        $links[] = $paged - 1;
-        $links[] = $paged - 2;
-    }
-
-    if ( ( $paged + 2 ) <= $max ) {
-        $links[] = $paged + 2;
-        $links[] = $paged + 1;
-    }
-
-    echo '<nav class="navigation"><ul class="pagination">' . "\n";
-
-    /** Previous Post Link */
-    if ( get_previous_posts_link() )
-        printf( '<li class="page-item">%s</li>' . "\n", get_previous_posts_link() );
-
-    /** Link to first page, plus ellipses if necessary */
-    if ( ! in_array( 1, $links ) ) {
-        $class = 1 == $paged ? ' class="active"' : '';
-
-        printf( '<li%s><a href="%s" class="page-link">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-
-        if ( ! in_array( 2, $links ) )
-            echo '<li>…</li>';
-    }
-
-    /** Link to current page, plus 2 pages in either direction if necessary */
-    sort( $links );
-    foreach ( (array) $links as $link ) {
-        $class = $paged == $link ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
-    }
-
-    /** Link to last page, plus ellipses if necessary */
-    if ( ! in_array( $max, $links ) ) {
-        if ( ! in_array( $max - 1, $links ) )
-            echo '<li>…</li>' . "\n";
-
-        $class = $paged == $max ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
-    }
-
-    /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_next_posts_link() );
-
-    echo '</ul></nav>' . "\n";
-}

@@ -1,15 +1,19 @@
-<section  class="recent-blog-posts mt-5" id="recent-blog-posts">
+<section  class="recent-blog-posts mt-5" aria-labelledby="letters-title">
   <div class="headline">
-    <h2 class="display-4"><em>Pulis Letters</em></h2>
+    <div class="container">
+      <div class="row">
+        <h2 id="letters-title">Pulis Letters</h2>
+        <p class="lead">Insights valiosos sobre acessibilidade, Obsidian e organização digital.</p>
+      </div>
+    </div>
   </div>
 
   <div class="container">
     <ul class="row list-unstyled">
       <?php
         $args = array(
-          'post_type'      => 'post',
+          'post_type'      => 'letters',
           'posts_per_page' => 3,
-          'category__in' => array( get_cat_ID( $post->post_name ), get_cat_ID( 'letters' ) ),
           'order'          => 'DESC'
         );
 
@@ -20,16 +24,16 @@
       ?>
         <li class="col-md-4 mb-5">
           <article class="c-card">
+            <?php if( has_post_thumbnail($letters->ID) ):  ?>
+              <?php $image = wp_get_attachment_url( get_post_thumbnail_id( $letters->ID ), 'letter-thumbnails' ); ?>
+              <figure class="c-card__image" style="background-image: url('<?php echo $image; ?>')"></figure>
+            <?php endif; ?>
             <div class="c-card__body">
               <h3 class="c-card__title">
                 <a href="<?php the_permalink(); ?>" class="c-card__title">
                   <?php the_title(); ?>
                 </a>
               </h3>
-
-              <time class="c-card__time time" datetime="<?php echo get_the_date('Y-m-d'); ?>">
-                <?php echo get_the_date('j F, Y'); ?>
-              </time>
             </div>
           </article>
         </li>

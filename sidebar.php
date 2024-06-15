@@ -10,7 +10,15 @@
 ?>
 
 <aside class="sidebar" id="sidebar" role="complementary">
-  <article class="c-newsletter" style="position: sticky; top: 8rem; ">
+  <?php
+		if ( ! dynamic_sidebar( 'main-sidebar' ) ) {
+			the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );
+			the_widget( 'WP_Widget_Archives', array( 'count' => 0, 'dropdown' => 1 ) );
+			the_widget( 'WP_Widget_Tag_Cloud' );
+		}
+	?>
+
+<article class="c-newsletter">
     <p class="c-newsletter__intro">
       <em>
         Junte-se a <strong>mais de 200 assinantes</strong> e receba dicas sobre acessibilidade, Obsidian e organização digital toda quinta-feira de manhã.

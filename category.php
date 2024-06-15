@@ -13,7 +13,7 @@ get_header(); ?>
 <main id="primary" class="site-content">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 mx-auto">
+      <div class="col-md-8">
         <?php if ( have_posts() ) : ?>
           <header class="archive-header">
             <h1 class="archive-title"><?php the_archive_title(); ?></h1>

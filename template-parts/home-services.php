@@ -1,6 +1,9 @@
 <section class="services" id="services" aria-labelledby="services-title">
-  <div class="headline">
-    <h2 class="display-4 id="services-title">Como posso te ajudar?</h2>
+  <div class="headline p-2">
+    <div class="container">
+      <h2 id="services-title">Meus serviços</h2>
+      <p class="lead">Veja como posso te ajudar.</p>
+    </div>
   </div>
 
   <div class="container">
@@ -8,7 +11,7 @@
       <div class="col-md-4 mb-2">
         <article class="c-card">
           <div class="c-card__body">
-            <h3 class="c-card__title">Auditoria</h3>
+            <h3 class="c-card__title">Auditoria de acessibilidade</h3>
             <p class="c-card__text">
               Uma análise minuciosa e profissional de seu espaço digital,
               identificando barreiras e propondo soluções para torná-lo acessível a todos.

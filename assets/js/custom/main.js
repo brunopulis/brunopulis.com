@@ -1,75 +1,27 @@
-/* eslint-disable quotes */
-/* eslint-disable comma-dangle */
-/* eslint-disable no-undef */
-"use strict";
+jQuery(document).ready(function ($) {
+  let formNewsletter = $('#form-newsletter');
 
-$(function () {
-	let healthInsuranceSlider = $(".health-insurance-slider");
-	let testimonialSlider = $(".testimonial-slider");
+  formNewsletter.on('submit', function (event) {
+    event.preventDefault();
 
-	healthInsuranceSlider.slick({
-		dots: true,
-		infinite: false,
-		speed: 300,
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					infinite: true,
-					dots: true,
-				},
-			},
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-				},
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-		],
-	});
+    let responseText = document.querySelector('.response');
 
-	testimonialSlider.slick({
-		dots: true,
-		infinite: false,
-		speed: 300,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					infinite: true,
-					dots: true,
-				},
-			},
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-				},
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-		],
-	});
-})();
+    const url =
+      'https://assets.mailerlite.com/jsonp/321590/forms/102787660366481364/subscribe';
+
+    let formData = $(this);
+
+    $.ajax({
+      url: url,
+      type: 'POST',
+      data: formData.serialize(),
+      dataType: 'json',
+      success: function (data) {
+        responseText.innerHTML = 'E-mail cadastrado';
+      },
+      error: function (data) {
+        responseText.innerHTML = 'Ocorreu um erro, tente novamente';
+      }
+    });
+  });
+});

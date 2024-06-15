@@ -48,7 +48,7 @@
                 'theme_location' => 'main-menu',
                 'depth'          => 2,
                 'container'      => false,
-                'menu_class'     => 'navbar-nav flex-row flex-wrap mx-auto',
+                'menu_class'     => 'navbar-nav mx-auto',
                 'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
                 'walker'         => new Odin_Bootstrap_Nav_Walker()
               )
@@ -57,7 +57,7 @@
 
           <ul class="navbar-nav ml-auto">
             <li class="nav-item cta-btn">
-              <a class="nav-link button__cta button--wheat" href="#">Junte-se a 200+ assinantes</a>
+              <a class="nav-link button__cta button--wheat" href="https://subscribepage.io/cartas">Assinar newsletter</a>
             </li>
           </ul>
         </div>
