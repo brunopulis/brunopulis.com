@@ -1,6 +1,6 @@
 .site-header {
   background: $body-bg;
-  padding: 0.8rem 0;
+  padding: toRem(19) 0;
 }
 
 .navbar-brand {
@@ -12,24 +12,31 @@
   letter-spacing: 0;
 }
 
+.nav-link {
+  font-size: toRem(16);
+
+  &:hover,
+  &:focus {
+    color: var(--pulis-color-orange-light);
+    text-decoration: none;
+  }
+}
+
 .nav-item.active > .nav-link {
   color: var(--pulis-color-blue);
   font-weight: var(--pulis-font-weight-600);
   text-decoration: underline;
   padding-bottom: 1px;
-}
 
-.nav-link {
-  font-size: toRem(16);
 }
 
 .sidebar {
   border-left: .06rem solid var(--soft-gray);
-    width: 25.75rem;
-    min-width: 25.75rem;
-    padding-top: 4rem;
-    padding-left: 4rem;
-    position: relative;
+  width: 25.75rem;
+  min-width: 25.75rem;
+  padding-top: 4rem;
+  padding-left: 4rem;
+  position: relative;
 }
 
 .post-date {

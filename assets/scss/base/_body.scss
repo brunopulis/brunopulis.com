@@ -1,6 +1,6 @@
-// ========================================================
+// =============================================================================
 // Body
-// ========================================================
+// =============================================================================
 
 html {
 	height: 100%;
@@ -15,34 +15,6 @@ body {
 	overflow-x: hidden;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-}
-
-main {
-  padding: 3rem 0;
-}
-
-.headline {
-  padding: 1rem 0;
-  margin-bottom: 1rem;
-
-  h2 {
-    max-width: 22ch;
-  }
-
-  @media(max-width: 480px) {
-    padding: 0;
-  }
-}
-
-a {
-  color: var(--pulis-color-white);
-  text-decoration: underline;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: var(--pulis-color-wheat);
-  }
 }
 
 svg {
@@ -106,10 +78,10 @@ article {
     color: var(--pulis-color-wheat);
     font-weight: 900;
   }
+}
 
-  time {
-    margin-top: 1rem;
-  }
+time {
+  display: block;
 }
 
 blockquote {
@@ -133,10 +105,28 @@ blockquote cite {
   width: 95%;
 }
 
+a {
+  color: var(--pulis-color-black);
+
+  &:active {
+    color: var(--pulis-color-blue);
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--pulis-color-orange-light);
+  }
+}
+
 main [role=note] {
   background-color: var(--primary-soft);
   padding: 2%;
   border-left: 7.5px solid var(--primary-glare);
   width: 90%;
   margin: 1.5em auto;
+}
+
+.section {
+  padding: 84px 0;
 }

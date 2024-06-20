@@ -18,6 +18,7 @@ get_header(); ?>
 
 <main id="content">
   <?php get_template_part( 'template-parts/home', 'hero' ); ?>
+  <?php // get_template_part( 'template-parts/home', 'portfolio' ); ?>
   <?php get_template_part( 'template-parts/home', 'blog' ); ?>
   <?php get_template_part( 'template-parts/home', 'letters' ); ?>
 </main>
