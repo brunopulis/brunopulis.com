@@ -2,26 +2,133 @@
 // Footer
 // ====================================================
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-inline: auto;
-  padding-inline: 1rem;
+.site-footer .widget_nav_menu {
+  padding: toRem(72) 0;
 }
 
-.footer__list {
+.menu-footer-container .menu {
   list-style: none;
+  margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer__title {
-  color: var(--pulis-wheat);
-  font-size: toRem(20);
-  padding-bottom: var(--pulis-block-spacing-horizontal);
+.menu-footer-container .menu-item {
+  padding-left: toRem(15);
+
+  &:first-child {
+    padding-left: 0;
+  }
 }
 
-.footer__item--inline {
-  display: inline;
+.menu-footer-container .menu-item a {
+  color: var(--pulis-color-black);
+  font-size: toRem(16);
+  font-weight: 500;
+  line-height: toRem(21);
+  transition: var(--transition);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--pulis-color-blue);
+    text-decoration: underline;
+  }
+} 
+
+// Social
+// ====================================================
+
+.footer-social {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social__title {
+  color: var(--pulis-color-blue);
+  font-size: toRem(18);
+  font-weight: 700;
+  line-height: toRem(24);
+  text-decoration: none;
+}
+
+.footer-social__icon {
+  height: toRem(20);
+  width: toRem(20);
+
+  &--twitter {
+    color: var(--pulis-color-black);
+  }
+
+  &--linkedin {
+    color: var(--linkedin);
+  }
+
+  &--instagram {
+    color: var(--instagram);
+  }
+
+  &--youtube {
+    color: var(--youtube);
+  }
+
+  &--mastodon {
+    color: var(--mastodon);
+  }
+  
+  &--rss {
+    color: var(--rss);
+  }
+}
+
+//footer-social__icon--rss
+
+// Credits
+// ====================================================
+
+.footer-credits {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: toRem(60);
+  padding-bottom: toRem(25);
+}
+
+.footer-credits p {
+  font-size: toRem(14);
+}
+
+.footer-credits p a {
+  color: var(--pulis-color-black);
+  
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.footer-social__list,
+.footer-credits__list {
+  align-items: center;
+  display: flex;
+  list-style-type: "";
+  margin: 0;
+  justify-content: flex-end;
+}
+
+.footer-social__item,
+.footer-credits__item {
+  padding-left: toRem(15);
+
+  &:first-child { 
+    padding-left: 0; 
+  }
+}
+
+.footer-credits__link {
+  color: #707070;
+  font-size: toRem(14);
 }
