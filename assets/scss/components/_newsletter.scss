@@ -3,18 +3,28 @@
 // ====================================================
 
 .newsletter {
+  align-items: center;
   background: var(--pulis-color-grey);
-  height: 335px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+  padding: toRem(30) toRem(32);
+  text-align: center;
+
+  @media(max-width: 480px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  &__title {
+    font-weight: 700;
+    padding-bottom: toRem(57);
+  }
 }
 
-.c-newsletter {
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
-  margin: 3rem 0 0 0;
-  padding: 1.5rem 0;
-}
-
-.c-newsletter__form {
+.newsletter__form {
   padding: 2rem 0;
 
   &-field {
@@ -24,6 +34,10 @@
       padding-right: 1rem;
     }
   }
+}
+
+.newsletter__intro {
+  margin: toRem(16) 0;
 }
 
 .c-newsletter-container {
