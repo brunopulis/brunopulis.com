@@ -2,47 +2,28 @@
 // Functions
 // =================================================================
 
-$browser-context: 16; // Default
+@use "sass:math" as math;
 
-/// Convert px to em
+$html-font-size: 16px;
+
+/// toRem
 ///
-/// @author Bruno Pulis <hello@brunopulis.com>
-/// @group helpers
-/// @param {Pixel | Number} $pixel
-/// @example em
-///     em(16);
-@function em($pixels, $context: $browser-context) {
-	@return calc($pixels/$context) + em;
+/// @author Bruno Pulis
+/// @example toRem(20) //
+/// @return string
+///
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+
+  @return $remValue;
 }
 
+@function fluid($min-size, $max-size, $min-breakpoint, $max-breakpoint, $unit: vw) {
+  $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+  $slope-to-unit: $slope * 100;
+  $intercept-rem: px-to-rem($min-size - $slope * $min-breakpoint);
+  $min-size-rem: px-to-rem($min-size);
+  $max-size-rem: px-to-rem($max-size);
 
-/**
- #rem
- */
-@function rem($pixels, $context: $browser-context) {
-	@return calc($pixels/$context) + rem;
-}
-
-
-/**
- #px
- */
-@function px($target, $context: $browser-context) {
-	@return calc($target*$context) + px;
-}
-
-
-/**
- #Return a number without a unit
- */
-@function number($target, $context: $browser-context) {
-	@return calc($target/$context);
-}
-
-
-/**
- #Remove any unit present to return a unitless number
- */
-@function unitless($number) {
-	@return calc($number / ($number * 0 + 1));
+  @return clamp(#{$min-size-rem}, #{$slope-to-unit}#{$unit} + #{$intercept-rem}, #{$max-size-rem});
 }

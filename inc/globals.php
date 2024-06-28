@@ -10,10 +10,10 @@ define ( 'WPLANG', 'pt-br' );
 define( 'TEMPLATE_PATH', get_template_directory_uri() );
 
 // CSS PATH
-define( 'STYLESHEET_PATH', '/wp-content/themes/flamenco/assets/css' );
+define( 'STYLESHEET_PATH', '/wp-content/themes/pulis/assets/css' );
 
 // SVG PATH
-define( 'SVG_PATH', '/wp-content/themes/flamenco/assets/images/svg/' );
+define( 'SVG_PATH', '/wp-content/themes/pulis/assets/images/svgs/' );
 
 // DISABLE EDITOR ON WORPRESS
 define( 'DISALLOW_FILE_EDIT', true );

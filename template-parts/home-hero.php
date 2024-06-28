@@ -1,22 +1,24 @@
 <?php if( is_front_page() ): ?>
   <section class="c-hero">
     <div class="container">
-      <div class="row g-0">
+      <div class="row d-flex align-items-center">
         <div class="col-xs-12 col-lg-6">
-          <h1 class="fw-bold">
-            <span class="me" rel="me">Bruno Pulis</span> <span class="d-none d-md-block" aria-hidden="true">👋</span>
+          <h1 class="c-hero__title">
+            <span class="me" rel="me">Bruno Pulis</span>
           </h1>
-          <p class="lead">Front-end Developer, Accessibility Consultant</p>
-          <p class="lead">
-            <span lang="en">Front-end</span> com 15 anos de experiência,
-            Ajudo pessoas a <strong>construir, testar e prototipar</strong> interfaces acessíveis.
+          <p class="c-hero__lead">
+            Cidadão da web, Front-end Developer e Consultor de Acessibilidade.
+            Tenho 15 anos de experiência em desenvolvimento web.
+            Ajudo pessoas a construir, testar e prototipar interfaces acessíveis.
           </p>
 
-          <a href="<?php bloginfo('url'); ?>/servicos">Conheça meus serviços</a>
+          <a href="<?php bloginfo('url'); ?>/servicos" class="c-hero__link">Conheça meus serviços</a>
         </div>
 
-        <div class="col-xs-12 col-lg-6 d-none d-md-block">
-          <img src="<?php echo TEMPLATE_PATH; ?>/assets/images/profile.png" loading="lazy" alt="">
+        <div class="col-xs-12 col-lg-6">
+          <figure class="c-hero__image">
+            <img src="<?php echo TEMPLATE_PATH; ?>/assets/images/profile.png" loading="lazy" alt="">
+          </figure>
         </div>
       </div>
     </div>

@@ -27,17 +27,17 @@ require_once get_template_directory() . '/core/classes/class-bootstrap-nav.php';
 require_once get_template_directory() . '/core/classes/class-shortcodes.php';
 require_once get_template_directory() . '/core/classes/class-shortcodes-menu.php';
 require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.php';
-// require_once get_template_directory() . '/core/classes/class-theme-options.php';
+require_once get_template_directory() . '/core/classes/class-theme-options.php';
 require_once get_template_directory() . '/core/classes/class-options-helper.php';
 require_once get_template_directory() . '/core/classes/class-post-type.php';
-// require_once get_template_directory() . '/core/classes/class-taxonomy.php';
-// require_once get_template_directory() . '/core/classes/class-metabox.php';
-// require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
-// require_once get_template_directory() . '/core/classes/class-contact-form.php';
-// require_once get_template_directory() . '/core/classes/class-post-form.php';
-// require_once get_template_directory() . '/core/classes/class-user-meta.php';
-// require_once get_template_directory() . '/core/classes/class-post-status.php';
-// require_once get_template_directory() . '/core/classes/class-term-meta.php';
+require_once get_template_directory() . '/core/classes/class-taxonomy.php';
+require_once get_template_directory() . '/core/classes/class-metabox.php';
+require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
+require_once get_template_directory() . '/core/classes/class-contact-form.php';
+require_once get_template_directory() . '/core/classes/class-post-form.php';
+require_once get_template_directory() . '/core/classes/class-user-meta.php';
+require_once get_template_directory() . '/core/classes/class-post-status.php';
+require_once get_template_directory() . '/core/classes/class-term-meta.php';
 
 // CPT
 require_once get_template_directory() . '/inc/functions/cpt.php';
@@ -60,7 +60,8 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
     // Register nav menus.
 		register_nav_menus(
 			array(
-				'main-menu' => __( 'Main Menu', 'odin' )
+				'main-menu' => __( 'Main Menu', 'odin' ),
+        'footer' => __( 'Footer', 'odin' )
 			)
 		);
 
@@ -188,6 +189,18 @@ function odin_widgets_init() {
 			'after_widget' => '</article>',
 			'before_title' => '<h3 class="widgettitle widget-title">',
 			'after_title' => '</h3>',
+    )
+	);
+
+  register_sidebar(
+		array(
+			'name' => 'Footer Sidebar 1',
+			'id' => 'footer-sidebar-1',
+			'description' => 'Appears in the footer area',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '',
+			'after_title' => '',
 		)
 	);
 }
@@ -246,7 +259,7 @@ function odin_stylesheet_uri( $uri, $dir ) {
 	return $dir . '/assets/css/style.css';
 }
 
-require_once('inc/functions/globals.php');
+require_once('inc/globals.php');
 
 add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );
 

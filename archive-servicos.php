@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <main id="content">
-  <?php get_template_part( 'content', 'servicos' ); ?>
+  <?php get_template_part( 'template-parts/content', 'servicos' ); ?>
 </main>
 <?php
 get_footer();
