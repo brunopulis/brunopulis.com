@@ -11849,6 +11849,7 @@ textarea.form-control-lg {
   --pulis-color-black: #0a0a0a;
   --pulis-color-blue: #274c77;
   --pulis-color-grey: #e7ecef;
+  --pulis-color-grey-light: #707070;
   --pulis-color-pink: #E6427E;
   --pulis-color-magenta: #782761;
   --transition: all ease-in .3s;
@@ -11887,21 +11888,22 @@ Theme colors.
 /**
 Sass variables.
  */
-/**
- #rem
- */
-/**
- #px
- */
-/**
- #Return a number without a unit
- */
-/**
- #Remove any unit present to return a unitless number
- */
+
+.entry-title {
+  color: var(--pulis-color-black);
+  font-size: 3.375rem;
+  line-height: 4.5rem;
+  padding-top: 3.125rem;
+}
+@media (max-width: 480px) {
+  .entry-title {
+    padding-top: 0;
+  }
+}
+
 html {
   height: 100%;
-  font-size: toRem(16);
+  font-size: 1rem;
   font-family: "Roboto", sans-serif;
 }
 
@@ -12031,7 +12033,7 @@ main [role=note] {
   color: var(--pulis-color-black);
   font-weight: 500;
   text-decoration: none;
-  padding: toRem(8) toRem(16);
+  padding: 0.5rem 1rem;
   transition: var(--transition);
 }
 .button:active, .button:hover, .button:focus {
@@ -12052,24 +12054,24 @@ main [role=note] {
 }
 
 .c-hero__title {
-  font-size: toRem(54);
-  line-height: toRem(72);
-  margin-bottom: toRem(38);
+  font-size: 3.375rem;
+  line-height: 4.5rem;
+  margin-bottom: 2.375rem;
 }
 
 .c-hero__lead {
-  font-size: toRem(24);
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: toRem(32);
+  line-height: 2rem;
   margin: 0;
-  padding-bottom: toRem(33);
+  padding-bottom: 2.0625rem;
 }
 
 .c-hero__link {
   color: var(--pulis-color-black);
-  font-size: toRem(24);
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: toRem(32);
+  line-height: 2rem;
   text-decoration: underline;
   transition: var(--transition);
 }
@@ -12107,7 +12109,7 @@ main [role=note] {
   color: var(--pulis-color-black);
   padding: 16px;
   background: #f6f6f6;
-  margin-bottom: toRem(16);
+  margin-bottom: 1rem;
   transition: background 0.35s ease-out;
 }
 
@@ -12171,9 +12173,9 @@ main [role=note] {
 
 .c-card__title {
   color: var(--pulis-color-black);
-  font-size: toRem(22);
+  font-size: 1.375rem;
   font-weight: 700;
-  line-height: toRem(29);
+  line-height: 1.8125rem;
   margin: 0;
   padding-bottom: 8px;
   transition: var(--transition);
@@ -12181,19 +12183,19 @@ main [role=note] {
 }
 
 .c-card__meta {
-  font-size: toRem(12);
+  font-size: 0.75rem;
   line-height: 19px;
   text-transform: uppercase;
-  padding-bottom: toRem(16);
+  padding-bottom: 1rem;
 }
 
 .c-card__body {
-  padding: toRem(32);
+  padding: 2rem;
 }
 
 .c-card__content p {
-  font-size: toRem(14);
-  line-height: toRem(19);
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
 }
 
 .c-card__image {
@@ -12226,14 +12228,14 @@ main [role=note] {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: toRem(30);
+  padding-right: 1.875rem;
 }
 .letter__edition span {
   color: var(--pulis-color-blue);
   display: flex;
-  font-size: toRem(22);
+  font-size: 1.375rem;
   font-weight: 500;
-  line-height: toRem(29);
+  line-height: 1.8125rem;
 }
 
 #webmention-source {
@@ -12270,7 +12272,7 @@ main [role=note] {
   display: flex;
   flex-direction: column;
   min-height: 360px;
-  padding: toRem(30) toRem(32);
+  padding: 1.875rem 2rem;
   text-align: center;
 }
 @media (max-width: 480px) {
@@ -12282,7 +12284,7 @@ main [role=note] {
 }
 .newsletter__title {
   font-weight: 700;
-  padding-bottom: toRem(57);
+  padding-bottom: 3.5625rem;
 }
 
 .newsletter__form {
@@ -12296,7 +12298,7 @@ main [role=note] {
 }
 
 .newsletter__intro {
-  margin: toRem(16) 0;
+  margin: 1rem 0;
 }
 
 .c-newsletter-container {
@@ -12318,20 +12320,20 @@ main [role=note] {
 
 .site-header {
   background: #fff;
-  padding: toRem(19) 0;
+  padding: 1.1875rem 0;
 }
 
 .navbar-brand {
   color: var(--pulis-color-blue);
-  font-size: toRem(24);
+  font-size: 1.5rem;
   font-weight: var(--pulis-font-weight-900);
-  line-height: toRem(32);
+  line-height: 2rem;
   font-family: var(--pulis-font-family-roboto);
   letter-spacing: 0;
 }
 
 .nav-link {
-  font-size: toRem(16);
+  font-size: 1rem;
 }
 .nav-link:hover, .nav-link:focus {
   color: var(--pulis-color-orange-light);
@@ -12364,8 +12366,51 @@ main [role=note] {
   margin-bottom: 2rem;
 }
 
+.services__headline {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  padding-top: 2rem;
+}
+.services__content {
+  padding-top: 2rem;
+}
+
+.service__header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.service__header .c-card__title {
+  color: var(--pulis-color-blue);
+  font-size: 1.5rem;
+}
+.service__icon {
+  height: 3.375rem;
+  margin-right: 1rem;
+  width: 3.375rem;
+  fill: var(--pulis-color-blue);
+}
+.service .c-card__content {
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  padding-top: 2rem;
+}
+.service .c-card__content a {
+  display: inline-block;
+  margin-top: 2rem;
+}
+.service__contact {
+  display: block;
+  padding-top: 2.375rem;
+  max-width: 557px;
+  font-size: 1.25rem;
+  line-height: 1.8125rem;
+  color: var(--pulis-color-grey-light);
+}
+
 .site-footer .widget_nav_menu {
-  padding: toRem(72) 0;
+  padding: 4.5rem 0;
 }
 
 .menu-footer-container .menu {
@@ -12385,27 +12430,27 @@ main [role=note] {
 }
 
 .menu-footer-container .menu-item {
-  padding-left: toRem(15);
+  padding-left: 0.9375rem;
 }
 .menu-footer-container .menu-item:first-child {
   padding-left: 0;
 }
 @media (max-width: 1000px) {
   .menu-footer-container .menu-item {
-    padding: 0 0 0 toRem(10) !important;
+    padding: 0 0 0 0.625rem !important;
   }
 }
 @media (max-width: 768px) {
   .menu-footer-container .menu-item {
-    padding-bottom: toRem(20) !important;
+    padding-bottom: 1.25rem !important;
   }
 }
 
 .menu-footer-container .menu-item a {
   color: var(--pulis-color-black);
-  font-size: toRem(16);
+  font-size: 1rem;
   font-weight: 500;
-  line-height: toRem(21);
+  line-height: 1.3125rem;
   transition: var(--transition);
   text-decoration: none;
 }
@@ -12415,7 +12460,7 @@ main [role=note] {
 }
 @media (max-width: 768px) {
   .menu-footer-container .menu-item a {
-    font-size: toRem(20);
+    font-size: 1.25rem;
   }
 }
 
@@ -12440,14 +12485,14 @@ main [role=note] {
 
 .footer-social__title {
   color: var(--pulis-color-blue);
-  font-size: toRem(18);
+  font-size: 1.125rem;
   font-weight: 700;
-  line-height: toRem(24);
+  line-height: 1.5rem;
   text-decoration: none;
 }
 @media (max-width: 768px) {
   .footer-social__title {
-    margin-bottom: toRem(20);
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -12459,12 +12504,12 @@ main [role=note] {
 
 @media (max-width: 768px) {
   .footer-social__item {
-    padding-left: toRem(15) !important;
+    padding-left: 0.9375rem !important;
   }
 }
 @media (max-width: 480px) {
   .footer-social__item {
-    padding-left: toRem(15) !important;
+    padding-left: 0.9375rem !important;
   }
   .footer-social__item:first-child {
     padding-left: 0 !important;
@@ -12472,8 +12517,8 @@ main [role=note] {
 }
 
 .footer-social__icon {
-  height: toRem(20);
-  width: toRem(20);
+  height: 1.25rem;
+  width: 1.25rem;
 }
 .footer-social__icon--twitter {
   color: var(--pulis-color-black);
@@ -12495,8 +12540,8 @@ main [role=note] {
 }
 @media (max-width: 480px) {
   .footer-social__icon {
-    height: toRem(30);
-    width: toRem(30);
+    height: 1.875rem;
+    width: 1.875rem;
   }
 }
 
@@ -12504,8 +12549,8 @@ main [role=note] {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-top: toRem(60);
-  padding-bottom: toRem(25);
+  padding-top: 3.75rem;
+  padding-bottom: 1.5625rem;
 }
 @media (max-width: 991px) {
   .footer-credits {
@@ -12519,7 +12564,7 @@ main [role=note] {
 }
 
 .footer-credits p {
-  font-size: toRem(14);
+  font-size: 0.875rem;
 }
 
 .footer-credits p a {
@@ -12548,7 +12593,7 @@ main [role=note] {
 
 .footer-social__item,
 .footer-credits__item {
-  padding-left: toRem(15);
+  padding-left: 0.9375rem;
 }
 .footer-social__item:first-child,
 .footer-credits__item:first-child {
@@ -12563,17 +12608,17 @@ main [role=note] {
 
 @media (max-width: 768px) {
   .footer-credits__item:last-child {
-    padding-top: toRem(15);
+    padding-top: 0.9375rem;
   }
 }
 
 .footer-credits__link {
   color: #707070;
-  font-size: toRem(14);
+  font-size: 0.875rem;
 }
 @media (max-width: 480px) {
   .footer-credits__link {
-    font-size: toRem(18);
+    font-size: 1.125rem;
   }
 }
 

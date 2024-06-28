@@ -7,6 +7,7 @@
 // Variables
 @import "abstracts/variables";
 @import "abstracts/functions";
+@import "wordpress/wordpress";
 
 // Base
 @import "base/body";
@@ -24,5 +25,6 @@
 
 // Layout
 @import "layouts/header";
+@import "layouts/services";
 @import "layouts/footer";
 
