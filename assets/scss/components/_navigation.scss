@@ -1,0 +1,28 @@
+// =======================================================
+// Navigation
+// =======================================================
+
+.navbar-brand {
+  color: $body-color;
+
+  &:hover,
+  &:focus {
+    color: var(--pulis-wheat);
+    text-decoration: underline;
+  }
+}
+
+.nav-link {
+  color: $body-color;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: var(--pulis-color-wheat);
+    text-decoration: underline;
+  }
+}
+
+.navbar-toggler {
+  background-color: var(--pulis-color-wheat);
+}

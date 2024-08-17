@@ -1,0 +1,132 @@
+// =============================================================================
+// Body
+// =============================================================================
+
+html {
+	height: 100%;
+  font-size: toRem(16);
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+	background-color: var(--bs-body-bg);
+	color: var(--pulis-color-black);
+	min-height: 100%;
+	overflow-x: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+svg {
+	fill: currentColor;
+	height: auto;
+}
+
+svg:not([class]) {
+	width: 100%;
+}
+
+.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 0.07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+
+.entry-header > .entry-meta,
+.archive-header {
+  padding-bottom: 2rem;
+}
+
+.entry-meta {
+  padding: 1rem 0;
+
+  .cat-links a {
+    color: var(--pulis-color-wheat);
+    text-decoration: underline;
+  }
+}
+
+.entry-content {
+  p {
+    margin-top: 1.5em;
+  }
+
+  ul, ol {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  ul > *+* {
+    margin-top: 1.5em;
+  }
+}
+
+article {
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+
+  li::marker {
+    color: var(--pulis-color-wheat);
+    font-weight: 900;
+  }
+}
+
+time {
+  display: block;
+}
+
+blockquote {
+  padding: 2ch;
+  border-left: 7.5px solid var(--wp--preset--color--vivid-red);
+  background-color: #f0f0f0;
+}
+
+blockquote p {
+  color: var(--pulis-color-black);
+  font-weight: 600;
+}
+
+blockquote cite {
+  display: block;
+  font-size: 90%;
+  line-height: 2em;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+  width: 95%;
+}
+
+a {
+  color: var(--pulis-color-black);
+
+  &:active {
+    color: var(--pulis-color-blue);
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--pulis-color-orange-light);
+  }
+}
+
+main [role=note] {
+  background-color: var(--primary-soft);
+  padding: 2%;
+  border-left: 7.5px solid var(--primary-glare);
+  width: 90%;
+  margin: 1.5em auto;
+}
+
+.section {
+  padding: 84px 0;
+}

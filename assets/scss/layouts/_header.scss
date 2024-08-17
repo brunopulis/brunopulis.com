@@ -1,0 +1,50 @@
+.site-header {
+  background: $body-bg;
+  padding: toRem(19) 0;
+}
+
+.navbar-brand {
+  color: var(--pulis-color-blue);
+  font-size: toRem(24);
+  font-weight: var(--pulis-font-weight-900);
+  line-height: toRem(32);
+  font-family: var(--pulis-font-family-roboto);
+  letter-spacing: 0;
+}
+
+.nav-link {
+  font-size: toRem(16);
+
+  &:hover,
+  &:focus {
+    color: var(--pulis-color-orange-light);
+    text-decoration: none;
+  }
+}
+
+.nav-item.active > .nav-link {
+  color: var(--pulis-color-blue);
+  font-weight: var(--pulis-font-weight-600);
+  text-decoration: underline;
+  padding-bottom: 1px;
+
+}
+
+.sidebar {
+  border-left: .06rem solid var(--soft-gray);
+  width: 25.75rem;
+  min-width: 25.75rem;
+  padding-top: 4rem;
+  padding-left: 4rem;
+  position: relative;
+}
+
+.post-date {
+  text-transform: uppercase;
+  color: var(--pulis-color-wheat);
+}
+
+.entry-content {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}

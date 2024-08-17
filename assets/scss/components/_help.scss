@@ -1,0 +1,29 @@
+.help-item:not(:last-child) {
+  margin-bottom: 64px;
+}
+
+.help-item__header {
+  border-left: 7px solid #3863d9;
+  color: var(--pulis-color-black);
+  padding: 16px;
+  background: #f6f6f6;
+  margin-bottom: toRem(16);
+  transition: background .35s ease-out;
+}
+
+.help-item__title {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+
+.help-item__list {
+  padding-left: 16px;
+  list-style-type: decimal;
+  margin-bottom: 32px;
+  line-height: 1.45;
+}
+
+.help-item__list__item {
+  font-size: 1rem;
+  line-height: 1.5;
+}

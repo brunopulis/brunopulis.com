@@ -1,0 +1,60 @@
+// ====================================================
+// Newsletter
+// ====================================================
+
+.newsletter {
+  align-items: center;
+  background: var(--pulis-color-grey);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: toRem(30) toRem(32);
+  text-align: center;
+
+  @media(max-width: 480px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+.newsletter__title {
+  font-weight: 700;
+}
+
+.newsletter__form {
+  padding: 2rem 0;
+
+  &-field {
+    min-width: 80%;
+
+    &:first-child {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.newsletter__intro {
+  margin: toRem(16) 0;
+}
+
+.c-newsletter-container {
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.c-newsletter__form-button {
+  background: var(--pulis-color-wheat);
+  color: var(--pulis-color-black);
+  font-weight: 600;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background: transparent;
+    border: 1px solid var(--pulis-color-wheat);
+    color: var(--pulis-color-white);
+  }
+}

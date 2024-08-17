@@ -1,0 +1,51 @@
+// =======================================================
+// Hero
+// =======================================================
+
+.c-hero {
+  background: var(--pulis-color-grey);
+  padding: 40px 0;
+  min-height: 440px;
+
+  @media(max-width: 991px) {
+    min-height: auto;
+  }
+}
+
+.c-hero__title {
+  font-size: toRem(54);
+  line-height: toRem(72);
+  margin-bottom: toRem(38);
+}
+
+.c-hero__lead {
+  font-size: toRem(24);
+  font-weight: 400;
+  line-height: toRem(32);
+  margin: 0;
+  padding-bottom: toRem(33);
+}
+
+.c-hero__link {
+  color: var(--pulis-color-black);
+  font-size: toRem(24);
+  font-weight: 500;
+  line-height: toRem(32);
+  text-decoration: underline;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--pulis-color-orange-light);
+  }
+}
+
+.c-hero__image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media(max-width: 991px) {
+    display: none;
+  }
+}

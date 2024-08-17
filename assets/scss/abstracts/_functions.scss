@@ -1,0 +1,29 @@
+// =================================================================
+// Functions
+// =================================================================
+
+@use "sass:math" as math;
+
+$html-font-size: 16px;
+
+/// toRem
+///
+/// @author Bruno Pulis
+/// @example toRem(20) //
+/// @return string
+///
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+
+  @return $remValue;
+}
+
+@function fluid($min-size, $max-size, $min-breakpoint, $max-breakpoint, $unit: vw) {
+  $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+  $slope-to-unit: $slope * 100;
+  $intercept-rem: px-to-rem($min-size - $slope * $min-breakpoint);
+  $min-size-rem: px-to-rem($min-size);
+  $max-size-rem: px-to-rem($max-size);
+
+  @return clamp(#{$min-size-rem}, #{$slope-to-unit}#{$unit} + #{$intercept-rem}, #{$max-size-rem});
+}
