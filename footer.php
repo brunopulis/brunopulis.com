@@ -55,7 +55,7 @@
             </a>
           </li>
           <li class="footer-social__item">
-            <a class="footer-social__link" href="https://mastodon.social/@brunopulis" rel="me noopener noreferrer" target="_blank">
+            <a class="footer-social__link" href="<?php bloginfo('url') ?>/feed" rel="noopener noreferrer" target="_blank">
               <svg aria-hidden="true" class="footer-social__icon footer-social__icon--mastodon">
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#mastodon">
               </svg>
@@ -89,25 +89,13 @@
           <li class="footer-credits__item"><a rel="external" class="footer-credits__link" referrerpolicy="strict-origin" href="https://a11y-webring.club/next">próximo website</a></li>
           <li class="footer-credits__item">
             <a href="https://notbyai.fyi" rel="external" target="_blank">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/written-by-human.svg" alt="Escrito por humano não por IA" class="img-fluid" width="131" height="42" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/written-by-human.svg" alt="Escrito por humano não por IA" class="img-fluid" />
             </a>
           </li>
         </ul>
       </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <ul class="footer-credits__list text-center">
-          <li class="footer-credits__item"><a rel="external" class="footer-credits__link" href="<?php bloginfo('url'); ?>/declaracao-de-acessibilidade/">Declaração de Acessibilidade</a></li>
-          <!--<li class="footer-credits__item"><a rel="external" class="footer-credits__link" href="https://a11y-webring.club/prev">VPAT</a></li>-->
-          <li class="footer-credits__item"><a rel="external" class="footer-credits__link" href="<?php bloginfo('url'); ?>/politica-de-privacidade">Política de Privacidade</a></li>
-        </ul>
-      </div>
-    </div>
   </div>
 </footer>
-<script src="https://tinylytics.app/embed/FziPycS5M-WzSzx6sBVm.js" defer></script>
 <?php wp_footer(); ?>
 </body>
 </html>

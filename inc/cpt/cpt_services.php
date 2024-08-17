@@ -8,13 +8,13 @@ function cpt_services() {
 
 	$events->set_labels(
 		array(
-			'menu_name' => __( 'Serviços', 'odin' )
+			'menu_name' => __( 'Meus serviços', 'odin' )
 		)
 	);
 
 	$events->set_arguments(
 		array(
-      'menu_icon' => 'dashicons-code-standards'
+      'menu_icon' => 'dashicons-clipboard'
 		)
 	);
 }

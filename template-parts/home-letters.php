@@ -1,7 +1,7 @@
-<section class="section" aria-labelledby="letters-title">
+<section class="" aria-labelledby="letters-title">
   <div class="container">
     <div class="row">
-      <div class="section-wrapper">
+      <div class="d-flex align-items-center justify-content-between">
         <h2 id="letters-title">Pulis Letters</h2>
         <a href="<?php the_permalink(); ?>/category/letters" class="button">veja todas as edições <span class="visually-hidden"> da <span></span></span></a>
       </div>
@@ -58,7 +58,7 @@
             <div class="c-newsletter-container">
               <div class="c-newsletter__form-field">
                 <label for="email" class="visually-hidden">E-mail</label>
-                <input type="email" id="email" name="fields[email]" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Seu melhor e-mail" class="form-control">
+                <input type="email" id="email" name="email_address" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Seu melhor e-mail" class="form-control">
               </div>
 
               <div class="c-newsletter__form-field">

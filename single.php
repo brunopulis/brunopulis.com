@@ -23,8 +23,6 @@ get_header(); ?>
       ?>
     </div>
   </div>
-
-  <?php require_once('template-parts/newsletter.php'); ?>
 </main>
 <?php
 

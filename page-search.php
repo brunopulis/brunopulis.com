@@ -17,7 +17,6 @@ get_header(); ?>
     <div class="row">
       <div class="headline">
         <h1>Pesquisa</h1>
-        <?php odin_breadcrumbs(); ?>
       </div>
       <div class="d-flex mx-auto">
         <?php get_search_form(); ?>

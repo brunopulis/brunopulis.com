@@ -40,5 +40,9 @@
         <?php endif; ?>
       </div>
     </div>
+
+    <aside class="col-md-4">
+      sidebar
+    </aside>
   </div>
 </section>

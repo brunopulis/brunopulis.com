@@ -1,0 +1,56 @@
+// =========================================================================
+// Services
+// =========================================================================
+
+.services {
+  &__headline {
+    font-size: toRem(24);
+    font-weight: 500;
+    line-height: toRem(32);
+    padding-top: toRem(32);
+  }
+
+  &__content {
+    padding-top: toRem(32);
+  }
+}
+
+.service {
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    .c-card__title {
+      color: var(--pulis-color-blue);
+      font-size: toRem(24);
+    }
+  }
+
+  &__icon {
+    height: toRem(54);
+    margin-right: toRem(16);
+    width: toRem(54);
+    fill: var(--pulis-color-blue);
+  }
+  
+  .c-card__content {
+    font-size: toRem(14);
+    line-height: toRem(19);
+    padding-top: toRem(32);
+
+    a {
+      display: inline-block;
+      margin-top: toRem(32);
+    }
+  }
+
+  &__contact {
+    display: block;
+    padding-top: toRem(38);
+    max-width: 557px;
+    font-size: toRem(20);
+    line-height: toRem(29);
+    color: var(--pulis-color-grey-light);
+  }
+}

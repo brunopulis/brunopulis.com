@@ -8,7 +8,7 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-height: 360px;
   padding: toRem(30) toRem(32);
   text-align: center;
 
@@ -17,10 +17,11 @@
     justify-content: flex-start;
     text-align: left;
   }
-}
 
-.newsletter__title {
-  font-weight: 700;
+  &__title {
+    font-weight: 700;
+    padding-bottom: toRem(57);
+  }
 }
 
 .newsletter__form {

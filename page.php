@@ -15,16 +15,17 @@ get_header(); ?>
 <main id="content">
   <div class="container">
     <div class="row">
-    <div class="col-md-8">
-        <?php
-          while ( have_posts() ) : the_post();
-            get_template_part( 'content', 'page' );
-          endwhile;
-        ?>
+      <div class="col-md-8 mx-auto">
+      <?php
+        while ( have_posts() ) : the_post();
+          get_template_part( 'content', 'page' );
+
+          if ( comments_open() || get_comments_number() ) :
+            comments_template();
+          endif;
+        endwhile;
+      ?>
       </div>
-      <aside class="col-md-4" style="padding-top: 80px;">
-        <?php the_post_thumbnail(); ?>
-      </aside>
     </div>
   </div>
 </main>

@@ -122,17 +122,17 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		);
 
     // Add support for Post Formats.
-		add_theme_support( 'post-formats', array(
-		    'aside',
-		    'gallery',
-		    'link',
-		    'image',
-		    'quote',
-		    'status',
-		    'video',
-		    'audio',
-		    'chat'
-		) );
+		// add_theme_support( 'post-formats', array(
+		//     'aside',
+		//     'gallery',
+		//     'link',
+		//     'image',
+		//     'quote',
+		//     'status',
+		//     'video',
+		//     'audio',
+		//     'chat'
+		// ) );
 
     // Support The Excerpt on pages.
 		add_post_type_support( 'page', 'excerpt' );
@@ -311,16 +311,4 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
 
-/**
- * Deal with the custom RSS templates.
- */
-add_action('init', 'customRSS');
-function customRSS() 
-{
-  add_feed( 'notas', 'customRSSFunc' );
-}
 
-function customRSSFunc()
-{
-  get_template_part( 'rss', 'notas' );
-}
