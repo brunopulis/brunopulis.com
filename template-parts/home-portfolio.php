@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <section  class="section" aria-labelledby="blog-title">
   <div class="headline p-1">
     <div class="container">
@@ -57,52 +56,3 @@
     </div>
   </div>
 </section>
-=======
-<section  class="section" aria-labelledby="blog-title">
-  <div class="container">
-    <div class="row">
-      <div class="section-wrapper">
-        <h2 id="letters-title">Últimos trabalhos</h2>
-        <a href="<?php bloginfo( 'url' ) ?>/portfolio" class="button">veja os últimos trabalhos <span class="visually-hidden">publicados</span></a>
-      </div>
-    </div>
-_
-    <div class="row mt-5 ">
-      <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="menu-filter">
-        <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>
-        <li class="list-inline-item"><a class="" data-filter=".seo">Seo</a></li>
-        <li class="list-inline-item"><a class="" data-filter=".webdesign">Webdesign</a></li>
-        <li class="list-inline-item"><a class="" data-filter=".WORK">WORK</a></li>
-        <li class="list-inline-item"><a class="" data-filter=".wordpress">Wordpress</a></li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="container">
-    <div class="row">
-      <?php
-        $args = array(
-          'post_type' => 'portfolio',
-          'posts_per_page' => 3,
-          'order' => 'DESC'
-        );
-
-        $blog = new WP_Query( $args );
-
-        if ( $blog->have_posts() ) :
-          while ( $blog->have_posts() ) : $blog->the_post();
-      ?>
-        <article class="home-blog__item col-lg-4">
-          <div class="c-card">
-            <div class="c-card__body">
-              <?php the_post_thumbnail(); ?>
-            </div>
-          </div>
-        </article>
-      <?php endwhile; ?>
-      <?php wp_reset_postdata(); ?>
-      <?php endif; ?>
-    </div>
-  </div>
-</section>
->>>>>>> master
