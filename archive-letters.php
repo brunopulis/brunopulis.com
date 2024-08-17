@@ -85,7 +85,7 @@ get_header(); ?>
             <div class="c-newsletter-container">
               <div class="c-newsletter__form-field">
                 <label for="email" class="visually-hidden">E-mail</label>
-                <input type="email" id="email" name="fields[email]" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Seu melhor e-mail" class="form-control">
+                <input type="email" id="email" name="email_address" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Seu melhor e-mail" class="form-control">
               </div>
 
               <div class="c-newsletter__form-field">

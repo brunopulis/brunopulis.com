@@ -16,10 +16,10 @@
   <h2 id="cta-title">Assine a newsletter</h2>
   <p>Faça parte dessa revolução, entre pra newsletter mais acessível do Brasil.</p>
 
-  <form action="https://assets.mailerlite.com/jsonp/321590/forms/102787660366481364/subscribe">
+  <form id="form-newsletter">
     <div class="grid">
-      <input type="text" name="fields[name]" aria-required="true" aria-label="Seu nome" placeholder="Qual seu nome?">
-      <input type="email" name="fields[email]" aria-required="true" aria-label="Seu e-mail" placeholder="Seu melhor e-mail">
+      <input type="text" name="fields[first_name]" aria-required="true" aria-label="Seu nome" placeholder="Qual seu nome?">
+      <input type="email" name="email_address" aria-required="true" aria-label="Seu e-mail" placeholder="Seu melhor e-mail">
 
       <input type="hidden" name="ml-submit" value="1" aria-invalid="false">
       <input type="hidden" name="anticsrf" value="true" aria-invalid="false">
