@@ -232,7 +232,7 @@ function odin_breadcrumbs( $homepage = '' ) {
 	! empty( $homepage ) || $homepage = __( 'Home', 'odin' );
 
 	// Default html.
-	$current_before = '<li class="active" aria-current="page">';
+	$current_before = '<li class="breadcrumb-item active" aria-current="page">';
 	$current_after  = '</li>';
 
 	if ( ! is_home() && ! is_front_page() || is_paged() ) {
