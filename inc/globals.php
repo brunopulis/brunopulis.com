@@ -18,4 +18,4 @@ define( 'SVG_PATH', '/wp-content/themes/pulis/assets/images/svgs/' );
 // DISABLE EDITOR ON WORPRESS
 define( 'DISALLOW_FILE_EDIT', true );
 
-define( 'FS_METHOD', 'direct' );
+// define( 'FS_METHOD', 'direct' );

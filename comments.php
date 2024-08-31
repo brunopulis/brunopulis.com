@@ -11,7 +11,7 @@
 <section  class="content-wrap" id="comments" itemscope itemtype="http://schema.org/Comment">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-8">
+      <div class="col-xs-12 col-sm-12 col-md-9 mx-auto">
         <?php if ( post_password_required() ) : ?>
           <p class="nopassword">
             <?php _e( 'This post is password protected. Enter the password to view all comments.', 'odin' ); ?>
@@ -74,9 +74,14 @@
 			'comment_notes_after' 	=> '',
 			'comment_field' 		=> $comment_field,
 			'fields' 				=> apply_filters( 'comment_form_default_fields', $fields ),
-			'class_submit' 			=> 'submit btn btn-default'
+			'class_submit' 			=> 'submit button'
 		));
 	?>
+	
+    <div class="reply-email">
+	    <h2>Responder por e-mail</h2>
+	    <p>Adoraria ouvir o que você achou. Mande um e-mail para <a href="mailto:hello@brunopulis.com?subject=Resposta%20ao%20artigo%20<?php the_title(); ?>"> hello@brunopulis.com</a>; não se esqueça de me informar se está satisfeito com o fato de seu comentário aparecer na Web!</p>
+	</div>
     </div>
   </div>
 </section><!-- #comments -->

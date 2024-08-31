@@ -11,45 +11,22 @@
 get_header();
 ?>
 
-<main id="content" class="">
+<main id="content">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
+    <div class="row" style="padding-top: 80px;">
+      <div class="col-md-7">
         <?php
-          $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 6,
-            'order' => 'DESC'
-          );
-
-            $blog = new WP_Query( $args );
-
-            if ( $blog->have_posts() ) :
-              while ( $blog->have_posts() ) : $blog->the_post();
+          while ( have_posts() ) : the_post();
+            get_template_part( 'content', 'page' );
+          endwhile;
         ?>
-          <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="entry-img">
-              <?php the_post_thumbnail();  ?>
-            </div>
-            <h2 class="entry-title"><?php the_title(); ?></h2>
-            <div class="entry-meta">
-              <?php echo get_post_meta(); ?>
-            </div>
-            <div class="entry-content">
-              <?php
-                the_content();
-              ?>
-            </div>
-          </article>
-          <?php
-                endwhile;
-            endif;
-          ?>
-        </div>
       </div>
+      <aside class="col-md-5">
+        <?php the_post_thumbnail('img-fluid'); ?>
+      </aside>
     </div>
-</main><!-- #main -->
+  </div>
+</main>
 
 <?php
-
 get_footer();

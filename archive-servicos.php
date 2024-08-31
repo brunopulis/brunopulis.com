@@ -15,6 +15,7 @@ get_header(); ?>
       <div class="row">
         <div class="col-md-6">
           <h1 class="entry-title"><?php the_title(); ?></h1>
+          <?php odin_breadcrumbs(); ?>
           <div class="services__headline">
             <p>
               Ofereço serviços diferentes para ajudá-lo com suas necessidades de acessibilidade digital. 

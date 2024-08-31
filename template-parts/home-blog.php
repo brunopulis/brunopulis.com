@@ -37,7 +37,7 @@
 
               <div class="c-card__content">
                 <p><?php the_excerpt(); ?></p>
-                <a href="#" class="c-card__link">Leia o texto <span class="visually-hidden">sobre: <?php the_title();?></span></a>
+                <a href="<?php the_permalink(); ?>" class="c-card__link">Leia o texto <span class="visually-hidden">sobre: <?php the_title();?></span></a>
               </div>
             </div>
           </div>

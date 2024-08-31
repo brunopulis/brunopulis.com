@@ -56,6 +56,9 @@ get_header(); ?>
         <?php wp_pagenavi(); ?>
         <?php endif; ?>
       </div>
+      <div class="col-md-4">
+        <?php get_sidebar(); ?>
+      </div>
     </div>
   </div>
 </main><!-- #main -->

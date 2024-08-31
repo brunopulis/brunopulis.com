@@ -9,7 +9,7 @@
 
 <form method="get" class="c-search" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
   <fieldset>
-    <legend class="text-center">Procure nos meus artigos</legend>
+    <legend>Procure nos meus artigos</legend>
 
     <div class="row g-3">
       <div class="col-sm-7">

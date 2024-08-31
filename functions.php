@@ -122,17 +122,17 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		);
 
     // Add support for Post Formats.
-		// add_theme_support( 'post-formats', array(
-		//     'aside',
-		//     'gallery',
-		//     'link',
-		//     'image',
-		//     'quote',
-		//     'status',
-		//     'video',
-		//     'audio',
-		//     'chat'
-		// ) );
+		add_theme_support( 'post-formats', array(
+		    'aside',
+		    'gallery',
+		    'link',
+		    'image',
+		    'quote',
+		    'status',
+		    'video',
+		    'audio',
+		    'chat'
+		) );
 
     // Support The Excerpt on pages.
 		add_post_type_support( 'page', 'excerpt' );
@@ -235,7 +235,7 @@ function odin_enqueue_scripts() {
   wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/vendor/bootstrap.min.js', array( 'jquery' ) );
   wp_enqueue_script( 'bootstrap-jquery', $template_url . '/assets/js/vendor/jquery.min.js' );
   wp_enqueue_script( 'custom-scripts', $template_url . '/assets/js/custom/main.js', '', '', true );
-	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
+	// wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
 
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
@@ -311,4 +311,16 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
 
+/**
+ * Deal with the custom RSS templates.
+ */
+add_action('init', 'customRSS');
+function customRSS() 
+{
+  add_feed( 'notas', 'customRSSFunc' );
+}
 
+function customRSSFunc()
+{
+  get_template_part( 'rss', 'notas' );
+}

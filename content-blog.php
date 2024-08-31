@@ -19,7 +19,7 @@
     </div>
 
     <div class="row g-4">
-      <div class="col-md-8">
+      <div class="col-md-9 mx-auto">
         <ul class="c-card--blog">
           <?php
             $args = array(
@@ -45,9 +45,6 @@
           <?php wp_reset_postdata(); ?>
           <?php endif; ?>
         </ul>
-      </div>
-      <div class="col-md-4">
-        <?php get_sidebar(); ?>
       </div>
     </div>
   </div>
