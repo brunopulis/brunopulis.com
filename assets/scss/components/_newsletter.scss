@@ -40,6 +40,26 @@
   margin: toRem(16) 0;
 }
 
+.c-newsletter {
+  min-height: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E7ECEF; 
+  
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding: toRem(32) 0;
+  }
+
+  &__intro {
+    text-align: center;
+    max-width: 630px;
+    margin: 0 auto;
+  }
+}
+
 .c-newsletter-container {
   justify-content: flex-start;
   align-items: flex-start;

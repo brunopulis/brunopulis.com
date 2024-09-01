@@ -12310,6 +12310,24 @@ main [role=note] {
   margin: 1rem 0;
 }
 
+.c-newsletter {
+  min-height: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E7ECEF;
+}
+.c-newsletter__title {
+  text-align: center;
+  margin: 0;
+  padding: 2rem 0;
+}
+.c-newsletter__intro {
+  text-align: center;
+  max-width: 630px;
+  margin: 0 auto;
+}
+
 .c-newsletter-container {
   justify-content: flex-start;
   align-items: flex-start;
