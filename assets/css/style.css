@@ -11916,6 +11916,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+p {
+  font-size: 1.25rem;
+}
+
 svg {
   fill: currentColor;
   height: auto;
@@ -11952,6 +11956,7 @@ svg:not([class]) {
 
 .entry-content p {
   margin-top: 1.5em;
+  font-size: 1.25rem;
 }
 .entry-content ul, .entry-content ol {
   margin-left: 5%;
@@ -12396,7 +12401,6 @@ main [role=note] {
   fill: var(--pulis-color-blue);
 }
 .service .c-card__content {
-  font-size: 0.875rem;
   line-height: 1.1875rem;
   padding-top: 2rem;
 }
@@ -12472,6 +12476,7 @@ main [role=note] {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
 }
 @media (max-width: 768px) {
   .footer-social {
@@ -12549,6 +12554,11 @@ main [role=note] {
   }
 }
 
+.footer-other-links {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .footer-credits {
   align-items: center;
   display: flex;
@@ -12569,6 +12579,7 @@ main [role=note] {
 
 .footer-credits p {
   font-size: 0.875rem;
+  margin: 0;
 }
 
 .footer-credits p a {

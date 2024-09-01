@@ -63,6 +63,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-top: toRem(32);
 
   @media(max-width: 768px) {
     display: flex;
@@ -142,6 +143,11 @@
   }
 }
 
+.footer-other-links {
+  font-size: toRem(16);
+  font-weight: 500;
+}
+
 
 // Credits
 // ====================================================
@@ -164,6 +170,7 @@
 
 .footer-credits p {
   font-size: toRem(14);
+  margin: 0;
 }
 
 .footer-credits p a {
