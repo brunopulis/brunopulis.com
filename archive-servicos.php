@@ -44,7 +44,7 @@ get_header(); ?>
             <article class="c-card h-100">
               <div class="service c-card__body">
                 <header class="service__header">
-                  <svg aria-hidden="true" class="service__icon service__icon--">
+                  <svg aria-hidden="true" class="service__icon service__icon--<?php echo $customClass; ?>">
                     <use xlink:href="<?php echo TEMPLATE_PATH; ?>/assets/images/svgs/solid.svg#<?php echo $customClass; ?>">
                   </use>
                   </svg>

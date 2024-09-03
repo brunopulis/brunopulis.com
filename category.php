@@ -13,7 +13,7 @@ get_header(); ?>
 <main id="primary" class="site-content">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-9 mx-auto">
         <?php if ( have_posts() ) : ?>
           <header class="archive-header">
             <h1 class="archive-title"><?php the_archive_title(); ?></h1>
@@ -28,9 +28,6 @@ get_header(); ?>
         <?php else: ?>
           <p>Desculpe, não encontramos nenhum post.</p>
         <?php endif; ?>
-      </div>
-      <div class="col-md-4">
-        <?php get_sidebar(); ?>
       </div>
     </div>
   </div>

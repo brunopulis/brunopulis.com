@@ -4,13 +4,20 @@
     "build": "npx sass assets/scss/style.scss assets/css/style.css --style=compressed",
     "doc": "sassdoc assets/scss -d docs"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["a11y, accessibil"],
+  "author": "Bruno Pulis <hello@brunopulis.com>",
   "license": "ISC",
   "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.53.0",
     "bootstrap": "^5.3.3"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.5",
     "autoprefixer": "^10.4.17",
     "caniuse-lite": "^1.0.30001591",
     "css-declaration-sorter": "^7.1.1",
@@ -21,7 +28,6 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.2.5",
     "sass": "^1.71.1",
-    "serve": "^14.2.1",
-    "vite": "^5.1.6"
+    "serve": "^14.2.1"
   }
 }

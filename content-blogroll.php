@@ -11,7 +11,7 @@
 
 <section class="container" id="blog" aria-labelledby="blog-section">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-9 mx-auto">
       <div class="headline">
         <h2><?php the_title(); ?></h2>
         <?php the_content(); ?>

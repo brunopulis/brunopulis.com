@@ -21,7 +21,7 @@ get_header(); ?>
 <main id="content">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-9 mx-auto">
         <header class="page-header">
           <h1><?php the_archive_title(); ?></h1>
         </header>
@@ -55,9 +55,6 @@ get_header(); ?>
         <?php wp_reset_postdata(); ?>
         <?php wp_pagenavi(); ?>
         <?php endif; ?>
-      </div>
-      <div class="col-md-4">
-        <?php get_sidebar(); ?>
       </div>
     </div>
   </div>

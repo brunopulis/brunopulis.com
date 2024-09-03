@@ -72,16 +72,16 @@
       <div class="footer-credits">
         <p class="footer-other-links">Outros links do site:</p>
         <ul id="menu-footer" class="footer-credits__list">
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/">Página Inicial</a></li>
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/portfolio/">Portfólio</a></li>
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/servicos/">Serviços</a></li>
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/newsletter/">Newsletter</a></li>
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/blog/">Blog</a></li>
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/sobre/">Sobre</a></li>
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/contato/">Contato</a></li>
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/colophon/">Meu setup</a></li>
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/guestbook/">Livro de visitas</a></li>
-          <li class="footer-credits__item"><a href="http://localhost/brunopulis/links/">Links</a></li>
+          <li class="footer-credits__item"><a href="#">Página Inicial</a></li>
+          <li class="footer-credits__item"><a href="#">Portfólio</a></li>
+          <li class="footer-credits__item"><a href="#">Serviços</a></li>
+          <li class="footer-credits__item"><a href="#">Newsletter</a></li>
+          <li class="footer-credits__item"><a href="#/">Blog</a></li>
+          <li class="footer-credits__item"><a href="#">Sobre</a></li>
+          <li class="footer-credits__item"><a href="#">Contato</a></li>
+          <li class="footer-credits__item"><a href="#">Meu setup</a></li>
+          <li class="footer-credits__item"><a href="#">Livro de visitas</a></li>
+          <li class="footer-credits__item"><a href="#">Links</a></li>
         </ul>
         <a href="https://notbyai.fyi" rel="external" target="_blank">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/written-by-human.svg" alt="Escrito por humano não por IA" class="img-fluid" width="131" height="42" />

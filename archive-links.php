@@ -15,8 +15,7 @@ get_header(); ?>
       <?php odin_breadcrumbs(); ?>
       
       <h1>Links</h1>
-      <p>As notas são minhas postagens mais curtas, como se fossem tweets.
-Em breve vou criar um feed específico para elas. <br/> Também são distribuídas nos meus perfis das redes sociais.</p>
+      <p>Links interessantes que vi ao longo da semana.</p>
      
       <div class="col-md-8">
         <div class="row">

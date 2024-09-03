@@ -17,6 +17,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+p {
+  font-size: toRem(20);
+}
+
 svg {
 	fill: currentColor;
 	height: auto;
@@ -55,6 +59,7 @@ svg:not([class]) {
 .entry-content {
   p {
     margin-top: 1.5em;
+    font-size: toRem(20);
   }
 
   ul, ol {
