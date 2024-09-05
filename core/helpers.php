@@ -356,7 +356,7 @@ function odin_breadcrumbs( $homepage = '' ) {
 				echo $parents;
 			}
 
-			printf( __( '%sCategory: %s%s', 'odin' ), $current_before, single_cat_title( '', false ), $current_after );
+			printf( __( '%s %s%s', 'odin' ), $current_before, single_cat_title( '', false ), $current_after );
 
 		// Tags archive.
 		} elseif ( is_tag() ) {

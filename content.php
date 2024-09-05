@@ -9,21 +9,30 @@
  */
 ?>
 
-<div class="col-xs-12 col-sm-12 col-md-9 mx-auto">
+<div class="col-xs-12 col-sm-12 col-md-6 mx-auto">
   <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
     <div class="entry-header">
       <?php
         if ( is_single() ) :
-          the_title( '<h1 class="entry-title">', '</h1>' );
+          the_title( '<h1 class="entry-title text-center">', '</h1>' );
         else :
           the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
         endif;
       ?>
-      <p class="post-date">
-        <time class="time" datetime="<?php echo get_the_date('Y-m-d'); ?>">
-          <?php echo get_the_date('F j, Y'); ?>
-        </time>
-      </p>
+
+      <ul>
+        <li>
+          <?php the_category(' ', ' '); ?>
+        </li>
+        <li>
+          <p class="post-date">
+          <time class="time" datetime="<?php echo get_the_date('Y-m-d g:i:s'); ?>">
+            <?php echo get_the_date('F j, Y'); ?>
+          </time>
+          </p>
+        </li>
+      </ul>
+      
     </div>
 
     <?php if ( is_search() ) : ?>

@@ -36,7 +36,7 @@
             <li class="c-card__list">
               <article class="h-entry">
                 <a href="<?php the_permalink(); ?>" class="p-name" rel="permalink"><?php the_title();?></a>
-                <time class="dt-published c-card__time" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+                <time class="dt-published c-card__time" datetime="<?php echo get_the_date('Y-m-d g:i:s'); ?>">
                   <?php echo get_the_date('j F, Y'); ?>
                 </time>
               </article>

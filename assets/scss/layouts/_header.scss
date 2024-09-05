@@ -30,18 +30,12 @@
 
 }
 
-.sidebar {
-  border-left: .06rem solid var(--soft-gray);
-  width: 25.75rem;
-  min-width: 25.75rem;
-  padding-top: 4rem;
-  padding-left: 4rem;
-  position: relative;
-}
-
 .post-date {
+  font-size: toRem(12);
+  text-align: center;
   text-transform: uppercase;
   color: var(--pulis-color-wheat);
+
 }
 
 .entry-content {

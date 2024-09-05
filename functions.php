@@ -185,10 +185,22 @@ function odin_widgets_init() {
 			'name' => __( 'Main Sidebar', 'odin' ),
 			'id' => 'main-sidebar',
 			'description' => __( 'Site Main Sidebar', 'odin' ),
-			'before_widget' => '<article id="%1$s" class="widget %2$s">',
-			'after_widget' => '</article>',
-			'before_title' => '<h3 class="widgettitle widget-title">',
-			'after_title' => '</h3>',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h2 class="widgettitle widget-title">',
+			'after_title' => '</h2>',
+    )
+	);
+
+  register_sidebar(
+		array(
+			'name' => __( 'Archive Sidebar', 'odin' ),
+			'id' => 'archive-sidebar',
+			'description' => __( 'Archive Sidebar', 'odin' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h2 class="widgettitle widget__title widget-title">',
+			'after_title' => '</h2>',
     )
 	);
 
