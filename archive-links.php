@@ -11,10 +11,9 @@ get_header(); ?>
 
 <main id="content">
   <div class="container">
-    <div class="row">
+    <div class="row">  
+      <h1 class="entry-title">Links</h1>
       <?php odin_breadcrumbs(); ?>
-      
-      <h1>Links</h1>
       <p>Links interessantes que vi ao longo da semana.</p>
      
       <div class="col-md-8">
@@ -32,26 +31,35 @@ get_header(); ?>
             
             if ( $bookmark->have_posts() ) :
               while ( $bookmark->have_posts() ) : $bookmark->the_post();
-
                 $sindycateLink = get_field( 'bookmark_url' );
           ?>
-            <div class="col-md-12 mb-3">
-              <article class="c-note h-entry">
-                <div class="c-note__body e-content">
-                  <h3><a href="<?php echo $sindycateLink ?>" class="p-name u-bookmark-of"><?php the_title(); ?></a></h3>
+            <article class="home-blog__item col-lg-4">
+              <div class="c-card h-100">
+                <div class="c-card__body">
+                  <h3 class="c-card__title">
+                    <a href="<?php the_permalink(); ?>" class="c-card__link">
+                      <?php the_title(); ?>
+                    </a>
+                  </h3>
+                  <time class="c-card__meta" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+                    <?php echo get_the_date('j F, Y'); ?>
+                  </time>
 
-                  <div class="c-note__content e-content p-name">
+                  <div class="c-card__content">
                     <p><?php the_content(); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="c-card__link">Leia o texto <span class="visually-hidden">sobre: <?php the_title();?></span></a>
                   </div>
                 </div>
-              </article>
+              </div>
+            </article>
+            <?php endwhile;?>
+            <div class="pagination">
+              <?php wp_pagenavi( array( 'query' => $bookmark ) ); ?>
             </div>
-          <?php endwhile; ?>
-          <div class="pagination">
-            <?php wp_pagenavi( array( 'query' => $bookmark ) ); ?>
-          </div>
-          <?php wp_reset_postdata(); ?>
-          <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+        <?php else: ?>
+          <p>Nenhum link encontrado.</p>
+        <?php endif; ?>  
         </div>
       </div>
     </div>
