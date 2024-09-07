@@ -61,7 +61,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		register_nav_menus(
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' ),
-        'footer' => __( 'Footer', 'odin' )
+        'footer-menu' => __( 'Footer', 'odin' )
 			)
 		);
 
