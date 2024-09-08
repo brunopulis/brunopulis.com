@@ -12011,17 +12011,21 @@ Sass variables.
   margin: 0.85rem 0;
 }
 
+.wp-pagenavi,
 .pagination {
   margin: 2rem 0;
   font-size: 1em;
   font-weight: 600;
 }
 @media (max-width: 480px) {
+  .wp-pagenavi,
   .pagination {
     margin: 1rem 0;
   }
 }
 
+.wp-pagenavi a,
+.wp-pagenavi span,
 .pagination a,
 .pagination span {
   padding: 0.4em 0.85em;
@@ -12033,7 +12037,10 @@ Sass variables.
   transition: all 0.3s;
 }
 
-.pagination a:hover, .pagination span.current {
+.wp-pagenavi a:hover,
+.wp-pagenavi a:hover span.current,
+.pagination a:hover,
+.pagination span.current {
   background: var(--pulis-color-blue);
   color: var(--pulis-color-white);
   border: 1px solid #AFAFAF;
@@ -12475,6 +12482,60 @@ main [role=note] {
 
 .navbar-toggler {
   background-color: var(--pulis-color-wheat);
+}
+
+.note {
+  width: 100%;
+  max-width: 55rem;
+  max-width: var(--content-max-width, 55rem);
+  position: relative;
+  min-height: 100px;
+}
+
+.c-note {
+  margin-bottom: 2rem;
+}
+
+.note__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem 0 0.25rem;
+}
+
+.note__meta--divider {
+  display: inline-block;
+  padding: 0 0.25rem;
+}
+
+.note__author__photo {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.note__author__name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.note__author__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.notelist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notelist__item:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .newsletter {

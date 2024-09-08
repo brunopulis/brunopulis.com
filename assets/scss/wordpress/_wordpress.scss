@@ -386,6 +386,7 @@
   }
 }
 
+.wp-pagenavi,
 .pagination {
   margin: 2rem 0;
   font-size: 1em;
@@ -396,7 +397,8 @@
   }
 }
 
-
+.wp-pagenavi a, 
+.wp-pagenavi span,
 .pagination a, 
 .pagination span {
   padding: .4em .85em; 
@@ -408,7 +410,10 @@
   transition: all .3s;
 }
 
-.pagination a:hover, .pagination span.current {
+.wp-pagenavi a:hover,
+.wp-pagenavi a:hover span.current,
+.pagination a:hover, 
+.pagination span.current {
   background: var(--pulis-color-blue);
   color: var(--pulis-color-white);
   border: 1px solid #AFAFAF;

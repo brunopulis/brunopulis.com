@@ -1,0 +1,57 @@
+// =========================================================================
+// Notes
+// =========================================================================
+
+.note {
+  width: 100%;
+  max-width: 55rem;
+  max-width: var(--content-max-width, 55rem);
+  position: relative;
+  min-height: 100px;
+}
+
+.c-note {
+  margin-bottom: 2rem;
+}
+
+.note__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem 0 .25rem;
+}
+
+.note__meta--divider {
+  display: inline-block;
+  padding: 0 .25rem;
+}
+
+.note__author__photo {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.note__author__name {
+  font-size: toRem(16);
+  font-weight: 700;
+}
+
+.note__author__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.notelist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notelist__item:not(:last-child) {
+  margin-bottom: 2rem;
+}
