@@ -25,6 +25,14 @@
           </a>
         </li>
         <li class="footer-social__item">
+          <a class="footer-social__link" href="https://mastodon.social/@brunopulis" rel="me noopener noreferrer" target="_blank">
+            <svg aria-hidden="true" class="footer-social__icon footer-social__icon--mastodon">
+              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#mastodon">
+            </svg>
+            <span class="visually-hidden">Mastodon</span>
+          </a>
+        </li>
+        <li class="footer-social__item">
           <a class="footer-social__link" href="https://youtube.com/c/BrunoPulis" rel="noopener noreferrer" target="_blank">
             <svg aria-hidden="true" class="footer-social__icon footer-social__icon--youtube">
               <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#youtube">
@@ -40,22 +48,7 @@
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>
-        <li class="footer-social__item">
-          <a class="footer-social__link" href="https://x.com/obrunopulis" rel="noopener noreferrer" target="_blank">
-            <svg aria-hidden="true" class="footer-social__icon footer-social__icon--twitter">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#x-twitter">
-            </svg>
-            <span class="visually-hidden">Twitter</span>
-          </a>
-        </li>
-        <li class="footer-social__item">
-          <a class="footer-social__link" href="https://mastodon.social/@brunopulis" rel="me noopener noreferrer" target="_blank">
-            <svg aria-hidden="true" class="footer-social__icon footer-social__icon--mastodon">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#mastodon">
-            </svg>
-            <span class="visually-hidden">Mastodon</span>
-          </a>
-        </li>
+        
         <li class="footer-social__item">
           <a class="footer-social__link" href="<?php bloginfo('url') ?>/feed" rel="noopener noreferrer" target="_blank">
             <svg aria-hidden="true" class="footer-social__icon footer-social__icon--rss">
