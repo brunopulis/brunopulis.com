@@ -11,203 +11,78 @@
  * @author   WPBrasil
  * @version  2.1.4
  */
+
 class Odin_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
+	private $current_item;
+  private $dropdown_menu_alignment_values = [
+    'dropdown-menu-start',
+    'dropdown-menu-end',
+    'dropdown-menu-sm-start',
+    'dropdown-menu-sm-end',
+    'dropdown-menu-md-start',
+    'dropdown-menu-md-end',
+    'dropdown-menu-lg-start',
+    'dropdown-menu-lg-end',
+    'dropdown-menu-xl-start',
+    'dropdown-menu-xl-end',
+    'dropdown-menu-xxl-start',
+    'dropdown-menu-xxl-end'
+  ];
 
-	/**
-	 * @see Walker::start_lvl()
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param int $depth Depth of page. Used for padding.
-	 */
-	public function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\">\n";
-	}
+  function start_lvl(&$output, $depth = 0, $args = null)
+  {
+    $dropdown_menu_class[] = '';
+    foreach($this->current_item->classes as $class) {
+      if(in_array($class, $this->dropdown_menu_alignment_values)) {
+        $dropdown_menu_class[] = $class;
+      }
+    }
+    $indent = str_repeat("\t", $depth);
+    $submenu = ($depth > 0) ? ' sub-menu' : '';
+    $output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr(implode(" ",$dropdown_menu_class)) . " depth_$depth\">\n";
+  }
 
-	/**
-	 * @see Walker::start_el()
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param object $item Menu item data object.
-	 * @param int $depth Depth of menu item. Used for padding.
-	 * @param int $current_page Menu item ID.
-	 * @param object $args
-	 */
-	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+  function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+  {
+    $this->current_item = $item;
 
-		/**
-		 * Dividers, Headers or Disabled
-		 * =============================
-		 * Determine whether the item is a Divider, Header, Disabled or regular
-		 * menu item. To prevent errors we use the strcasecmp() function to so a
-		 * comparison that is not case sensitive. The strcasecmp() function returns
-		 * a 0 if the strings are equal.
-		 */
-		if ( strcasecmp( $item->attr_title, 'divider' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="presentation" class="divider">';
-		} else if ( strcasecmp( $item->title, 'divider' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="presentation" class="divider">';
-		} else if ( strcasecmp( $item->attr_title, 'dropdown-header' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="presentation" class="dropdown-header">' . esc_html( $item->title );
-		} else if ( strcasecmp( $item->attr_title, 'disabled' ) == 0 ) {
-			$output .= $indent . '<li role="presentation" class="disabled"><a href="#">' . esc_html( $item->title ) . '</a>';
-		} else {
+    $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
-			$class_names = $value = '';
+    $li_attributes = '';
+    $class_names = $value = '';
 
-			$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-			$classes[] = 'nav-item menu-item-' . $item->ID;
+    $classes = empty($item->classes) ? array() : (array) $item->classes;
 
-			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+    $classes[] = ($args->walker->has_children) ? 'dropdown' : '';
+    $classes[] = 'nav-item';
+    $classes[] = 'nav-item-' . $item->ID;
+    if ($depth && $args->walker->has_children) {
+      $classes[] = 'dropdown-menu dropdown-menu-end';
+    }
 
-			if ( $args->has_children ) {
-				$class_names .= ' dropdown';
-			}
+    $class_names =  join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
+    $class_names = ' class="' . esc_attr($class_names) . '"';
 
-			if ( in_array( 'current-menu-item', $classes ) ) {
-				$class_names .= ' active';
-			}
+    $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args);
+    $id = strlen($id) ? ' id="' . esc_attr($id) . '"' : '';
 
-			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+    $output .= $indent . '<li ' . $id . $value . $class_names . $li_attributes . '>';
 
-			$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
-			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+    $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
+    $attributes .= !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
+    $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
+    $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
 
-			$output .= $indent . '<li' . $class_names . $value . $id  .'>';
+    $active_class = ($item->current || $item->current_item_ancestor || in_array("current_page_parent", $item->classes, true) || in_array("current-post-ancestor", $item->classes, true)) ? 'active' : '';
+    $nav_link_class = ( $depth > 0 ) ? 'dropdown-item ' : 'nav-link ';
+    $attributes .= ( $args->walker->has_children ) ? ' class="'. $nav_link_class . $active_class . ' dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="'. $nav_link_class . $active_class . '"';
 
-			$atts = array();
-      $atts['class']  = 'nav-link';
-			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-			$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
+    $item_output = $args->before;
+    $item_output .= '<a' . $attributes . '>';
+    $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
+    $item_output .= '</a>';
+    $item_output .= $args->after;
 
-			// If item has_children add atts to a.
-			if ( $args->has_children && $depth === 0) {
-				$atts['href']        = '#';
-				$atts['data-toggle'] = 'dropdown';
-				$atts['class']       = 'dropdown-toggle';
-			} else {
-				$atts['href'] = ! empty( $item->url ) ? $item->url : '';
-			}
-
-			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
-
-			$attributes = '';
-			foreach ( $atts as $attr => $value ) {
-				if ( ! empty( $value ) ) {
-					$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-					$attributes .= ' ' . $attr . '="' . $value . '"';
-				}
-			}
-
-			$item_output = $args->before;
-
-			/*
-			 * Glyphicons
-			 * ===========
-			 * Since the the menu item is NOT a Divider or Header we check the see
-			 * if there is a value in the attr_title property. If the attr_title
-			 * property is NOT null we apply it as the class name for the glyphicon.
-			 */
-			if ( ! empty( $item->attr_title ) ) {
-				$item_output .= '<a'. $attributes .'><span class="glyphicon ' . esc_attr( $item->attr_title ) . '"></span>&nbsp;';
-			} else {
-				$item_output .= '<a'. $attributes .'>';
-			}
-
-			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <span class="caret"></span></a>' : '</a>';
-			$item_output .= $args->after;
-
-			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-		}
-	}
-
-	/**
-	 * Traverse elements to create list from elements.
-	 *
-	 * Display one element if the element doesn't have any children otherwise,
-	 * display the element and its children. Will only traverse up to the max
-	 * depth and no ignore elements under that depth.
-	 *
-	 * This method shouldn't be called directly, use the walk() method instead.
-	 *
-	 * @see Walker::start_el()
-	 *
-	 * @param object $element Data object.
-	 * @param array $children_elements List of elements to continue traversing.
-	 * @param int $max_depth Max depth to traverse.
-	 * @param int $depth Depth of current element.
-	 * @param array $args
-	 * @param string $output Passed by reference. Used to append additional content.
-	 *
-	 * @return null Null on failure with no changes to parameters.
-	 */
-	public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
-		if ( ! $element ) {
-			return;
-		}
-
-		$id_field = $this->db_fields['id'];
-
-		// Display this element.
-		if ( is_object( $args[0] ) ) {
-			$args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
-		}
-
-		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-	}
-
-	/**
-	 * Menu Fallback
-	 * =============
-	 * If this function is assigned to the wp_nav_menu's fallback_cb variable
-	 * and a manu has not been assigned to the theme location in the WordPress
-	 * menu manager the function with display nothing to a non-logged in user,
-	 * and will add a link to the WordPress menu manager if logged in as an admin.
-	 *
-	 * @param array $args passed from the wp_nav_menu function.
-	 */
-	public static function fallback( $args ) {
-		if ( current_user_can( 'manage_options' ) ) {
-
-			extract( $args );
-
-			$fb_output = null;
-
-			if ( $container ) {
-				$fb_output = '<' . $container;
-
-				if ( $container_id ) {
-					$fb_output .= ' id="' . $container_id . '"';
-				}
-
-				if ( $container_class ) {
-					$fb_output .= ' class="' . $container_class . '"';
-				}
-
-				$fb_output .= '>';
-			}
-
-			$fb_output .= '<ul';
-
-			if ( $menu_id ) {
-				$fb_output .= ' id="' . $menu_id . '"';
-			}
-
-			if ( $menu_class ) {
-				$fb_output .= ' class="' . $menu_class . '"';
-			}
-
-			$fb_output .= '>';
-			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">' . __( 'Add a menu', 'odin' ) . '</a></li>';
-			$fb_output .= '</ul>';
-
-			if ( $container ) {
-				$fb_output .= '</' . $container . '>';
-			}
-
-			echo $fb_output;
-		}
-	}
+    $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+  }
 }
