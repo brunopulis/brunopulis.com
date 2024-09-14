@@ -8,22 +8,22 @@ function cpt_hero() {
 
 	$hero->set_labels(
 		array(
-      'name'                  => __( 'Banners', 'bruno-pulis' ),
-			'menu_name'             => __( 'Meus banners', 'bruno-pulis' ),
-      'name_admin_bar'        => __( 'Banners', 'bruno-pulis' ),
-      'archives'              => __( 'Item Arquivado', 'bruno-pulis' ),
-      'attributes'            => __( 'Atributos', 'bruno-pulis' ),
-      'all_items'             => __( 'Todos os banners', 'bruno-pulis' ),
-      'add_new_item'          => __( 'Adicionar novo banner', 'bruno-pulis' ),
-      'add_new'               => __( 'Adicionar novo banner', 'bruno-pulis' ),
-      'new_item'              => __( 'Adicionar novo banner', 'bruno-pulis' ),
-      'edit_item'             => __( 'Editar banner', 'bruno-pulis' ),
-      'update_item'           => __( 'Atualizar banner', 'bruno-pulis' ),
-      'view_item'             => __( 'Ver banner', 'bruno-pulis' ),
-      'view_items'            => __( 'Ver banners', 'bruno-pulis' ),
-      'search_items'          => __( 'Procurar banners', 'bruno-pulis' ),
-      'not_found'             => __( 'Nenhum banner encontrado', 'bruno-pulis' ),
-      'not_found_in_trash'    => __( 'Nenhum banner encontrado', 'bruno-pulis' ),
+      'name'                  => __( 'Banners', 'odin' ),
+			'menu_name'             => __( 'Meus banners', 'odin' ),
+      'name_admin_bar'        => __( 'Banners', 'odin' ),
+      'archives'              => __( 'Item Arquivado', 'odin' ),
+      'attributes'            => __( 'Atributos', 'odin' ),
+      'all_items'             => __( 'Todos os banners', 'odin' ),
+      'add_new_item'          => __( 'Adicionar novo banner', 'odin' ),
+      'add_new'               => __( 'Adicionar novo banner', 'odin' ),
+      'new_item'              => __( 'Adicionar novo banner', 'odin' ),
+      'edit_item'             => __( 'Editar banner', 'odin' ),
+      'update_item'           => __( 'Atualizar banner', 'odin' ),
+      'view_item'             => __( 'Ver banner', 'odin' ),
+      'view_items'            => __( 'Ver banners', 'odin' ),
+      'search_items'          => __( 'Procurar banners', 'odin' ),
+      'not_found'             => __( 'Nenhum banner encontrado', 'odin' ),
+      'not_found_in_trash'    => __( 'Nenhum banner encontrado', 'odin' ),
 		)
 	);
 
