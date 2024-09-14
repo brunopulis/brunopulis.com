@@ -1,9 +1,9 @@
 <section class="" aria-labelledby="letters-title">
-  <div class="container">
+  <div class="container mb-5">
     <div class="row">
       <div class="d-flex align-items-center justify-content-between">
-        <h2 id="letters-title">Pulis Letters</h2>
-        <a href="<?php the_permalink(); ?>/category/letters" class="button">veja todas as edições <span class="visually-hidden"> da <span></span></span></a>
+        <h2 class="section-title" id="letters-title">Pulis Letters</h2>
+        <a href="<?php the_permalink(); ?>/letters" class="button">veja todas as edições <span class="visually-hidden"> da <span></span></span></a>
       </div>
       <p>Insights valiosos sobre acessibilidade, Obsidian e organização digital.</p>
     </div>
@@ -27,12 +27,16 @@
                 $edition = get_field( 'letters_edition' );
           ?>
             <div class="col-md-6 mb-3">
-              <article class="letter__item c-card h-100">
+              <article class="card card__letter card__letter--small letter__item card">
                 <div class="c-card__body letter__body">
                   <div class="letter__edition">
-                    <span><span aria-label="Edição: ">#</span> <?php echo $edition; ?></span>
+                    <span>
+                      <span aria-hidden="true">#</span>
+                      <span class="visually-hidden">Edição:</span> 
+                      <?php echo $edition; ?>
+                    </span>
                   </div>
-                  <h3 class="c-card__title letter__title">
+                  <h3 class="card-title c-card__title letter__title">
                     <a href="<?php the_permalink(); ?>" class="c-card__title">
                       <?php the_title(); ?>
                     </a>
@@ -56,13 +60,14 @@
           </div>
           <form class="c-newsletter__form" id="form-newsletter">
             <div class="c-newsletter-container">
-              <div class="c-newsletter__form-field">
+              <div class="c-newsletter__form-field input-group">
                 <label for="email" class="visually-hidden">E-mail</label>
                 <input type="email" id="email" name="email_address" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Seu melhor e-mail" class="form-control">
+                <input type="submit" class="c-newsletter__form-button btn btn-primary" value="Assinar" />
               </div>
 
               <div class="c-newsletter__form-field">
-                <input type="submit" class="c-newsletter__form-button btn btn-primary" value="Assinar" />
+                
               </div>
             </div>
           </form>
