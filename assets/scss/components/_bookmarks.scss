@@ -1,0 +1,44 @@
+// =========================================================================
+// Bookmarks
+// =========================================================================
+
+.bookmark__list {
+  margin-bottom: rem(80);
+
+  @extend .list-grid;
+}
+
+.bookmark__item {
+  min-height: 205px;
+}
+
+.bookmark__title {
+  margin-block-start: rem(23);
+  margin-block-end: rem(23);
+  word-break: break-word;
+
+  &:after {
+    content: '🔖';
+    display: inline;
+    margin-left: rem(10);
+  }
+}
+
+.bookmark__link {
+  font-size: rem(20);
+  color: $main;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.bookmark__text {
+  font-size: rem(20);
+  margin-block-start: rem(19);
+  margin-block-end: rem(19);
+}
+
+.bookmark__date {
+  color: $main;
+  font-size: rem(14);
+  font-weight: 700;
+}
