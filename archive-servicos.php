@@ -66,6 +66,7 @@ get_header(); ?>
       </div>
     </div>
   </section>
+  <?php require_once('template-parts/newsletter.php'); ?>
 </main>
 <?php
 get_footer();

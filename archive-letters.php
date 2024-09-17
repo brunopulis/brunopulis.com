@@ -12,7 +12,7 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Odin
+ * @package Bruno_Pulis
  * @since 2.2.0
  */
 
@@ -23,7 +23,8 @@ get_header(); ?>
 <main id="content">
   <div class="container">
     <div class="row">
-      <?php the_content(); ?>
+      <h1>Pulis Letters</h1>
+      <p>Insights valiosos sobre acessibilidade, Obsidian e organização digital.</p>
      
       <div class="col-md-8">
         <div class="row">

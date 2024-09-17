@@ -4,7 +4,7 @@
  *
  * The template for displaying Livros page.
  *
- * @package Odin
+ * @package Bruno_Pulis
  * @since 2.2.0
  */
 get_header(); ?>
@@ -65,6 +65,7 @@ get_header(); ?>
       </div>
     </div>
   </section>
+  <?php require_once('template-parts/newsletter.php'); ?>
 </main>
 <?php
 get_footer();
