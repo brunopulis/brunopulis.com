@@ -8,6 +8,10 @@ ul {
   list-style: none;
 }
 
+ol, ul, dl {
+  padding-left: rem(16);
+}
+
 ol[class],
 ul[class] {
 	list-style: none;
@@ -119,4 +123,16 @@ dl.grid {
 
 .category__link {
   font-size: 1.5rem;
+}
+
+.list-grid {
+  --grid-gap: 2.5em;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: var(--grid-gap);  
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

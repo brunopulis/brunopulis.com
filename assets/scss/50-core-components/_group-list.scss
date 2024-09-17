@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #Group list
+\*------------------------------------*/
+
+.component--group-list {
+	background-color: $mist-gray;
+	padding-bottom: rem(50);
+	padding-top: rem(50);
+}
+
+.component--group-list__intro {
+	max-width: rem($text-measure);
+}

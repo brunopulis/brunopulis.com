@@ -2,7 +2,7 @@
 // Hero
 // =======================================================
 
-.c-hero {
+.home .hero {
   background: var(--pulis-color-grey);
   padding: 40px 0;
   min-height: 440px;
@@ -13,24 +13,25 @@
 }
 
 .c-hero__title {
-  font-size: toRem(54);
-  line-height: toRem(72);
-  margin-bottom: toRem(38);
+  font-size: rem(54);
+  line-height: rem(63);
+  font-weight: 400;
+  margin: 0;
 }
 
 .c-hero__lead {
-  font-size: toRem(24);
+  font-size: rem(24);
   font-weight: 400;
-  line-height: toRem(32);
+  line-height: rem(32);
   margin: 0;
-  padding-bottom: toRem(33);
+  padding: rem(36) 0;
 }
 
 .c-hero__link {
   color: var(--pulis-color-black);
-  font-size: toRem(24);
+  font-size: rem(24);
   font-weight: 500;
-  line-height: toRem(32);
+  line-height: rem(32);
   text-decoration: underline;
   transition: var(--transition);
 

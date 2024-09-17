@@ -3,12 +3,39 @@
 // ===========================================
 
 // TODO: Refactor this
+.card {
+  --bs-card-spacer-y: 2rem;
+  --bs-card-spacer-x: 2rem;
+  --bs-card-border-color: #e7ecef;
+
+  &-title {
+    color: $main;
+    font-size: rem(22);
+    font-weight: 400;
+    margin: 0;
+    word-wrap: break-word;
+  }
+
+  &-text > p {
+    font-size: rem(16);
+  }
+
+  &-link {
+    color: $main;
+  }
+}
+
+.card__letter--small {
+  min-height: rem(150);
+}
+
+
 .c-card {
   margin-bottom: var(--pulis-block-spacing-vertical);
-  padding: var(--pulis-block-spacing-vertical) 0;
+  padding: rem(8);
   border-radius: var(--pulis-border-radius);
   border: 1px solid var(--pulis-color-grey);
-  height: 240px;
+  min-height: 208px;
 
   &--transparent {
     background: transparent;
@@ -31,14 +58,24 @@
 }
 
 .c-card__title {
-  color: var(--pulis-color-black);
-  font-size: toRem(22);
-  font-weight: 700;
-  line-height: toRem(29);
+  color: $text-color;
+  font-size: rem(22);
+  font-weight: 400;
+  line-height: rem(26);
   margin: 0;
-  padding-bottom: 8px;
   transition: var(--transition);
   text-decoration: none;
+  word-break: break-all;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.c-card__date {
+  font-size: rem(14);
+  padding: rem(9) 0;
+  text-transform: uppercase;
 }
 
 .c-card__meta {
@@ -53,9 +90,10 @@
 }
 
 .c-card__content {
+  padding: rem(19) 0;
   p {
-    font-size: toRem(14);
-    line-height: toRem(19);
+    font-size: rem(16);
+    line-height: rem(19);
   }
 }
 
@@ -67,8 +105,9 @@
 }
 
 .c-card__link {
-  color: var(--pulis-color-blue);
-  text-decoration: none;
+  color: $main;
+  text-decoration: underline;
+  font-size: rem(16);
 
   &:hover,
   &:focus {
@@ -82,7 +121,7 @@
 }
 
 .letter__body {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   justify-content: flex-start;
 }
@@ -94,10 +133,10 @@
   padding-right: toRem(30);
 
   span {
-    color: var(--pulis-color-blue);
+    color: $main;
     display: flex;
-    font-size: toRem(22);
-    font-weight: 500;
+    font-size: rem(22);
+    font-weight: 700;
     line-height: toRem(29);
   }
 }
@@ -120,4 +159,24 @@
     border: var(--bs-border-width) solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.card-category {
+  border-top-left-radius: rem(4);
+  border-top-right-radius: rem(4);
+  transform: rotate(-90deg);
+  padding: rem(5) rem(15);
+  position: absolute;
+
+  &--a11y {
+    background: $category-color-8;
+    color: $white;
+    font-size: rem(14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }

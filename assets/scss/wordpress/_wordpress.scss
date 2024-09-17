@@ -44,6 +44,19 @@
 //     word-wrap: break-word;
 // }
 
+.entry-header {
+  padding-bottom: rem(132);
+}
+
+.post-category__list {
+  display: flex;
+  justify-content: center;
+}
+
+.post-category__item {
+  padding: 0 rem(32);
+}
+
 // .page-content,
 // .entry-content {
 //     @include clearfix;
@@ -426,5 +439,21 @@
 .breadcrumb-item {
   @media(max-width: 768px) {
     font-size: toRem(13);
+  }
+}
+
+.category{
+  border-radius: rem(4);
+  display: inline;
+  padding: rem(4) rem(16);
+  text-transform: uppercase;
+
+  background: $main;
+  font-size: rem(14);
+  line-height: rem(19);
+
+  a {
+    color: $white;
+    text-decoration: none;
   }
 }

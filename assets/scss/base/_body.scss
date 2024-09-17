@@ -4,7 +4,7 @@
 
 html {
 	height: 100%;
-  font-size: toRem(16);
+  font-size: rem(16);
   font-family: "Roboto", sans-serif;
 }
 
@@ -15,10 +15,6 @@ body {
 	overflow-x: hidden;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-}
-
-p {
-  font-size: toRem(20);
 }
 
 svg {
@@ -46,6 +42,12 @@ svg:not([class]) {
   padding-bottom: 2rem;
 }
 
+.section-title {
+  font-weight: 700;
+  font-size: rem(32);
+  line-height: rem(38);
+  margin: 0;
+}
 
 
 .entry-meta {
@@ -123,14 +125,6 @@ a {
   &:focus {
     color: var(--pulis-color-orange-light);
   }
-}
-
-main [role=note] {
-  background-color: var(--primary-soft);
-  padding: 2%;
-  border-left: 7.5px solid var(--primary-glare);
-  width: 90%;
-  margin: 1.5em auto;
 }
 
 .section {

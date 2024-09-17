@@ -13,7 +13,13 @@
 }
 
 .bookmark__item {
+  background: $bg-border;
   min-height: 205px;
+  padding: rem(16);
+
+  @media(max-width: 630px) {
+    min-height: auto;
+  }
 }
 
 .bookmark__title {
@@ -36,7 +42,7 @@
 }
 
 .bookmark__text {
-  font-size: rem(20);
+  font-size: rem(16);
   margin-block-start: rem(19);
   margin-block-end: rem(19);
 }

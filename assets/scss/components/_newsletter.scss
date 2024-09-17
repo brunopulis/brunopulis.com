@@ -66,6 +66,11 @@
   display: flex;
 }
 
+.c-newsletter__form {
+  display: flex;
+  justify-content: center;
+}
+
 .c-newsletter__form-button {
   background: var(--pulis-color-wheat);
   color: var(--pulis-color-black);

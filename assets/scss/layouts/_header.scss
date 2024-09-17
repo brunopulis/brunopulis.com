@@ -13,7 +13,8 @@
 }
 
 .nav-link {
-  font-size: toRem(16);
+  font-size: rem(16);
+  color: $text-color;
 
   &:hover,
   &:focus {
