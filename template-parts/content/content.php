@@ -9,6 +9,7 @@
  */
 ?>
 
+<!-- max-width: 45rem +/- 710  -->
 <div class="col-xs-12 col-sm-12 col-md-10 mx-auto">
   <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" >
     <div class="entry-header">
@@ -20,16 +21,20 @@
         endif;
       ?>
 
-      <ul>
-        <li class="category">
+      <?php
+        $category = get_the_category();
+        $firstCategory = $category[0]->cat_name;
+        $slugCategory  = $category[0]->category_nicename;
+      ?>
+
+      <ul class="post-category__list d-flex justify-content-center align-items-center">
+        <li class="category post-category__item">
           <?php the_category(' ', ' '); ?>
         </li>
-        <li>
-          <p class="post-date">
-          <time class="time" datetime="<?php echo get_the_date('Y-m-d g:i:s'); ?>">
+        <li class="post-category__item">
+          <time class="post-date time" datetime="<?php echo get_the_date('Y-m-d g:i:s'); ?>">
             <?php echo get_the_date('F j, Y'); ?>
           </time>
-          </p>
         </li>
       </ul>
     </div>

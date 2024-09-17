@@ -43,6 +43,17 @@
             </li>
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>
+
+          <?php 
+          echo paginate_links( 
+            array( 
+              'before_page_number'=> '<span class="visually-hidden" aria-hidden="true">',
+              'after_page_number'=> '</span>',
+              'next_text'    => 'Artigos antigos',
+              'prev_text'    => 'Novos artigos'
+            ) 
+          );
+        ?>
           <?php endif; ?>
         </ul>
       </div>
