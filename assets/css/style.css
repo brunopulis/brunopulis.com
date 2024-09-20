@@ -4290,7 +4290,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.card {
+.card, .note {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
@@ -4322,26 +4322,27 @@ textarea.form-control-lg {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
-.card > hr {
+.card > hr, .note > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group {
+.card > .list-group, .note > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child {
+.card > .list-group:first-child, .note > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
-.card > .list-group:last-child {
+.card > .list-group:last-child, .note > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
-.card > .card-header + .list-group,
-.card > .list-group + .card-footer {
+.card > .card-header + .list-group, .note > .card-header + .list-group,
+.card > .list-group + .card-footer,
+.note > .list-group + .card-footer {
   border-top: 0;
 }
 
@@ -4435,7 +4436,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
 
-.card-group > .card {
+.card-group > .card, .card-group > .note {
   margin-bottom: var(--bs-card-group-margin);
 }
 @media (min-width: 576px) {
@@ -4443,36 +4444,40 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card {
+  .card-group > .card, .card-group > .note {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card {
+  .card-group > .card + .card, .card-group > .note + .card, .card-group > .card + .note, .card-group > .note + .note {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child) {
+  .card-group > .card:not(:last-child), .card-group > .note:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top,
-  .card-group > .card:not(:last-child) .card-header {
+  .card-group > .card:not(:last-child) .card-img-top, .card-group > .note:not(:last-child) .card-img-top,
+  .card-group > .card:not(:last-child) .card-header,
+  .card-group > .note:not(:last-child) .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-  .card-group > .card:not(:last-child) .card-footer {
+  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .note:not(:last-child) .card-img-bottom,
+  .card-group > .card:not(:last-child) .card-footer,
+  .card-group > .note:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child) {
+  .card-group > .card:not(:first-child), .card-group > .note:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top,
-  .card-group > .card:not(:first-child) .card-header {
+  .card-group > .card:not(:first-child) .card-img-top, .card-group > .note:not(:first-child) .card-img-top,
+  .card-group > .card:not(:first-child) .card-header,
+  .card-group > .note:not(:first-child) .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom,
-  .card-group > .card:not(:first-child) .card-footer {
+  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .note:not(:first-child) .card-img-bottom,
+  .card-group > .card:not(:first-child) .card-footer,
+  .card-group > .note:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -11844,6 +11849,363 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/*------------------------------------*\
+    #Apollo: core styles for all browsers
+\*------------------------------------*/
+/*------------------------------------*\
+    #Settings
+\*------------------------------------*/
+/*------------------------------------*\
+    #Breakpoints
+
+    The measurements presented here are for guidance only
+    and should be updated to reflect the design/content needs.
+\*------------------------------------*/
+/*------------------------------------*\
+    #Colors
+\*------------------------------------*/
+/**
+Base colors that can be used when prototyping. Taken from http://clrs.cc/
+
+1. We ideally avoid using pure white on pure black, because the contrast is
+so great that it creates the illusion that text is vibrating on screen.
+ */
+/* 1 */
+/* 1 */
+/**
+Sass variables.
+ */
+/*------------------------------------*\
+    #Debugging helpers
+\*------------------------------------*/
+/*
+    pesticide v1.3.0 . @mrmrs . MIT
+*/
+/*------------------------------------*\
+    #Fonts
+\*------------------------------------*/
+@font-face {
+  font-display: fallback;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/notosans/notosans-regular.woff2") format("woff2"), url("../fonts/notosans/notosans-regular.woff") format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/notosans/notosans-italic.woff2") format("woff2"), url("../fonts/notosans/notosans-italic.woff") format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/notosans/notosans-bold.woff2") format("woff2"), url("../fonts/notosans/notosans-bold.woff") format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/notosans/notosans-bolditalic.woff2") format("woff2"), url("../fonts/notosans/notosans-bolditalic.woff") format("woff");
+}
+/*------------------------------------*\
+    #Typesetting
+\*------------------------------------*/
+/**
+Use https://www.cssfontstack.com/ and https://meowni.ca/font-style-matcher/ to pick
+system fonts that are reasonably close to any web fonts needed for the project.
+
+This improves performance, avoids Flash Of Invisible Text (FOIT) and minimises
+Flash of Unstyled Content (FOUC) - see https://helenvholmes.com/writing/type-is-your-right/
+
+Be sure to include fonts for both Mac OS and Windows. Use quote marks around
+fonts with white space in their name.
+
+When Font Face Observer has detected that the @font-face files are loaded, then we
+can safely use the web fonts instead of the system fonts.
+ */
+/*------------------------------------*\
+    #Functions
+\*------------------------------------*/
+/*------------------------------------*\
+    #Maths functions
+\*------------------------------------*/
+/**
+ #Random number
+ http://xkcd.com/221/
+ */
+/**
+ #Power function
+ https://css-tricks.com/snippets/sass/power-function/
+ */
+/**
+ #Square root function
+ */
+/*------------------------------------*\
+    #CSS unit functions
+\*------------------------------------*/
+/**
+ #rem
+ */
+/**
+ #px
+ */
+/**
+ #Return a number without a unit
+ */
+/**
+ #Remove any unit present to return a unitless number
+ */
+/*------------------------------------*\
+    #Mixins
+\*------------------------------------*/
+/*------------------------------------*\
+    #Font sizes
+\*------------------------------------*/
+/*------------------------------------*\
+    #Media query
+\*------------------------------------*/
+/*------------------------------------*\
+    #Stack
+\*------------------------------------*/
+/**
+This mixin allows us to add vertical spacing between a container's direct children,
+much like the 'axiomatic owl' technique but limited to specific use cases.
+
+By applying Flexbox to the parent container, we can use auto margin on a specific
+child element. This way, we can choose to group elements inside the stack to the
+top/bottom of the vertical space, which is useful for card-like components.
+
+Use with a specific measure, or without for the default measure, e.g.
+
+main {
+	@include stack(4rem);
+}
+
+article {
+	@include stack;
+}
+ */
+/*------------------------------------*\
+    #Base
+
+    Normalize comes first for the cascade
+\*------------------------------------*/
+/*------------------------------------*\
+    #Layouts
+\*------------------------------------*/
+/*------------------------------------*\
+    #Core components
+\*------------------------------------*/
+/*------------------------------------*\
+    #Templates
+\*------------------------------------*/
+/*------------------------------------*\
+    #Utilities
+\*------------------------------------*/
+/*------------------------------------*\
+    #Alignment utilities
+
+    1. Logical property allows text-direction to change with `ltr`
+\*------------------------------------*/
+.u-float-left {
+  float: left;
+  float: inline-start; /* 1 */
+}
+
+.u-float-right {
+  float: right;
+  float: inline-end; /* 1 */
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-left {
+  text-align: left;
+  text-align: start; /* 1 */
+}
+
+.u-text-right {
+  text-align: right;
+  text-align: end; /* 1 */
+}
+
+.u-text-vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.u-text-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.u-block-left {
+  float: left;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+.u-block-right {
+  float: right;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+/**
+Change text-alignment at the "laptop" breakpoint,
+as defined in /10-settings/breakpoints
+
+1. Logical property allows text-direction to change with `ltr`
+ */
+@media screen and (min-width: 80em) {
+  .u-text-left-from-lap {
+    text-align: left;
+    text-align: start; /* 1 */
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .u-text-center-from-lap {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .u-text-right-from-lap {
+    text-align: right;
+    text-align: end; /* 1 */
+  }
+}
+
+/*------------------------------------*\
+    #Clearfix utility
+
+    https://css-tricks.com/snippets/css/clear-fix/
+
+    Extend the clearfix placeholder with Sass to avoid
+    having it appear over and over in your markup.
+\*------------------------------------*/
+/*------------------------------------*\
+    #Layout utilities
+\*------------------------------------*/
+/**
+For a full-viewport-width element inside a limited width parent.
+The parent must be exactly centered in the browser in order for this
+to work - see https://css-tricks.com/full-width-containers-limited-width-parents/
+ */
+.u-full-width {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+/**
+To horizontally center a block-level item
+ */
+.u-center {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/*------------------------------------*\
+    #Margin utilities
+
+    Double specificity in classname avoids use of !important
+\*------------------------------------*/
+.u-no-margin.u-no-margin {
+  margin: 0;
+}
+
+.u-no-margin-top.u-no-margin-top {
+  margin-top: 0;
+}
+
+/*------------------------------------*\
+    #Color utilities
+
+    Double specificity in classname avoids use of !important
+\*------------------------------------*/
+/**
+ Utilities for "solid" background/border color with WCAG conforming content color
+ */
+.u-bg-active.u-bg-active {
+  background-color: #fc7750;
+  border-color: #fc7750;
+  color: #111;
+}
+
+.u-bg-category.u-bg-category {
+  background-color: #78265f;
+  border-color: #78265f;
+  color: #fff;
+}
+
+.u-bg-error.u-bg-error {
+  background-color: #a82615;
+  border-color: #a82615;
+  color: #fff;
+}
+
+.u-bg-info.u-bg-info {
+  background-color: #005a9c;
+  border-color: #005a9c;
+  color: #fff;
+}
+
+.u-bg-success.u-bg-success {
+  background-color: #046704;
+  border-color: #046704;
+  color: #fff;
+}
+
+.u-bg-warning.u-bg-warning {
+  background-color: #c28605;
+  border-color: #c28605;
+  color: #111;
+}
+
+/**
+ Utilities for border/content color with white background color
+ */
+.u-color-draft.u-color-draft {
+  background-color: #fff;
+  border-color: #111;
+  color: #111;
+}
+
+.u-color-error.u-color-error {
+  background-color: #fff;
+  border-color: #a82615;
+  color: #a82615;
+}
+
+.u-color-info.u-color-info {
+  background-color: #fff;
+  border-color: #005a9c;
+  color: #005a9c;
+}
+
+.u-color-success.u-color-success {
+  background-color: #fff;
+  border-color: #046704;
+  color: #046704;
+}
+
+.u-color-warning.u-color-warning {
+  background-color: #fff;
+  border-color: #c28605;
+  color: #111;
+}
+
 :root {
   --pulis-color-white: #ffffff;
   --pulis-color-black: #0a0a0a;
@@ -11888,6 +12250,19 @@ Theme colors.
 /**
 Sass variables.
  */
+.entry-header {
+  padding-bottom: 8.25rem;
+}
+
+.post-category__list {
+  display: flex;
+  justify-content: center;
+}
+
+.post-category__item {
+  padding: 0 2rem;
+}
+
 
 .widget_block {
   padding: 1.25rem 1.25rem 1rem;
@@ -11923,8 +12298,8 @@ Sass variables.
 .entry-title {
   color: var(--pulis-color-black);
   font-size: 3.375rem;
+  margin-bottom: 2rem;
   line-height: 4.5rem;
-  padding-top: 3.125rem;
 }
 @media (max-width: 480px) {
   .entry-title {
@@ -12056,6 +12431,20 @@ Sass variables.
   }
 }
 
+.category {
+  border-radius: 0.25rem;
+  display: inline;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  background: #274c78;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+}
+.category a {
+  color: #fff;
+  text-decoration: none;
+}
+
 html {
   height: 100%;
   font-size: 1rem;
@@ -12069,10 +12458,6 @@ body {
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-p {
-  font-size: 1.25rem;
 }
 
 svg {
@@ -12098,6 +12483,13 @@ svg:not([class]) {
 
 .entry-header > .entry-meta {
   padding-bottom: 2rem;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.375rem;
+  margin: 0;
 }
 
 .entry-meta {
@@ -12166,14 +12558,6 @@ a:hover, a:focus {
   color: var(--pulis-color-orange-light);
 }
 
-main [role=note] {
-  background-color: var(--primary-soft);
-  padding: 2%;
-  border-left: 7.5px solid var(--primary-glare);
-  width: 90%;
-  margin: 1.5em auto;
-}
-
 .section {
   padding: 84px 0;
 }
@@ -12198,6 +12582,183 @@ main [role=note] {
 .button:active, .button:hover, .button:focus {
   background: var(--pulis-color-orange-light);
   color: var(--pulis-color-black);
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+ol, ul, dl {
+  padding-left: 1rem;
+}
+
+ol[class],
+ul[class] {
+  list-style: none;
+  padding: 0;
+}
+
+ul:not([class]),
+ol:not([class]),
+ol.counter {
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  padding-inline-start: 0;
+}
+ul:not([class]) > * + *,
+ul:not([class]) li ul,
+ul:not([class]) li ol,
+ol:not([class]) > * + *,
+ol:not([class]) li ul,
+ol:not([class]) li ol,
+ol.counter > * + *,
+ol.counter li ul,
+ol.counter li ol {
+  margin-top: 0.75em;
+}
+
+ol.counter ::marker {
+  content: counters(list-item, ".") ". ";
+}
+
+.clean-list li {
+  display: block;
+}
+
+dl {
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+}
+dl dt {
+  font-weight: bold;
+}
+dl dd + dt {
+  margin-top: 0.5em;
+}
+dl dt + dd,
+dl dd + dd {
+  margin-top: 0.25em;
+}
+
+dl.inline div {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+}
+dl.inline div dt, dl.inline div dd {
+  margin-inline-start: 0;
+}
+dl.inline div dt::after {
+  content: ": ";
+}
+dl.inline div dd:not(:last-child):after {
+  content: ", ";
+}
+
+@supports (grid-row-start: auto) {
+  dl.grid {
+    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: 1fr;
+    row-gap: 1rem;
+  }
+  dl.grid dd + dt,
+  dl.grid dt + dd,
+  dl.grid dd + dd {
+    margin-top: 0;
+  }
+  dl.grid dt {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  dl.grid dd {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+
+.category__item {
+  margin-bottom: var(--pulis-block-spacing-vertical);
+  padding: var(--pulis-block-spacing-vertical) var(--pulis-block-spacing-horizontal);
+  border-radius: var(--pulis-border-radius);
+  background: var(--pulis-card-background-color);
+  box-shadow: var(--pulis-card-box-shadow);
+}
+
+.category__link {
+  font-size: 1.5rem;
+}
+
+.list-grid, .blogroll__list, .bookmark__list {
+  --grid-gap: 2.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: var(--grid-gap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------*\
+    #Links
+\*------------------------------------*/
+/**
+Default global link styles that do not interfere with component link styles
+- see https://alexcarpenter.me/screencasts/2019/02/global-link-styles/
+
+1. Don't rely on colour alone for styling links - see
+https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F73
+
+2. Remove the outline on focused links when they are also active/hovered.
+ */
+a:not([class]),
+a.with-icon--before,
+a.with-icon--after {
+  border: 0;
+  color: #005797;
+  cursor: pointer;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+  text-decoration: underline; /* 1 */
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 0.25em;
+}
+a:not([class]) svg,
+a.with-icon--before svg,
+a.with-icon--after svg {
+  fill: currentColor;
+}
+a:not([class]):visited,
+a.with-icon--before:visited,
+a.with-icon--after:visited {
+  color: #920ba6;
+}
+a:not([class]):hover,
+a.with-icon--before:hover,
+a.with-icon--after:hover {
+  color: #024488;
+  outline-width: 0; /* 2 */
+}
+a:not([class]):focus,
+a.with-icon--before:focus,
+a.with-icon--after:focus {
+  background-color: #f9dc4a;
+  background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a);
+  color: #000;
+  text-decoration: none;
+}
+a:not([class]):active,
+a.with-icon--before:active,
+a.with-icon--after:active {
+  color: #000;
+  outline-width: 0; /* 2 */
+}
+
+.text-no-underline {
   text-decoration: none;
 }
 
@@ -12244,21 +12805,22 @@ main [role=note] {
   padding: 1.875rem 0;
 }
 
-.c-hero {
+.home .hero {
   background: var(--pulis-color-grey);
   padding: 40px 0;
   min-height: 440px;
 }
 @media (max-width: 991px) {
-  .c-hero {
+  .home .hero {
     min-height: auto;
   }
 }
 
 .c-hero__title {
   font-size: 3.375rem;
-  line-height: 4.5rem;
-  margin-bottom: 2.375rem;
+  line-height: 3.9375rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .c-hero__lead {
@@ -12266,7 +12828,7 @@ main [role=note] {
   font-weight: 400;
   line-height: 2rem;
   margin: 0;
-  padding-bottom: 2.0625rem;
+  padding: 2.25rem 0;
 }
 
 .c-hero__link {
@@ -12302,8 +12864,7 @@ main [role=note] {
   margin: 1.5rem 0;
 }
 .home-blog__item .c-card__link {
-  color: #000;
-  font-size: 1rem;
+  font-size: 1.375rem;
 }
 
 .help-item:not(:last-child) {
@@ -12351,12 +12912,35 @@ main [role=note] {
   margin: 15px 0;
 }
 
+.card, .note {
+  --bs-card-spacer-y: 2rem;
+  --bs-card-spacer-x: 2rem;
+  --bs-card-border-color: #e7ecef;
+}
+.card-title {
+  color: #274c78;
+  font-size: 1.375rem;
+  font-weight: 400;
+  margin: 0;
+  word-wrap: break-word;
+}
+.card-text > p {
+  font-size: 1rem;
+}
+.card-link {
+  color: #274c78;
+}
+
+.card__letter--small {
+  min-height: 9.375rem;
+}
+
 .c-card {
   margin-bottom: var(--pulis-block-spacing-vertical);
-  padding: var(--pulis-block-spacing-vertical) 0;
+  padding: 0.5rem;
   border-radius: var(--pulis-border-radius);
   border: 1px solid var(--pulis-color-grey);
-  height: 240px;
+  min-height: 208px;
 }
 .c-card--transparent {
   background: transparent;
@@ -12378,14 +12962,23 @@ main [role=note] {
 }
 
 .c-card__title {
-  color: var(--pulis-color-black);
+  color: #0a0a0a;
   font-size: 1.375rem;
-  font-weight: 700;
-  line-height: 1.8125rem;
+  font-weight: 400;
+  line-height: 1.625rem;
   margin: 0;
-  padding-bottom: 8px;
   transition: var(--transition);
   text-decoration: none;
+  word-break: break-all;
+}
+.c-card__title a {
+  text-decoration: none;
+}
+
+.c-card__date {
+  font-size: 0.875rem;
+  padding: 0.5625rem 0;
+  text-transform: uppercase;
 }
 
 .c-card__meta {
@@ -12399,8 +12992,11 @@ main [role=note] {
   padding: 2rem;
 }
 
+.c-card__content {
+  padding: 1.1875rem 0;
+}
 .c-card__content p {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.1875rem;
 }
 
@@ -12412,8 +13008,9 @@ main [role=note] {
 }
 
 .c-card__link {
-  color: var(--pulis-color-blue);
-  text-decoration: none;
+  color: #274c78;
+  text-decoration: underline;
+  font-size: 1rem;
 }
 .c-card__link:hover, .c-card__link:focus {
   text-decoration: none;
@@ -12425,7 +13022,7 @@ main [role=note] {
 }
 
 .letter__body {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   justify-content: flex-start;
 }
@@ -12437,10 +13034,10 @@ main [role=note] {
   padding-right: 1.875rem;
 }
 .letter__edition span {
-  color: var(--pulis-color-blue);
+  color: #274c78;
   display: flex;
   font-size: 1.375rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.8125rem;
 }
 
@@ -12464,8 +13061,27 @@ main [role=note] {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.card-category {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  transform: rotate(-90deg);
+  padding: 0.3125rem 0.9375rem;
+  position: absolute;
+}
+.card-category--a11y {
+  background: #317826;
+  color: #fff;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .navbar-brand {
-  color: #212529;
+  color: #fff;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--pulis-wheat);
@@ -12473,7 +13089,7 @@ main [role=note] {
 }
 
 .nav-link {
-  color: #212529;
+  color: #fff;
 }
 .nav-link:hover, .nav-link:focus, .nav-link:focus-visible {
   color: var(--pulis-color-wheat);
@@ -12484,12 +13100,163 @@ main [role=note] {
   background-color: var(--pulis-color-wheat);
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*------------------------------------*\
+    #Breadcrumbs
+    See: https://scottaohara.github.io/a11y_breadcrumbs/
+\*------------------------------------*/
+.breadcrumb__headline {
+  font-size: 0.875rem;
+  padding: 0 0.6875rem 0 0;
+}
+
+.breadcrumb {
+  padding-bottom: 0.9375rem;
+  padding-top: 0.625rem;
+}
+
+.breadcrumb a {
+  color: #274c78;
+  font-size: 0.875rem;
+  padding: 0.6875rem 0;
+}
+.breadcrumb a:visited, .breadcrumb a:hover, .breadcrumb a:active {
+  color: #274c78;
+  text-decoration: underline;
+}
+
+.breadcrumbs [aria-current],
+.breadcrumb [aria-current] {
+  --bs-breadcrumb-item-active-color: $text-color;
+  color: #0a0a0a;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.breadcrumbs [aria-current]:hover, .breadcrumbs [aria-current]:focus,
+.breadcrumb [aria-current]:hover,
+.breadcrumb [aria-current]:focus {
+  outline-color: #0a0a0a;
+}
+
+/**
+Separator chevron - see https://codepen.io/jonneal/pen/kptBs
+*/
+.breadcrumbs li:not(:last-child)::after {
+  border-style: solid;
+  border-width: 0.1em 0.1em 0 0;
+  content: "";
+  display: block;
+  height: 0.5em;
+  position: absolute;
+  right: 0.4em;
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+  width: 0.5em;
+}
+
+.bookmark__list {
+  margin-bottom: 5rem;
+}
+@media (max-width: 630px) {
+  .bookmark__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bookmark__item {
+  background: #e7ecef;
+  min-height: 205px;
+  padding: 1rem;
+}
+@media (max-width: 630px) {
+  .bookmark__item {
+    min-height: auto;
+  }
+}
+
+.bookmark__title {
+  margin-block-start: 1.4375rem;
+  margin-block-end: 1.4375rem;
+  word-break: break-word;
+}
+
+.bookmark__link {
+  font-size: 1.25rem;
+  color: #274c78;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bookmark__text {
+  font-size: 1rem;
+  margin-block-start: 1.1875rem;
+  margin-block-end: 1.1875rem;
+}
+
+.bookmark__date {
+  color: #274c78;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.blogroll__list {
+  margin-bottom: 5rem;
+}
+@media (max-width: 630px) {
+  .blogroll__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blogroll__title {
+  color: #274c78;
+  font-weight: 700;
+  margin-block-start: 1.4375rem;
+  margin-block-end: 1.4375rem;
+  word-break: break-word;
+}
+
+.blogroll__thumbnail {
+  border: 1px solid #e7ecef;
+  margin-bottom: 0.8125rem;
+}
+
+.blogroll__text {
+  font-size: 1rem;
+  margin-block-start: 1.1875rem;
+  margin-block-end: 1.1875rem;
+}
+
+.blogroll__link {
+  font-size: 0.875rem;
+  color: #274c78;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
 .note {
-  width: 100%;
+  background: #e7ecef;
+  margin-bottom: 1rem;
   max-width: 55rem;
-  max-width: var(--content-max-width, 55rem);
+  padding: 1rem;
   position: relative;
-  min-height: 100px;
+  width: 100%;
+}
+
+.note__text {
+  font-size: 1.25rem;
+}
+
+.note__date {
+  color: #274c78;
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .c-note {
@@ -12598,6 +13365,11 @@ main [role=note] {
   display: flex;
 }
 
+.c-newsletter__form {
+  display: flex;
+  justify-content: center;
+}
+
 .c-newsletter__form-button {
   background: var(--pulis-color-wheat);
   color: var(--pulis-color-black);
@@ -12607,6 +13379,37 @@ main [role=note] {
   background: transparent;
   border: 1px solid var(--pulis-color-wheat);
   color: var(--pulis-color-white);
+}
+
+.pill {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--pulis-card-background-color);
+  background: transparent;
+  color: var(--pulis-white);
+  font-weight: 700;
+  font-size: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+  line-height: 1;
+  text-decoration: none;
+  text-decoration-color: currentcolor;
+  text-transform: capitalize;
+}
+.pill:hover, .pill:focus, .pill:focus-visible {
+  background: var(--pulis-wheat);
+  color: var(--pulis-black);
+  text-decoration: none;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 45rem;
+  margin: 0 auto;
+  margin-top: 0px;
+  gap: 0.3rem;
 }
 
 .site-header {
@@ -12625,6 +13428,7 @@ main [role=note] {
 
 .nav-link {
   font-size: 1rem;
+  color: #0a0a0a;
 }
 .nav-link:hover, .nav-link:focus {
   color: var(--pulis-color-orange-light);
@@ -12848,7 +13652,7 @@ main [role=note] {
 .footer-credits {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   padding-top: 3.75rem;
   padding-bottom: 1.5625rem;
 }
@@ -12864,7 +13668,7 @@ main [role=note] {
 }
 
 .footer-credits p {
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -12920,6 +13724,24 @@ main [role=note] {
 @media (max-width: 480px) {
   .footer-credits__link {
     font-size: 1.125rem;
+  }
+}
+
+.footer-credits__list .menu-item {
+  padding: 0 1rem;
+}
+
+.footer-credits .menu-item .nav-link {
+  font-weight: 500;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 480px) {
+  .footer-copyright {
+    flex-direction: column;
   }
 }
 

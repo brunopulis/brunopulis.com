@@ -229,16 +229,16 @@ function odin_excerpt( $type = 'excerpt', $limit = 40 ) {
 function odin_breadcrumbs( $homepage = '' ) {
 	global $wp_query, $post, $author;
 
-	! empty( $homepage ) || $homepage = __( 'Home', 'odin' );
+	! empty( $homepage ) || $homepage = __( 'Página inicial', 'odin' );
 
 	// Default html.
 	$current_before = '<li class="breadcrumb-item active" aria-current="page">';
 	$current_after  = '</li>';
 
 	if ( ! is_home() && ! is_front_page() || is_paged() ) {
-
 		// First level.
-		echo '<nav><ol  class="breadcrumb" id="breadcrumbs">';
+    echo '<div class="d-flex align-items-center"><p class="breadcrumb__headline">Você está em:</p>';
+		echo '<nav class="breadcrumb-nav" aria-label="Navegação rápida"><ol  class="breadcrumb" id="breadcrumbs">';
 		echo '<li class="breadcrumb-item"><a href="' . home_url() . '" rel="nofollow">' . $homepage . '</a></li>';
 
 		// Single post.
@@ -439,7 +439,7 @@ function odin_breadcrumbs( $homepage = '' ) {
 			echo ' (' . sprintf( __( 'Page %s', 'abelman' ), get_query_var( 'paged' ) ) . ')';
 		}
 
-		echo '</ol></nav>';
+		echo '</ol></nav></div>';
 	}
 }
 
