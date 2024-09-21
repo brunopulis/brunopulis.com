@@ -9,7 +9,7 @@
  * For more information on hooks, actions, and filters,
  * see http://codex.wordpress.org/Plugin_API
  *
- * @package Odin
+ * @package Bruno_Pulis
  * @since 2.2.0
  */
 
@@ -35,12 +35,17 @@ require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
 // require_once get_template_directory() . '/core/classes/class-contact-form.php';
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
-require_once get_template_directory() . '/core/classes/class-user-meta.php';
+// require_once get_template_directory() . '/core/classes/class-user-meta.php';
 require_once get_template_directory() . '/core/classes/class-post-status.php';
 require_once get_template_directory() . '/core/classes/class-term-meta.php';
 
 // CPT
 require_once get_template_directory() . '/inc/functions/cpt.php';
+
+// Remove
+require_once get_template_directory() . '/inc/functions/remove.php';
+
+
 /**
  * Odin Widgets.
  */
@@ -55,7 +60,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 	 */
 	function odin_setup_features() {
     // Add support for multiple languages.
-		load_theme_textdomain( 'odin', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'bruno-pulis', get_template_directory() . '/languages' );
 
     // Register nav menus.
 		register_nav_menus(
@@ -65,15 +70,12 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			)
 		);
 
-		/*
-		 * Add post_thumbnails suport.
-		 */
+    // Add post_thumbnails suport.
 		add_theme_support( 'post-thumbnails' );
     add_theme_support( 'letter-thumbnails', 440, 250, true );
+    add_theme_support( 'blogroll-thumbnail', 376, 211, true );
 
-		/**
-		 * Add feed link.
-		 */
+    // Add feed link
 		add_theme_support( 'automatic-feed-links' );
 
 		/**
@@ -91,24 +93,17 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 
 		add_theme_support( 'custom-header', $default );
 
-		/**
-		 * Support Custom Background.
-		 */
+		// Support Custom Background.
 		$defaults = array(
 			'default-color' => '',
 			'default-image' => '',
 		);
-
 		add_theme_support( 'custom-background', $defaults );
 
-		/**
-		 * Support Custom Editor Style.
-		 */
+    // Support Custom Editor Style.
 		add_editor_style( 'assets/css/editor-style.css' );
 
-		/**
-		 * Add support for infinite scroll.
-		 */
+    // Add support for infinite scroll.
 		add_theme_support(
 			'infinite-scroll',
 			array(
@@ -123,15 +118,15 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 
     // Add support for Post Formats.
 		add_theme_support( 'post-formats', array(
-		    'aside',
-		    'gallery',
-		    'link',
-		    'image',
-		    'quote',
-		    'status',
-		    'video',
-		    'audio',
-		    'chat'
+      'aside',
+      'gallery',
+      'link',
+      'image',
+      'quote',
+      'status',
+      'video',
+      'audio',
+      'chat'
 		) );
 
     // Support The Excerpt on pages.
@@ -258,6 +253,79 @@ function odin_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'odin_enqueue_scripts', 1 );
 
 /**
+ * Allow SVG uploads in the Media Library
+ */
+function bp_add_file_types_to_uploads($file_types) {
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	return $file_types;
+}
+
+add_filter( 'upload_mimes', 'bp_add_file_types_to_uploads' );
+
+/**
+ * Disable Dashicons on the front end for unauthenticated users
+ */
+add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
+function bs_dequeue_dashicons() {
+  if ( ! is_user_logged_in() ) {
+    wp_deregister_style( 'dashicons' );
+  }
+}
+
+/**
+ * Custom Markup for Comments
+ */
+function gg_comments($comment, $args, $depth) {
+	if ( 'div' === $args['style'] ) {
+		$tag       = 'div';
+		$add_below = 'comment-item';
+	} else {
+		$tag       = 'li';
+		$add_below = 'comment-item';
+	}?>
+	<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'comment--parent' ); ?> id="comment-<?php comment_ID() ?>"><?php 
+	if ( 'div' != $args['style'] ) { ?>
+		<div id="comment-<?php comment_ID() ?>" class="comment__wrapper">
+		<?php } ?>
+			<div class="comment__body">
+				<div class="comment__author"> 
+					<?php printf( __( '%s' ), get_comment_author_link() ); ?>
+				</div><?php 
+				if ( $comment->comment_approved == '0' ) { ?>
+				<span class="comment__notice"><?php _e( 'Your comment is waiting for approval.' ); ?></span><?php 
+			} ?>
+				<div class="comment__meta">
+					<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">#</a>
+					<?php
+					printf( 
+						get_comment_date()
+					); ?>
+				</div>
+				<div class="comment__text">
+					<?php comment_text(); ?>
+					<?php comment_reply_link( 
+						array_merge( 
+							$args, 
+							array( 
+								'add_below' => $add_below, 
+								'depth'     => $depth, 
+								'max_depth' => $args['max_depth'] 
+							) 
+						) 
+					); ?>
+				</div>
+			</div>
+			<?php 
+	if ( 'div' != $args['style'] ) : ?>
+		</div><?php 
+	endif;
+}
+
+
+
+/**
  * Odin custom stylesheet URI.
  *
  * @since  2.2.0
@@ -326,13 +394,20 @@ if ( is_woocommerce_activated() ) {
 /**
  * Deal with the custom RSS templates.
  */
-add_action('init', 'customRSS');
-function customRSS() 
-{
+add_action( 'init', 'customRSS' );
+function customRSS() {
   add_feed( 'notas', 'customRSSFunc' );
 }
 
-function customRSSFunc()
-{
+function customRSSFunc() {
   get_template_part( 'rss', 'notas' );
+}
+
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+  
+function add_my_post_types_to_query( $query ) {
+  if ( is_home() && $query->is_main_query() )
+    $query->set( 'post_type', array( 'post', 'heros' ) );
+  
+  return $query;
 }

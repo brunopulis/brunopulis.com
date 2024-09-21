@@ -29,6 +29,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <div class="alert alert-primary" role="alert">
+    <p class="text-center">Não repare a bagunça, esse site está passando por um processo de redesign. ❤</p>
+  </div>
 	<?php if ( function_exists( 'wp_body_open' ) ) {
 		wp_body_open();
 	} ?>
@@ -63,7 +66,7 @@
           ?>
 
           <div class="ml-3">
-            <a href="#" class="btn btn-primary">Solicitar projeto</a>
+            <a href="#" class="button">Solicitar projeto</a>
           </div>
         </div>
       </div>

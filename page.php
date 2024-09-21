@@ -6,7 +6,7 @@
  * Please note that this is the WordPress construct of pages and that other
  * 'pages' on your WordPress site will use a different template.
  *
- * @package Odin
+ * @package Bruno_Pulis
  * @since 2.2.0
  */
 
@@ -18,7 +18,7 @@ get_header(); ?>
     <div class="col-md-8">
         <?php
           while ( have_posts() ) : the_post();
-            get_template_part( 'content', 'page' );
+            get_template_part( 'template-parts/content/content', 'page' );
           endwhile;
         ?>
       </div>
@@ -27,6 +27,7 @@ get_header(); ?>
       </aside>
     </div>
   </div>
+  <?php require_once('template-parts/newsletter.php'); ?>
 </main>
 
 <?php

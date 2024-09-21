@@ -62,7 +62,8 @@
     </div>
 
     <div class="row">
-      <div class="footer-credits">
+      <div class="d-flex footer-credits align-items-center">
+        <div class="d-flex col-lg-9 align-items-center">
         <p class="footer-other-links">Outros links do site:</p>
 
         <?php
@@ -77,45 +78,44 @@
             )
           );
         ?>
-        <!-- <ul id="menu-footer" class="footer-credits__list">
-          <li class="footer-credits__item"><a href="#">Página Inicial</a></li>
-          <li class="footer-credits__item"><a href="#">Portfólio</a></li>
-          <li class="footer-credits__item"><a href="#">Serviços</a></li>
-          <li class="footer-credits__item"><a href="#">Newsletter</a></li>
-          <li class="footer-credits__item"><a href="#/">Blog</a></li>
-          <li class="footer-credits__item"><a href="#">Sobre</a></li>
-          <li class="footer-credits__item"><a href="#">Contato</a></li>
-          <li class="footer-credits__item"><a href="#">Meu setup</a></li>
-          <li class="footer-credits__item"><a href="#">Livro de visitas</a></li>
-          <li class="footer-credits__item"><a href="#">Links</a></li>
-        </ul> -->
-        <a href="https://notbyai.fyi" rel="external" target="_blank">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/written-by-human.svg" alt="Escrito por humano não por IA" class="img-fluid" width="131" height="42" />
-        </a>
+        </div>
+       
+        <div class="d-flex justify-content-end col-lg-3 not-ai">
+          <a href="https://notbyai.fyi" rel="external" target="_blank">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/written-by-human.svg" alt="Escrito por humano não por IA" class="img-fluid" width="131" height="42" />
+          </a>
+        </div>
       </div>
     </div>
     
     <div class="row">
-      <div class="footer-credits">
+      <div class="footer-copyright">
         <p>
           Feito com <span role="img" aria-label="amor">❤️</span> em BH, 2012 - 2024
           <span xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
             <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-NC 4.0</a>
           </span>
         </p>
-        <ul class="footer-credits__list">
-          <li class="footer-credits__item"><a rel="external" class="footer-credits__link" href="https://a11y-webring.club/">a11y-webring.club</a></li>
-          <li class="footer-credits__item"><a rel="external" class="footer-credits__link" referrerpolicy="strict-origin" href="https://a11y-webring.club/prev">Site anterior</a></li>
-          <li class="footer-credits__item"><a rel="external" class="footer-credits__link" referrerpolicy="strict-origin" href="https://a11y-webring.club/random">Site aleatório</a></li>
-          <li class="footer-credits__item"><a rel="external" class="footer-credits__link" referrerpolicy="strict-origin" href="https://a11y-webring.club/next">Próximo website</a></li>
-          <li class="footer-credits__item"><a class="footer-credits__link" href="<?php bloginfo('url'); ?>/declaracao-de-acessibilidade/">Declaração de Acessibilidade</a></li>
-          <li class="footer-credits__item"><a class="footer-credits__link" href="<?php bloginfo('url'); ?>/politica-de-privacidade">Política de Privacidade</a></li>
-        </ul>
+
+        <div class="d-flex flex-column">
+          <ul class="footer-credits__list">
+            <li class="footer-credits__item"><a rel="external" class="footer-credits__link" href="https://a11y-webring.club/">a11y-webring.club</a></li>
+            <li class="footer-credits__item"><a rel="external" class="footer-credits__link" referrerpolicy="strict-origin" href="https://a11y-webring.club/prev">Site anterior</a></li>
+            <li class="footer-credits__item"><a rel="external" class="footer-credits__link" referrerpolicy="strict-origin" href="https://a11y-webring.club/random">Site aleatório</a></li>
+            <li class="footer-credits__item"><a rel="external" class="footer-credits__link" referrerpolicy="strict-origin" href="https://a11y-webring.club/next">Próximo website</a></li>
+          </ul>
+
+          <ul class="footer-credits__list">
+            <li class="footer-credits__item"><a class="footer-credits__link" href="<?php bloginfo('url'); ?>/declaracao-de-acessibilidade/">Declaração de Acessibilidade</a></li>
+            <li class="footer-credits__item"><a class="footer-credits__link" href="<?php bloginfo('url'); ?>/politica-de-privacidade">Política de Privacidade</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </footer>
-<script src="https://tinylytics.app/embed/FziPycS5M-WzSzx6sBVm.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
 <?php wp_footer(); ?>
 </body>
 </html>

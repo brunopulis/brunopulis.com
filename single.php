@@ -14,11 +14,7 @@ get_header(); ?>
     <div class="row">
       <?php
         while ( have_posts() ) : the_post();
-          get_template_part( 'content' );
-
-          if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+          get_template_part( 'template-parts/content/content' );
         endwhile;
       ?>
     </div>

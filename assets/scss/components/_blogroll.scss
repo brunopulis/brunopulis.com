@@ -1,8 +1,8 @@
 // =========================================================================
-// Bookmarks
+// Blogroll
 // =========================================================================
 
-.bookmark__list {
+.blogroll__list {
   margin-bottom: rem(80);
 
   @extend .list-grid;
@@ -12,37 +12,30 @@
   }
 }
 
-.bookmark__item {
-  background: $bg-border;
-  min-height: 205px;
-  padding: rem(16);
-
-  @media(max-width: 630px) {
-    min-height: auto;
-  }
-}
-
-.bookmark__title {
+.blogroll__title {
+  color: $main;
+  font-weight: 700;
   margin-block-start: rem(23);
   margin-block-end: rem(23);
   word-break: break-word;
 }
 
-.bookmark__link {
-  font-size: rem(20);
-  color: $main;
-  text-decoration: none;
-  transition: color .3s ease;
+.blogroll__thumbnail {
+  border: 1px solid $bg-border;
+  margin-bottom: rem(13);
 }
 
-.bookmark__text {
+.blogroll__text {
   font-size: rem(16);
   margin-block-start: rem(19);
   margin-block-end: rem(19);
 }
 
-.bookmark__date {
-  color: $main;
+.blogroll__link {
   font-size: rem(14);
-  font-weight: 700;
+  color: $main;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color .3s ease;
 }
+
