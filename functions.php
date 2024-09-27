@@ -320,8 +320,8 @@ if ( is_woocommerce_activated() ) {
  *
  * @return string
  */
-function q23_rss_thanks_default( $post ) {
-  $rss_thanks_messages = [
+function jeherve_welcome_rss_readers( $content ) {
+  $welcome_messages = array(
     "💖 O RSS é fantástico, e você também o é por usá-lo. 🎆",
     "👏 Parabéns por ser um usuário de RSS. 🎉",
     "🥰 Você está lendo esta postagem por meio do feed RSS. Isso faz de você uma das melhores pessoas da Internet! 🏆",
@@ -335,19 +335,14 @@ function q23_rss_thanks_default( $post ) {
     "🧡 Eu adoro os feeds RSS. E adoro você por usá-los. 💙",
     "🎗️ O uso de feeds RSS é uma ótima maneira de se manter atualizado com meu blog. Obrigado por se inscrever! 🤗",
     "🦸 Você é meu herói! (Por usar o RSS para acompanhar meu blog.) 🥇",
-  ];
+  );
 
-  $post_id = intval( $post ? $post->ID : 0 );
-  return $rss_thanks_messages[ $post_id % count( $rss_thanks_messages ) ];
+  $welcome_message = $welcome_messages[ wp_rand( 0, count( $welcome_messages ) - 1 ) ];
+
+  return sprintf(
+    '%1$s<p>%2$s</p>',
+    $content,
+    $welcome_message
+  );
 }
-
-function q23_rss_thanks( $content ) {
-  global $post;
-
-  $rss_thanks_message = get_post_meta( $post->ID , 'rss_thanks_message', true );
-  $rss_thanks_message = empty( $rss_thanks_message ) ? q23_rss_thanks_default( $post ) : $rss_thanks_message;
-
-  return $content . "<p style=\"margin-top: 0.5ch; padding-top: 0.5ch; border-top: 1px solid #ccc;\">$rss_thanks_message</p>";
-}
-
-add_action( 'the_content_feed', 'q23_rss_thanks' );
+add_filter( 'the_content_feed', 'jeherve_welcome_rss_readers' );
