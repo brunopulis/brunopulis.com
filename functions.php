@@ -311,4 +311,43 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
 
+/**
+ * Display a nice welcoming message to folks reading posts via RSS.
+ *
+ * Kudos Kev Quirk for the idea!
+ *
+ * @param string $content The current post content.
+ *
+ * @return string
+ */
+function q23_rss_thanks_default( $post ) {
+  $rss_thanks_messages = [
+    "💖 O RSS é fantástico, e você também o é por usá-lo. 🎆",
+    "👏 Parabéns por ser um usuário de RSS. 🎉",
+    "🥰 Você está lendo esta postagem por meio do feed RSS. Isso faz de você uma das melhores pessoas da Internet! 🏆",
+    "📰 Usar um leitor de feed é a melhor maneira de ler as publicações do meu blog. Como você é inteligente por saber disso! 🚀",
+    "🌟 Você está lendo esta publicação por meio do feed RSS, seu astro! 🌠",
+    "🪄 Os feeds são maravilhosos, e você é uma pessoa maravilhosa por usá-los. 🔮",
+    "❤️‍🔥 Você está lendo esta publicação por meio do feed RSS. Você está em chamas! 🔥",
+    "🧨 RSS é dinamite! Obrigado por assinar meu blog. 💥",
+    "🤘 Você está inscrito no DanQ.me usando o feed RSS. Você é demais! 🎸",
+    "🕵️ Assinar os feeds RSS do DanQ.me significa que você poderá ver publicações secretas de bônus não divulgadas no site principal. Esperto você! 🧠",
+    "🧡 Eu adoro os feeds RSS. E adoro você por usá-los. 💙",
+    "🎗️ O uso de feeds RSS é uma ótima maneira de se manter atualizado com meu blog. Obrigado por se inscrever! 🤗",
+    "🦸 Você é meu herói! (Por usar o RSS para acompanhar meu blog.) 🥇",
+  ];
 
+  $post_id = intval( $post ? $post->ID : 0 );
+  return $rss_thanks_messages[ $post_id % count( $rss_thanks_messages ) ];
+}
+
+function q23_rss_thanks( $content ) {
+  global $post;
+
+  $rss_thanks_message = get_post_meta( $post->ID , 'rss_thanks_message', true );
+  $rss_thanks_message = empty( $rss_thanks_message ) ? q23_rss_thanks_default( $post ) : $rss_thanks_message;
+
+  return $content . "<p style=\"margin-top: 0.5ch; padding-top: 0.5ch; border-top: 1px solid #ccc;\">$rss_thanks_message</p>";
+}
+
+add_action( 'the_content_feed', 'q23_rss_thanks' );
