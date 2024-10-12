@@ -13,6 +13,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
+        <?php odin_breadcrumbs(); ?>  
         <h1><?php the_title(); ?></h1>
         <p>
           Ofereço serviços diferentes para ajudá-lo com suas necessidades de acessibilidade digital. 

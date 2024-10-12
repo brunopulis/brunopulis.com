@@ -13,7 +13,13 @@
       <article class="home-blog__item col-lg-4">
         <div class="card">
           <div class="card-body">
-            <h3 class="card-title">Desenvolvimento web</h3>
+
+            <h3 class="card-title">
+              <svg aria-hidden="true" class="service__icon" width="24" height="24">
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/solid.svg#code"></use>
+              </svg>
+              Desenvolvimento web
+            </h3>
             <div class="card-text mt-3">
               <p>Criação de websites acessíveis, desenvolvidos com foco na usabilidade para todos os usuários, incluindo pessoas com deficiência, garantindo uma presença online inclusiva.</p>
             </div>
@@ -26,7 +32,12 @@
       <article class="home-blog__item col-lg-4">
         <div class="card">
           <div class="card-body">
-            <h3 class="card-title">Consultorias e Mentorias</h3>
+            <h3 class="card-title">
+              <svg aria-hidden="true" class="service__icon" width="24" height="24">
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/solid.svg#pencil"></use>
+              </svg>
+              Consultorias e Mentorias
+            </h3>
             <div class="card-text mt-3">
               <p>Orientação especializada para implementar políticas, práticas e padrões de acessibilidade, garantindo que seu negócio esteja alinhado com as normas e boas práticas.</p>
             </div>
@@ -39,7 +50,12 @@
       <article class="home-blog__item col-lg-4">
         <div class="card">
           <div class="card-body">
-            <h3 class="card-title">Palestras</h3>
+            <h3 class="card-title">
+              <svg aria-hidden="true" class="service__icon" width="24" height="24">
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/solid.svg#chalkboard"></use>
+              </svg>
+              Palestras
+            </h3>
             <div class="card-text mt-3">
               <p>Palestras inspiradoras e educativas sobre a importância da acessibilidade, sensibilizando seu público para a inclusão e o impacto positivo de práticas acessíveis..</p>
             </div>

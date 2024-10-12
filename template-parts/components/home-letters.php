@@ -32,7 +32,7 @@
                   <div class="letter__edition">
                     <span>
                       <span aria-hidden="true">#</span>
-                      <span class="visually-hidden">Edição:</span> 
+                      <span class="visually-hidden">Edição:</span>
                       <?php echo $edition; ?>
                     </span>
                   </div>
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <article class="newsletter">
+        <article class="newsletter newsletter--square">
           <h2 class="newsletter__title">Assine a Pulis <span lang="en">Letters</span></h2>
           <div class="newsletter__intro">
             <p>
@@ -60,14 +60,10 @@
           </div>
           <form class="c-newsletter__form" id="form-newsletter">
             <div class="c-newsletter-container">
+              <label for="email" class="visually-hidden">E-mail</label>
               <div class="c-newsletter__form-field input-group">
-                <label for="email" class="visually-hidden">E-mail</label>
                 <input type="email" id="email" name="email_address" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Seu melhor e-mail" class="form-control">
-                <input type="submit" class="c-newsletter__form-button btn btn-primary" value="Assinar" />
-              </div>
-
-              <div class="c-newsletter__form-field">
-                
+                <input type="submit" class="c-newsletter__form-button" value="Assinar">
               </div>
             </div>
           </form>
