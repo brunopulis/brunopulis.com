@@ -29,8 +29,8 @@ function cpt_notas() {
 
 	$notas->set_arguments(
 		array(
-      'menu_icon' => 'dashicons-format-status',
-      'supports' => array( 'title', 'editor', 'post-formats' ),
+      'menu_icon'     => 'dashicons-format-status',
+      'supports'      => array( 'title', 'editor', 'post-formats' ),
       'menu_position' => 5,
       'taxonomies'    => array( 'category', 'post_tag' ),
 		)
