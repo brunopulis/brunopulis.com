@@ -1,15 +1,14 @@
-<section class="testimonials" aria-labelledby="testimonials-title">
-  <div class="container">
-    <div class="row">
-      <div class="d-flex align-items-center justify-content-between">
-        <div>
-          <h2 class="section-title" id="testimonials-title">Confira quem aprova!</h2>
-          <p class="lead">Veja como posso te ajudar.</p>
-        </div>
-        <a href="<?php bloginfo( 'url' ) ?>/blog" class="button">veja todos os depoimentos</a>
+<section class="section testimonials" aria-labelledby="testimonials-title">
+  <header class="section__header" role="banner">
+    <div class="container">
+      <div class="section__wrap">
+        <h2 class="section-title" id="testimonials-title">Confira quem aprova!</h2>
+        <a href="<?php bloginfo( 'url' ) ?>/depoimentos" class="button">todos depoimentos</a>
       </div>
+      <p>Veja como posso te ajudar.</p>
     </div>
-  </div>
+  </header>
+
   <div class="container mt-5 mb-5">
     <div class="row g-2">
       <?php
@@ -49,7 +48,9 @@
                   <p><?php echo $name_client; ?></p>
                   <p><?php echo $job_title; ?></p>
                 </div>
+                <?php if ( has_post_thumbnail() ):  ?>
                 <img src="http://lorempixel.com.br/120/48" width="120" height="48">
+                <?php endif; ?>
               </div>
             </div>
           </article>

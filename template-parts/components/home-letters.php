@@ -1,13 +1,13 @@
-<section class="" aria-labelledby="letters-title">
-  <div class="container mb-5">
-    <div class="row">
-      <div class="d-flex align-items-center justify-content-between">
+<section class="section" aria-labelledby="letters-title">
+  <header class="section__header" role="banner">
+    <div class="container">
+      <div class="section__wrap">
         <h2 class="section-title" id="letters-title">Pulis Letters</h2>
         <a href="<?php the_permalink(); ?>/letters" class="button">veja todas as edições <span class="visually-hidden"> da <span></span></span></a>
       </div>
       <p>Insights valiosos sobre acessibilidade, Obsidian e organização digital.</p>
     </div>
-  </div>
+  </header>
 
   <div class="container">
     <div class="row">
@@ -27,7 +27,7 @@
                 $edition = get_field( 'letters_edition' );
           ?>
             <div class="col-md-6 mb-3">
-              <article class="card card__letter card__letter--small letter__item card">
+              <article class="card card__letter card__letter--small letter__item">
                 <div class="c-card__body letter__body">
                   <div class="letter__edition">
                     <span>
@@ -50,24 +50,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <article class="newsletter newsletter--square">
-          <h2 class="newsletter__title">Assine a Pulis <span lang="en">Letters</span></h2>
-          <div class="newsletter__intro">
-            <p>
-              Junte-se a mais de 200 assinantes e receba dicas sobre acessibilidade
-              Obsidian e organização digital toda quinta-feira de manhã.
-            </p>
-          </div>
-          <form class="c-newsletter__form" id="form-newsletter">
-            <div class="c-newsletter-container">
-              <label for="email" class="visually-hidden">E-mail</label>
-              <div class="c-newsletter__form-field input-group">
-                <input type="email" id="email" name="email_address" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Seu melhor e-mail" class="form-control">
-                <input type="submit" class="c-newsletter__form-button" value="Assinar">
-              </div>
-            </div>
-          </form>
-        </article>
+        <?php require_once( 'newsletter-sidebar.php' ); ?>
       </div>
     </div>
   </div>

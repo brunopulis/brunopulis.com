@@ -1,12 +1,12 @@
-<section  class="section" aria-labelledby="blog-title">
-  <div class="container">
-    <div class="row">
-      <div class="d-flex align-items-center justify-content-between">
+<section class="section" aria-labelledby="blog-title">
+  <header class="section__header" role="banner">
+    <div class="container">
+      <div class="section__wrap">
         <h2 class="section-title" id="blog-title">Últimas publicações</h2>
         <a href="<?php bloginfo( 'url' ) ?>/blog" class="button">veja todas as publicações <span class="visually-hidden">do blog</span></a>
       </div>
     </div>
-  </div>
+  </header>
 
   <div class="container">
     <div class="row">
