@@ -3,7 +3,7 @@
     <div class="container">
       <div class="section__wrap">
         <h2 class="section-title" id="portfolio-title">Últimos trabalhos</h2>
-        <a href="<?php bloginfo( 'url' ) ?>/portfolio" class="button">todos projetos</a>
+        <a href="<?php bloginfo( 'url' ) ?>/portfolio" class="button button--grey">todos projetos</a>
       </div>
     </div>
   </header>

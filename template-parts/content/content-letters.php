@@ -58,7 +58,7 @@
             Obsidian e organização digital toda quinta-feira de manhã.
           </p>
         </div>
-        <a href="https://pulisletters.substack.com" rel="external noopener noreferrer" target="_blank" class="button button--blue">Assinar a Pulis Letters</a>
+        <?php echo do_shortcode( '[wpforms id="1048"]' );  ?>
       </aside>
     </div>
   </div>

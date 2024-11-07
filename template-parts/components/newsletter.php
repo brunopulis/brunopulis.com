@@ -7,7 +7,7 @@
           <p>Junte-se a mais de <strong>300 assinantes</strong> e receba dicas sobre acessibilidade, Obsidian e organização digital toda quinta-feira de manhã.</p>
         </div>
         <div class="newsletter__subscribe">
-          <a href="https://pulisletters.substack.com" rel="external noopener noreferrer" target="_blank" class="button button--blue">Assinar a Pulis Letters</a>
+          <?php echo do_shortcode( '[wpforms id="1048"]' );  ?>
         </div>
       </div>
     </div>

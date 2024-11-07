@@ -3,7 +3,7 @@
     <div class="container">
       <div class="section__wrap">
         <h2 class="section-title" id="testimonials-title">Confira quem aprova!</h2>
-        <a href="<?php bloginfo( 'url' ) ?>/depoimentos" class="button">todos depoimentos</a>
+        <a href="<?php bloginfo( 'url' ) ?>/depoimentos" class="button button--grey">todos depoimentos</a>
       </div>
       <p>Veja como posso te ajudar.</p>
     </div>

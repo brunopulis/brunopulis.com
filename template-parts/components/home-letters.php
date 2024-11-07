@@ -3,7 +3,7 @@
     <div class="container">
       <div class="section__wrap">
         <h2 class="section-title" id="letters-title">Pulis Letters</h2>
-        <a href="<?php the_permalink(); ?>/letters" class="button">veja todas as edições <span class="visually-hidden"> da <span></span></span></a>
+        <a href="<?php the_permalink(); ?>/letters" class="button button--grey">veja todas as edições <span class="visually-hidden"> da <span></span></span></a>
       </div>
       <p>Insights valiosos sobre acessibilidade, Obsidian e organização digital.</p>
     </div>
@@ -11,7 +11,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-12 col-lg-8">
         <div class="row">
           <?php
             $args = array(
@@ -49,7 +49,7 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-12 col-lg-4">
         <?php require_once( 'newsletter-sidebar.php' ); ?>
       </div>
     </div>

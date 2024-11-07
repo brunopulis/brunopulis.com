@@ -3,7 +3,7 @@
     <div class="container">
       <div class="section__wrap">
         <h2 class="section-title" id="blog-title">Últimas publicações</h2>
-        <a href="<?php bloginfo( 'url' ) ?>/blog" class="button">veja todas as publicações <span class="visually-hidden">do blog</span></a>
+        <a href="<?php bloginfo( 'url' ) ?>/blog" class="button button--grey">veja todas as publicações <span class="visually-hidden">do blog</span></a>
       </div>
     </div>
   </header>

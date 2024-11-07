@@ -51,29 +51,25 @@
     </header>
 
     <div class="row mt-5">
-        <div class="col-sm-8">
-            <div class="entry-content" style="margin: 0;">
-        <?php
-          the_content();
-        ?>
+      <div class="col-sm-8">
+        <div class="entry-content" style="margin: 0;">
+          <?php the_content(); ?>
+        </div>
+
+        <div class="entry-meta">
+          <?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
+            <span class="cat-links badge text-bg-secondary"><?php echo __( '', 'odin' ) . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'odin' ) ); ?></span>
+          <?php endif; ?>
+          <?php the_tags( '<span class="badge text-bg-secondary">' . __( 'Tags:', 'odin' ) . ' ', ', ', '</span>' ); ?>
+          <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
+            <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'odin' ), __( '1 Comment', 'odin' ), __( '% Comments', 'odin' ) ); ?></span>
+          <?php endif; ?>
+        </div>
       </div>
-
-            <div class="entry-meta">
-      <?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
-        <span class="cat-links"><?php echo __( 'Categoria:', 'odin' ) . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'odin' ) ); ?></span>
-      <?php endif; ?>
-      <?php the_tags( '<span class="tag-links">' . __( 'Tags:', 'odin' ) . ' ', ', ', '</span>' ); ?>
-      <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-        <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'odin' ), __( '1 Comment', 'odin' ), __( '% Comments', 'odin' ) ); ?></span>
-      <?php endif; ?>
+      <div class="col-sm-4">
+        <?php get_sidebar(); ?>
+      </div>
     </div>
-        </div>
-        <div class="col-sm-4">
-            <?php get_sidebar(); ?>
-        </div>
-    </div>
-
-
 
     <footer class="post-single__footer">
       <?php

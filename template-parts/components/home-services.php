@@ -3,7 +3,7 @@
     <div class="container">
       <div class="section__wrap">
         <h2 class="section-title" id="services-title">Meus serviços</h2>
-        <a href="<?php bloginfo( 'url' ) ?>/servicos" class="button">todos os serviços</a>
+        <a href="<?php bloginfo( 'url' ) ?>/servicos" class="button button--grey">todos os serviços</a>
       </div>
     </div>
   </header>
@@ -13,10 +13,12 @@
       <li>
         <article class="card h-100">
           <div class="card-body">
-            <svg aria-hidden="true" class="service__icon" width="24" height="24">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/solid.svg#code"></use>
-            </svg>
-            <h3 class="card-title">Desenvolvimento de sites</h3>
+            <h3 class="card-title">
+              <svg aria-hidden="true" class="service__icon" width="24" height="24">
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/solid.svg#code"></use>
+              </svg>
+              Desenvolvimento de sites
+            </h3>
             <div class="card-text mt-3">
               <p>
                 Criação de websites, landing pages e customização de temas WordPress. Com foco em usabilidade e acessibilidade.</p>
