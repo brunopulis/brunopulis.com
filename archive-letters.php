@@ -18,16 +18,14 @@
 get_header(); ?>
 
 <main id="content"> 
-  <section class="hero">
+  <section class="hero hero--letters">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
           <?php odin_breadcrumbs(); ?>
           <span class="tagline">Insights valiosos sobre acessibilidade, Obsidian e organização digital.</span>
           <h1>Assine a Pulis Letters</h1>
-          <p>
-          Inscreva-se para se juntar a 500.000+ outros assinantes e receba e-mails regulares sobre neurociência, saúde e ferramentas relacionadas à ciência do Dr. Andrew Huberman.
-          </p>
+          <p>Junte-se a mais de 300 assinantes e receba dicas sobre acessibilidade, <br> Obsidian e organização digital toda quinta-feira de manhã.</p>
           <?php echo do_shortcode( '[wpforms id="1048"]' );  ?>
         </div>
       </div>
@@ -35,7 +33,7 @@ get_header(); ?>
   </section>
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-lg-8">
         <h2>Edições anteriores</h2>
         <div class="row">
           <?php
@@ -68,7 +66,7 @@ get_header(); ?>
               </article>
             </div>
           <?php endwhile; ?>
-          <div class="pagination d-flex justify-content-center">
+          <div class="d-flex justify-content-center">
             <?php
               echo odin_pagination( 2, 1, false, $letters); 
             ?>
@@ -78,7 +76,7 @@ get_header(); ?>
           <?php endif; ?>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-lg-4 letters--mail">
         <?php require_once( 'template-parts/components/newsletter-sidebar.php' ); ?>
       </div>
     </div>
