@@ -12,7 +12,7 @@
 
 <footer class="site-footer">
   <div class="container">
-  <div class="row">
+  <div class="row g-0">
     <div class="footer-social">
       <a class="footer-social__title" href="/">Bruno Pulis</a>
       <ul class="footer-social__list">
@@ -48,7 +48,7 @@
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>
-        
+
         <li class="footer-social__item">
           <a class="footer-social__link" href="<?php bloginfo('url') ?>/feed" rel="noopener noreferrer" target="_blank">
             <svg aria-hidden="true" class="footer-social__icon footer-social__icon--rss">
@@ -61,11 +61,8 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="d-flex footer-credits align-items-center">
-        <div class="d-flex col-lg-9 align-items-center">
-        <p class="footer-other-links">Outros links do site:</p>
-
+    <div class="row g-0">
+      <div class="footer-credits">
         <?php
           wp_nav_menu(
             array(
@@ -78,23 +75,20 @@
             )
           );
         ?>
-        </div>
-       
-        <div class="d-flex justify-content-end col-lg-3 not-ai">
-          <a href="https://notbyai.fyi" rel="external" target="_blank">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/written-by-human.svg" alt="Escrito por humano não por IA" class="img-fluid" width="131" height="42" />
-          </a>
-        </div>
+
+        <a href="https://notbyai.fyi" class="not-ai" rel="external" target="_blank">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/written-by-human.svg" alt="Escrito por humano não por IA" class="img-fluid" width="131" height="42" />
+        </a>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="footer-copyright">
         <p>
           Feito com <span role="img" aria-label="amor">❤️</span> em BH, 2012 - 2024
-          <span xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+          <div xmlns:cc="http://creativecommons.org/ns#">
             <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-NC 4.0</a>
-          </span>
+          </div>
         </p>
 
         <div class="d-flex flex-column">
@@ -114,8 +108,6 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-
 <?php wp_footer(); ?>
 </body>
 </html>
