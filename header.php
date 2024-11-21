@@ -21,7 +21,15 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="manifest" href="<?php echo get_template_directory_uri()?>/site.webmanifest">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBMVRSBHZR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CBMVRSBHZR');
+  </script>
 	<?php if ( ! get_option( 'site_icon' ) ) : ?>
 		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 	<?php endif; ?>
@@ -29,9 +37,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <div class="alert alert-primary" role="alert">
-    <p class="text-center">Não repare a bagunça, esse site está passando por um processo de redesign. ❤</p>
-  </div>
 	<?php if ( function_exists( 'wp_body_open' ) ) {
 		wp_body_open();
 	} ?>
@@ -44,7 +49,9 @@
   <header class="site-header">
     <nav class="navbar navbar-expand-lg d-flex justify-content-center">
       <div class="container">
-        <a class="navbar-brand h-card" href="<?php bloginfo('url') ?>/" rel="me">Bruno Pulis</a>
+        <a class="navbar-brand h-card" href="<?php bloginfo('url') ?>/">
+          <img src="<?php echo TEMPLATE_PATH; ?>/assets/images/logo.svg" class="img-fluid" width="50" height="50" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
                 aria-controls="navMain"
                 aria-expanded="false"
@@ -65,8 +72,8 @@
             );
           ?>
 
-          <div class="ml-3">
-            <a href="#" class="button">Solicitar projeto</a>
+          <div class="button-cta ml-3">
+            <a href="<?php echo bloginfo( 'url' ); ?>/orcamento" class="button button--blue">orçamento</a>
           </div>
         </div>
       </div>
