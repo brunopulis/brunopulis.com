@@ -55,7 +55,7 @@ function odin_pagination( $mid = 2, $end = 1, $show = false, $query = null ) {
 				)
 			);
 
-			$pagination = '<nav aria-label="Paginação" class="pagination">' . paginate_links( $arguments ) . '</nav>';
+			$pagination = '<nav aria-label="Paginação">' . paginate_links( $arguments ) . '</nav>';
 
 			// Prevents duplicate bars in the middle of the url.
 			if ( $url_base ) {
@@ -149,7 +149,7 @@ function odin_related_posts( $display = 'category', $qty = 4, $title = '', $thum
 		if ( $related->have_posts() ) {
 
 			$layout = '<div id="related-post">';
-			$layout .= '<h3>' . esc_html( $title ) . '</h3>';
+			$layout .= '<h2 class="related-post__title">' . esc_html( $title ) . '</h2>';
 			$layout .= ( $thumb ) ? '<div class="row">' : '<ul>';
 
 			while ( $related->have_posts() ) {
@@ -159,9 +159,9 @@ function odin_related_posts( $display = 'category', $qty = 4, $title = '', $thum
 
 				if ( $thumb ) {
 					if ( has_post_thumbnail() ) {
-						$img = get_the_post_thumbnail( get_the_ID(), 'thumbnail' );
+						$img = get_the_post_thumbnail( get_the_ID(), 'blog-thumbnails' );
 					} else {
-						$img = '<img src="' . get_template_directory_uri() . '/core/assets/images/odin-thumb-placeholder.jpg" alt="' . get_the_title() . '">';
+						$img = '<img src="' . get_template_directory_uri() . '/core/assets/images/odin-thumb-placeholder.jpg" class="img-fluid" alt="' . get_the_title() . '">';
 					}
 					// Filter to replace the image.
 					$image = apply_filters( 'odin_related_posts_thumbnail', $img );
@@ -171,9 +171,9 @@ function odin_related_posts( $display = 'category', $qty = 4, $title = '', $thum
 					$layout .= '</span>';
 				}
 
-				$layout .= '<span class="text">';
-				$layout .= sprintf( '<a href="%1$s" title="%2$s">%2$s</a>', esc_url( get_permalink() ), get_the_title() );
-				$layout .= '</span>';
+				$layout .= '<div class="text">';
+				$layout .= sprintf( '<h3 class="related-post__subtitle"><a href="%1$s">%2$s</a></h3>', esc_url( get_permalink() ), get_the_title() );
+				$layout .= '</div>';
 
 				$layout .= ( $thumb ) ? '</div>' : '</li>';
 			}
@@ -229,16 +229,16 @@ function odin_excerpt( $type = 'excerpt', $limit = 40 ) {
 function odin_breadcrumbs( $homepage = '' ) {
 	global $wp_query, $post, $author;
 
-	! empty( $homepage ) || $homepage = __( 'Página inicial', 'odin' );
+	! empty( $homepage ) || $homepage = __( 'Home', 'odin' );
 
 	// Default html.
 	$current_before = '<li class="breadcrumb-item active" aria-current="page">';
 	$current_after  = '</li>';
 
 	if ( ! is_home() && ! is_front_page() || is_paged() ) {
+
 		// First level.
-    echo '<div class="d-flex align-items-center"><p class="breadcrumb__headline">Você está em:</p>';
-		echo '<nav class="breadcrumb-nav" aria-label="Navegação rápida"><ol  class="breadcrumb" id="breadcrumbs">';
+		echo '<nav aria-label="Navegação rápida"><ol class="breadcrumb" id="breadcrumbs">';
 		echo '<li class="breadcrumb-item"><a href="' . home_url() . '" rel="nofollow">' . $homepage . '</a></li>';
 
 		// Single post.
@@ -356,7 +356,7 @@ function odin_breadcrumbs( $homepage = '' ) {
 				echo $parents;
 			}
 
-			printf( __( '%s %s%s', 'odin' ), $current_before, single_cat_title( '', false ), $current_after );
+			printf( __( '%sCategory: %s%s', 'odin' ), $current_before, single_cat_title( '', false ), $current_after );
 
 		// Tags archive.
 		} elseif ( is_tag() ) {
@@ -439,7 +439,7 @@ function odin_breadcrumbs( $homepage = '' ) {
 			echo ' (' . sprintf( __( 'Page %s', 'abelman' ), get_query_var( 'paged' ) ) . ')';
 		}
 
-		echo '</ol></nav></div>';
+		echo '</ol></nav>';
 	}
 }
 

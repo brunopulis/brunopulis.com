@@ -1,0 +1,17 @@
+// =========================================================================
+// Related Posts
+// =========================================================================
+
+.related-posts {
+  margin: rem(80) 0;
+}
+
+.related-post__title {
+  color: var(--pulis-color-blue);
+}
+
+.related-post__subtitle {
+  color: var(--pulis-color-grey);
+  font-size: rem(18);
+  line-height: rem(24);
+}
