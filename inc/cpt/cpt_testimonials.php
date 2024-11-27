@@ -27,7 +27,7 @@ function cpt_testimonials() {
 
 	$testimonials->set_arguments(
 		array(
-      'menu_icon' => 'dashicons-person',
+      'menu_icon' => 'dashicons-testimonial',
 		)
 	);
 }

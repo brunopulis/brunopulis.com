@@ -14,7 +14,11 @@ function cpt_portfolio() {
 
 	$portfolio->set_arguments(
 		array(
-      'menu_icon' => 'dashicons-clipboard'
+      'supports'  => array( 'title', 'excerpt', 'thumbnail' ),
+      'menu_icon' => 'dashicons-clipboard',
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array( 'slug' => 'portfolio' ),
 		)
 	);
 }

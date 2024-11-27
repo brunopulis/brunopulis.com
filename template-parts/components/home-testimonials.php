@@ -26,8 +26,8 @@
             $job_title   = get_field( 'depoiments_job_title' );
       ?>
         <div class="col-md-4">
-          <article class="testimonial__item">
-            <div class="testimonial__rating" style="margin-bottom: 30px;">
+          <article class="testimonial__item card h-100">
+            <div class="testimonial__rating">
               <?php for ($i=0; $i < 5; $i++): ?>
                 <svg aria-hidden="true" class="" width="20" height="18"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/regular.svg#star"></svg>
               <?php endfor; ?>
@@ -36,7 +36,7 @@
               <p><?php the_content(); ?></p>
             </blockquote>
 
-            <div class="testimonial__container">
+            <div class="card-body testimonial__container">
               <div class="d-flex">
                 <?php if ( has_post_thumbnail() ):  ?>
                   <div class="testimonial__client-image">

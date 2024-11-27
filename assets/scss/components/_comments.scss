@@ -17,3 +17,45 @@
 .comment-form-cookies-consent {
   margin: 15px 0;
 }
+
+#webmention-form {
+  border-color: var(--pulis-color-grey);
+  background-image: url(../images/webmention-icon-256x256.png);
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  background-position: 1rem .5rem;
+  text-shadow: 1px 1px #ecffec;
+  padding: .25rem 1rem;
+  font-size: small;
+  margin: rem(20) 0;
+}
+
+#webmention-form p:first-child {
+  padding-left: 4rem;
+}
+
+#webmention-source {
+  border: 1px solid var(--pulis-color-black);
+  padding: rem(6) rem(12);
+  width: 100%;
+}
+
+#webmention-submit {
+  background: var(--pulis-color-grey);
+  color: var(--pulis-color-black);
+  border-radius: rem(4);
+  font-weight: 500;
+  text-decoration: none;
+  padding: rem(6);
+  transition: var(--transition);
+
+  &:active,
+  &:hover,
+  &:focus {
+    background: var(--pulis-color-orange-light);
+    color: var(--pulis-color-black);
+    text-decoration: none;
+  }
+
+  @extend .btn;
+}

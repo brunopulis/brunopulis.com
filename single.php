@@ -14,13 +14,13 @@ get_header(); ?>
     <div class="row">
       <?php
         while ( have_posts() ) : the_post();
-          get_template_part( 'template-parts/content/content' );
+          get_template_part( 'template-parts/content/content-blog' );
         endwhile;
       ?>
     </div>
   </div>
-
-  <?php require_once('template-parts/newsletter.php'); ?>
+      
+  <?php require_once('template-parts/components/newsletter.php'); ?>
 </main>
 <?php
 

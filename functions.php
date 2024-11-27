@@ -60,20 +60,23 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 	 */
 	function odin_setup_features() {
     // Add support for multiple languages.
-		load_theme_textdomain( 'bruno-pulis', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'odin', get_template_directory() . '/languages' );
 
     // Register nav menus.
 		register_nav_menus(
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' ),
+        'service-menu' => __( 'Service', 'odin' ),
         'footer-menu' => __( 'Footer', 'odin' )
 			)
 		);
 
     // Add post_thumbnails suport.
-		add_theme_support( 'post-thumbnails' );
-    add_theme_support( 'letter-thumbnails', 440, 250, true );
-    add_theme_support( 'blogroll-thumbnail', 376, 211, true );
+    add_image_size( 'blog-thumbnails', 416, 250, true );
+    add_image_size( 'portfolio-thumb', 440, 235, true );
+    add_image_size( 'letter-thumbnails', 713, 450, true );
+    add_image_size( 'blogroll-thumbnail', 376, 211, true );
+    add_image_size( 'single-thumbnail', 660, 450, true );
 
     // Add feed link
 		add_theme_support( 'automatic-feed-links' );
@@ -92,6 +95,12 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		);
 
 		add_theme_support( 'custom-header', $default );
+    add_theme_support( 'blog-thumbnails' );
+    add_theme_support( 'portfolio-thumb' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'letter-thumbnails' );
+    add_theme_support( 'blogroll-thumbnail' );
+    add_theme_support( 'single-thumbnail' );
 
 		// Support Custom Background.
 		$defaults = array(
@@ -275,57 +284,6 @@ function bs_dequeue_dashicons() {
 }
 
 /**
- * Custom Markup for Comments
- */
-function gg_comments($comment, $args, $depth) {
-	if ( 'div' === $args['style'] ) {
-		$tag       = 'div';
-		$add_below = 'comment-item';
-	} else {
-		$tag       = 'li';
-		$add_below = 'comment-item';
-	}?>
-	<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'comment--parent' ); ?> id="comment-<?php comment_ID() ?>"><?php 
-	if ( 'div' != $args['style'] ) { ?>
-		<div id="comment-<?php comment_ID() ?>" class="comment__wrapper">
-		<?php } ?>
-			<div class="comment__body">
-				<div class="comment__author"> 
-					<?php printf( __( '%s' ), get_comment_author_link() ); ?>
-				</div><?php 
-				if ( $comment->comment_approved == '0' ) { ?>
-				<span class="comment__notice"><?php _e( 'Your comment is waiting for approval.' ); ?></span><?php 
-			} ?>
-				<div class="comment__meta">
-					<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">#</a>
-					<?php
-					printf( 
-						get_comment_date()
-					); ?>
-				</div>
-				<div class="comment__text">
-					<?php comment_text(); ?>
-					<?php comment_reply_link( 
-						array_merge( 
-							$args, 
-							array( 
-								'add_below' => $add_below, 
-								'depth'     => $depth, 
-								'max_depth' => $args['max_depth'] 
-							) 
-						) 
-					); ?>
-				</div>
-			</div>
-			<?php 
-	if ( 'div' != $args['style'] ) : ?>
-		</div><?php 
-	endif;
-}
-
-
-
-/**
  * Odin custom stylesheet URI.
  *
  * @since  2.2.0
@@ -411,3 +369,40 @@ function add_my_post_types_to_query( $query ) {
   
   return $query;
 }
+
+
+/**
+ * Display a nice welcoming message to folks reading posts via RSS.
+ *
+ * Kudos Kev Quirk for the idea!
+ *
+ * @param string $content The current post content.
+ *
+ * @return string
+ */
+ function jeherve_welcome_rss_readers( $content ) {
+    $welcome_messages = array(
+        "💖 O RSS é fantástico, e você também o é por usá-lo. 🎆",
+        "👏 Parabéns por ser um usuário de RSS. 🎉",
+        "🥰 Você está lendo esta postagem por meio do feed RSS. Isso faz de você uma das melhores pessoas da Internet! 🏆",
+        "📰 Usar um leitor de feed é a melhor maneira de ler as publicações do meu blog. Como você é inteligente por saber disso! 🚀",
+        "🌟 Você está lendo esta publicação por meio do feed RSS, seu astro! 🌠",
+        "🪄 Os feeds são maravilhosos, e você é uma pessoa maravilhosa por usá-los. 🔮",
+        "❤️‍🔥 Você está lendo esta publicação por meio do feed RSS. Você está em chamas! 🔥",
+        "🧨 RSS é dinamite! Obrigado por assinar meu blog. 💥",
+        "🤘 Você está inscrito no DanQ.me usando o feed RSS. Você é demais! 🎸",
+        "🕵️ Assinar os feeds RSS do DanQ.me significa que você poderá ver publicações secretas de bônus não divulgadas no site principal. Esperto você! 🧠",
+        "🧡 Eu adoro os feeds RSS. E adoro você por usá-los. 💙",
+        "🎗️ O uso de feeds RSS é uma ótima maneira de se manter atualizado com meu blog. Obrigado por se inscrever! 🤗",
+        "🦸 Você é meu herói! (Por usar o RSS para acompanhar meu blog.) 🥇",
+    );
+
+    $welcome_message = $welcome_messages[ wp_rand( 0, count( $welcome_messages ) - 1 ) ];
+
+    return sprintf(
+        '%1$s<p>%2$s</p>',
+        $content,
+        $welcome_message
+    );
+}
+add_filter( 'the_content_feed', 'jeherve_welcome_rss_readers' );

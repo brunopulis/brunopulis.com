@@ -15,19 +15,17 @@ get_header(); ?>
 <main id="content">
   <div class="container">
     <div class="row">
-    <div class="col-md-8">
+    <div>
+        <?php odin_breadcrumbs(); ?>
         <?php
           while ( have_posts() ) : the_post();
             get_template_part( 'template-parts/content/content', 'page' );
           endwhile;
         ?>
       </div>
-      <aside class="col-md-4" style="padding-top: 80px;">
-        <?php the_post_thumbnail(); ?>
-      </aside>
     </div>
   </div>
-  <?php require_once('template-parts/newsletter.php'); ?>
+  <?php require_once('template-parts/components/newsletter.php'); ?>
 </main>
 
 <?php

@@ -1,8 +1,6 @@
 <?php
 /**
- * Template Name: Portfolio
- *
- * The template for displaying Serviços page.
+ * Template Name: Portfolio Archive
  *
  * @package Odin
  * @since 2.2.0
@@ -13,53 +11,94 @@ get_header(); ?>
   <section>
     <div class="container">
       <div class="row">
+        <?php odin_breadcrumbs(); ?>
         <h1 class="entry-title">Portfólio</h1>
-        <div class="d-flex align-items-center justify-content-between">
-          
-        </div>
-      </div>
-
-      <div class="row mt-5 ">
-        <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="menu-filter">
-          <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>
-          <li class="list-inline-item"><a class="" data-filter=".seo">Seo</a></li>
-          <li class="list-inline-item"><a class="" data-filter=".webdesign">Webdesign</a></li>
-          <li class="list-inline-item"><a class="" data-filter=".WORK">WORK</a></li>
-          <li class="list-inline-item"><a class="" data-filter=".wordpress">Wordpress</a></li>
-        </ul>
+        <p>Confira alguns trabalhos que desenvolvi.</p>
       </div>
     </div>
-    
+
     <div class="container">
-      <div class="row">
+      <div class="projects">
         <?php
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
           $args = array(
-            'post_type' => 'portfolio',
-            'posts_per_page' => 3,
-            'order' => 'DESC'
+            'post_type'      => 'portfolio',
+            'paged'          => $paged,
+            'posts_per_page' => 2,
+            'post_status'    => 'publish',
+            'order'          => 'DESC',
+            'orderby'        => 'date'
           );
 
-          $blog = new WP_Query( $args );
+          $projects = new WP_Query( $args );
 
-          if ( $blog->have_posts() ) :
-            while ( $blog->have_posts() ) : $blog->the_post();
+          if ( $projects->have_posts() ) :
+            while ( $projects->have_posts() ) : $projects->the_post();
         ?>
-          <article class="home-blog__item col-lg-4">
-            <div class="c-card">
-              <div class="c-card__body">
-                <a href="<?php the_permalink(); ?>">
-                  <?php the_post_thumbnail(); ?>
-                </a>
-              </div>
+          <article class="project">
+            <div class="content">
+              <h2 class="project__name"><?php the_title(); ?></h2>
+              <p><?php the_content(); ?></p>
+              <?php
+                $project_categories = get_the_terms(get_the_ID(), 'portfolio_attributes');
+                if ($project_categories && !is_wp_error($project_categories)) :
+              ?>
+                <ul class="list">
+                  <?php foreach ($project_categories as $category) : ?>
+                    <li class="list__item">
+                      <span class="list-badge list-badge--grey"><?php echo esc_html($category->name); ?></span>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+              
+              <a href="<?php the_permalink(); ?>" class="project__link">
+                Veja o projeto completo
+                <svg aria-hidden="true" class="project__icon">
+                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/solid.svg#chevron-right">
+                </svg>
+              </a>
+            </div>
+            <div class="justify-content-end d-flex">
+              <?php the_post_thumbnail(); ?>
             </div>
           </article>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-        <?php endif; ?>
+        <?php 
+          endwhile; 
+          
+          
+          // $total_pages = $projects->max_num_pages;
+
+            
+
+          //   if ($total_pages > 1){
+          //     $current_page = max(1, get_query_var('paged'));
+          //     //odin_debug($current_page);
+
+          //     echo paginate_links(array(
+          //       'base' => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
+          //       'format' => '?paged=%#%',
+          //       'current' => max(1, $paged),
+          //       'total' => $total_pages,
+          //       'prev_text' => __('« Anterior'),
+          //       'next_text' => __('Próximo »'),
+          //     ));
+            
+          //   }  
+          // endif;
+        ?>
+        <div class="d-flex justify-content-start">
+          <?php echo odin_pagination( 2, 1, false, $projects ); ?>
+        </div>
+        <?php
+          wp_reset_postdata(); 
+        endif;
+        ?>
       </div>
     </div>
   </section>
-  <?php require_once('template-parts/newsletter.php'); ?>
+  <?php require_once('template-parts/components/newsletter.php'); ?>
 </main>
 <?php
 get_footer();

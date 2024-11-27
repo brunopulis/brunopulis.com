@@ -1,16 +1,6 @@
 <?php
 /**
- * Template Name: Newsletter
- *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
- *
- * If you'd like to further customize these archive views, you may create a
- * new template file for each specific one. For example, Twenty Thirteen
- * already has tag.php for Tag archives, category.php for Category archives,
- * and author.php for Author archives.
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
+ * Template Name: Newsletter Archive
  *
  * @package Bruno_Pulis
  * @since 2.2.0
@@ -62,13 +52,14 @@ get_header(); ?>
                       <?php the_title(); ?>
                     </a>
                   </h3>
+                  <time class="c-card__meta" datetime="<?php echo get_the_date('Y-m-d');?>">
                 </div>
               </article>
             </div>
           <?php endwhile; ?>
-          <div class="d-flex justify-content-center">
+          <div class="d-flex justify-content-start">
             <?php
-              echo odin_pagination( 2, 1, false, $letters); 
+              echo odin_pagination( 2, 1, true, $letters); 
             ?>
           </div>
           <?php wp_reset_postdata(); ?>

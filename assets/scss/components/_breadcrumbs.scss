@@ -1,7 +1,7 @@
-/*------------------------------------*\
-    #Breadcrumbs
-    See: https://scottaohara.github.io/a11y_breadcrumbs/
-\*------------------------------------*/
+// =========================================================
+// Breadcrumbs
+// @see: https://scottaohara.github.io/a11y_breadcrumbs/
+// =========================================================
 
 .breadcrumb__headline {
   font-size: rem(14);
@@ -9,14 +9,10 @@
 }
 
 .breadcrumb {
-	padding-bottom: rem(15);
-	padding-top: rem(10);
 }
 
 .breadcrumb a {
 	color: $main;
-  font-size: rem(14);
-  padding: rem(11) 0;
 
 	&:visited,
 	&:hover,
@@ -31,7 +27,6 @@
   --bs-breadcrumb-item-active-color: $text-color;
 
   color: $text-color;
-  font-size: rem(14);
 	text-decoration: none;
 
 	&:hover,
@@ -40,10 +35,7 @@
 	}
 }
 
-
-/**
-Separator chevron - see https://codepen.io/jonneal/pen/kptBs
-*/
+// Separator chevron - see https://codepen.io/jonneal/pen/kptBs 
 .breadcrumbs li:not(:last-child) {
 	&::after {
 		border-style: solid;

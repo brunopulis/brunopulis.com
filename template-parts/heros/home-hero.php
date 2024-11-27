@@ -10,7 +10,7 @@
           Ajudo empreendedores a terem presença digital com sites <strong>rápidos, acessíveis e práticos</strong>.
         </p>
 
-        <a href="<?php bloginfo('url'); ?>/servicos" class="c-hero__link">Conheça meus serviços</a>
+        <a href="<?php bloginfo('url'); ?>/servicos" class="button button--blue">Conheça meus serviços</a>
 			</div>
 
       <div class="col-lg-6">

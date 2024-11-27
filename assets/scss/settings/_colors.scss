@@ -2,100 +2,36 @@
 // Colors
 // =========================================================================
 
+:root {
+  --pulis-color-white: #ffffff;
+  --pulis-color-black: #0a0a0a;
+  --pulis-color-blue: #274c77;
+  --pulis-color-grey: #e7ecef;
+  --pulis-color-grey-light: #707070;
+  --pulis-color-pink: #E6427E;
+  --pulis-color-magenta: #782761;
+  --transition: all ease-in .3s;
+  --pulis-color-tiny-blue: #6096ba;
+  --pulis-color-orange: #ea9010;
+  --pulis-color-orange-light: #EF980E;
+  --pulis-font-family-roboto: Roboto;
+  --pulis-font-style-normal: normal;
+  --pulis-font-weight-600: 600;
+  --pulis-font-weight-900: 900;
+  --pulis-font-size-54: 54px;
+  --bs-nav-link-color: --color-white;
+  --instagram: #e1306c;
+  --linkedin: #0077b5;
+  --twitter: #1da1f2;
+  --whatsapp: #25d366;
+  --mastodon: #2C90DC;
+  --youtube: #ff0000;
+  --rss: #E99010;
+}
 
-/**
-Base colors that can be used when prototyping. Taken from http://clrs.cc/
-
-1. We ideally avoid using pure white on pure black, because the contrast is
-so great that it creates the illusion that text is vibrating on screen.
- */
-$black: #000;
-$off-black: #111; /* 1 */
-$white: #fff;
-$off-white: #fafafa; /* 1 */
-
-$maroon: #85144b;
-$red: #ff4136;
-$orange: #ff851b;
-$yellow: #ffdc00;
-$olive: #3d9970;
-$green: #2ecc40;
-$lime: #01ff70;
-$teal: #39cccc;
-$aqua: #7fdbff;
-$blue: #0073d8;
-$navy: #001f3f;
-$purple: #78265f;
-$fuchsia: #f012be;
-$grey: #aaa;
-$mercury-grey: #e5e5e5;
-$silver: #ddd;
-
-// Theme colors 
+// Theme colors
 $bg-border: #e7ecef;
 $body-color: $white;
 $text-color: #0a0a0a;
 $main: #274c78;
 $link-footer: #707070;
-
-
-$red: #e93737;
-$light-red: #ec7070;
-$coral: #fc7750;
-$light-coral: #fea78d;
-$deep-yellow: #f9c818;
-$yellow: #f9dc4a;
-$orange: #e99010;
-$deep-green: #0a4343;
-$teal-green: #237978;
-$aqua: #1bc0d7;
-$light-blue: #cbe0fb;
-$sky-blue: #6bc8fe;
-$azure: #0075ff;
-$w3c-blue: #005a9c;
-$blue: #005797;
-$deep-blue: #024488;
-$pink: #ddb0c8;
-$light-pink: #eeccdc;
-$storm-gray: #545454;
-$twiki-gray: #e7ecef;
-$mist-gray: #f8f8fb;
-
-
-/**
-Sass variables.
- */
-// Sass variables
-$border-color:                  $twiki-gray;
-$input-border-color:            $storm-gray;
-$focus-color:                   $yellow;
-
-$link-color:                    $blue;
-$link-color--visited:           $purple;
-$link-color--hover:             $deep-blue;
-$link-color--hover: $orange;
-
-$success-color:                 #046704;
-$info-color:                    $w3c-blue;
-$warning-color:                 #c28605;
-$error-color:                   #a82615;
-
-// Social media colours that might be useful
-$facebook: #3b5998;
-$instagram: #405de6;
-$linkedin: #0077b5;
-$pinterest: #bd081c;
-$twitter: #1da1f2;
-$whatsapp: #25d366;
-$youtube: #ff0000;
-
-// Categories
-$category-color-1: #264b78;
-$category-color-2: #78265f;
-$category-color-3: #785b26;
-$category-color-4: #233820;
-$category-color-5: #cdb486;
-$category-color-6: #86a6cd;
-$category-color-7: #cd86b7;
-$category-color-8: #317826;
-$category-color-9: #d1f7cb;

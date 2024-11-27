@@ -31,20 +31,67 @@
           </div>
 
           <div class="post-meta__share">
-              <p><strong>Compartilhe essa publicação</strong></p>
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" rel="nofollow noopener noreferrer" target="_blank">LinkedIn</a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" rel="nofollow noopener noreferrer" target="_blank">Facebook</a>
-              <a href="https://www.threads.net/intent/post?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" rel="nofollow noopener noreferrer" target="_blank">Threads</a>
-              <a href="https://toot.kytta.dev/?text=<?php the_title(); ?>%20por%20@brunopulis@mastodon.social%3A%0A%0A<?php the_permalink() ?>" rel="nofollow noopener noreferrer" target="_blank">Mastodon</a>
-              <a href="mailto:?subject=Seu%20amigo%20compartilhou%20um%20artigo%20com%20você.&body=<?php the_title(); ?>%20<?php the_permalink(); ?>" rel="nofollow noopener noreferrer" target="_blank">E-mail</a>
+            <p><strong>Compartilhe essa publicação</strong></p>
+
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="mailto:?subject=Seu%20amigo%20compartilhou%20um%20artigo%20com%20você.&body=<?php the_title(); ?>%20<?php the_permalink(); ?>" rel="nofollow noopener noreferrer" target="_blank">
+                  <svg aria-hidden="true" class="social__icon">
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/regular.svg#envelope">
+                  </svg>
+                  <span class="visually-hidden">E-mail</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://twitter.com/intent/tweet?url=<?php the_permalink();?>&text=<?php the_title();?>" rel="nofollow noopener noreferrer" target="_blank">
+                  <svg aria-hidden="true" class="social__icon">
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#x-twitter">
+                  </svg>
+                  <span class="visually-hidden">Twitter</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" rel="nofollow noopener noreferrer" target="_blank">
+                  <svg aria-hidden="true" class="social__icon">
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#facebook">
+                  </svg>
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+              
+              <li class="social__item">
+                <a class="social__link" href="https://www.threads.net/intent/post?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" rel="nofollow noopener noreferrer" target="_blank">
+                  <svg aria-hidden="true" class="social__icon">
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#threads">
+                  </svg>
+                  <span class="visually-hidden">Threads</span>   
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://toot.kytta.dev/?text=<?php the_title(); ?>%20por%20@brunopulis@mastodon.social%3A%0A%0A<?php the_permalink() ?>" rel="nofollow noopener noreferrer" target="_blank">
+                  <svg aria-hidden="true" class="social__icon">
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#mastodon">
+                  </svg>
+                  <span class="visually-hidden">Mastodon</span>   
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" rel="nofollow noopener noreferrer" target="_blank">
+                <svg aria-hidden="true" class="social__icon">
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#linkedin">
+                  </svg>
+                  <span class="visually-hidden">Linkedin</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div class="col-sm-12 col-md-6">
           <?php
-              if ( has_post_thumbnail() ) {
-                the_post_thumbnail( 'single-thumbnail', array( 'width' => 636, 'height' => 358, 'class' => 'img-fluid'  ) );
-              }
+            if ( has_post_thumbnail() ) {
+              the_post_thumbnail( 'single-thumbnail', array( 'width' => 636, 'height' => 358, 'class' => 'img-fluid'  ) );
+            }
           ?>
         </div>
       </div>
@@ -58,12 +105,9 @@
 
         <div class="entry-meta">
           <?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
-            <span class="cat-links badge text-bg-secondary"><?php echo __( '', 'odin' ) . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'odin' ) ); ?></span>
+            <span class="list-badge list-badge--grey"><?php echo __( '', 'odin' ) . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'odin' ) ); ?></span>
           <?php endif; ?>
-          <?php the_tags( '<span class="badge text-bg-secondary">' . __( 'Tags:', 'odin' ) . ' ', ', ', '</span>' ); ?>
-          <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-            <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'odin' ), __( '1 Comment', 'odin' ), __( '% Comments', 'odin' ) ); ?></span>
-          <?php endif; ?>
+          <?php the_tags( '<span class="list-badge list-badge--grey">' . __( 'Tags:', 'odin' ) . ' ', ', ', '</span>' ); ?>
         </div>
       </div>
       <div class="col-sm-4">
@@ -89,5 +133,9 @@
         comments_template();
       endif;
     ?>
+  </section>
+  
+  <section class="related-posts">
+    <?php echo odin_related_posts( 'category', 4, '', true, 'post' ) ?>
   </section>
 </div>

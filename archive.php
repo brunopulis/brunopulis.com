@@ -23,6 +23,7 @@ get_header(); ?>
     <div class="row">
       <div class="col-md-9 mx-auto">
         <header class="page-header">
+          <?php odin_breadcrumbs(); ?>    
           <h1><?php the_archive_title(); ?></h1>
         </header>
 
@@ -58,6 +59,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
+  <?php require_once('template-parts/components/newsletter.php'); ?>
 </main><!-- #main -->
 
 <?php

@@ -20,8 +20,7 @@
               Desenvolvimento de sites
             </h3>
             <div class="card-text mt-3">
-              <p>
-                Criação de websites, landing pages e customização de temas WordPress. Com foco em usabilidade e acessibilidade.</p>
+              <p>Crio sites e páginas personalizadas que são fáceis de usar, bonitas e acessíveis para todos, incluindo pessoas com deficiência. Seu site será único e pensado para o seu negócio.</p>
             </div>
             <!--<a href="<?php the_permalink(); ?>" class="button">
               fazer orçamento <span class="visually-hidden">de desenvolvimento</span>
@@ -39,7 +38,7 @@
               Consultorias e Mentorias
             </h3>
             <div class="card-text mt-3">
-              <p>Orientação especializada para implementar políticas, práticas e padrões de acessibilidade, garantindo que seu negócio esteja alinhado com as normas e boas práticas.</p>
+              <p>Ajudo você ou sua equipe a entender e aplicar práticas que tornam seu site ou serviço mais acessível, seguindo as normas e boas práticas do mercado.</p>
             </div>
             <!--<a href="<?php the_permalink(); ?>" class="button">
               fazer orçamento <span class="visually-hidden">de desenvolvimento</span>
@@ -57,7 +56,7 @@
               Palestras
             </h3>
             <div class="card-text mt-3">
-              <p>Palestras inspiradoras e educativas sobre a importância da acessibilidade, sensibilizando seu público para a inclusão e o impacto positivo de práticas acessíveis..</p>
+              <p>Ofereço palestras que mostram de forma prática e inspiradora como a acessibilidade pode transformar negócios e impactar positivamente as pessoas.</p>
             </div>
             <!--<a href="<?php the_permalink(); ?>" class="button">
               fazer orçamento <span class="visually-hidden">de desenvolvimento</span>
@@ -72,14 +71,10 @@
               <svg aria-hidden="true" class="service__icon" width="24" height="24">
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#accessible-icon"></use>
               </svg>
-              Auditoria de acessibilidade
+              Avaliação de acessibilidade
             </h3>
             <div class="card-text mt-3">
-              <p>
-                Produzimos um relatório detalhado apontado as falhas em relação às diretrizes de acessibilidade e outros padrões nacionais e internacionais.
-                E indicamos como corrigir.
-              </p>
-
+              <p>Analiso seu site ou sistema e entrego um relatório claro com os problemas de acessibilidade encontrados e como corrigi-los.</p>
             </div>
             <!--<a href="<?php the_permalink(); ?>" class="button">
               fazer orçamento <span class="visually-hidden">de desenvolvimento</span>
@@ -97,10 +92,7 @@
               Remediação de acessibilidade
             </h3>
             <div class="card-text mt-3">
-              <p>
-                Não sabe ou não tem tempo para corrigir problemas de acessibilidade?
-                Essa solução é ideal para esse cenário. Avaliamos e corrigimos.
-              </p>
+              <p>Se você não sabe por onde começar ou não tem tempo para corrigir problemas de acessibilidade, eu resolvo para você. Identifico e corrijo os erros para que tudo fique dentro dos padrões.</p>
             </div>
             <!--<a href="<?php the_permalink(); ?>" class="button">
               fazer orçamento <span class="visually-hidden">de desenvolvimento</span>
@@ -118,7 +110,7 @@
               Documentos acessíveis
             </h3>
             <div class="card-text mt-3">
-              <p>Corrigimos problemas de acessibilidade em documentos como: PDF, Word, Excel e Powerpoint.</p>
+              <p>Corrijo problemas em documentos como: <strong>PDFs, Word, Excel e PowerPoint</strong> para que qualquer pessoa possa acessá-los sem dificuldade.</p>
             </div>
             <!--<a href="<?php the_permalink(); ?>" class="button">
               fazer orçamento <span class="visually-hidden">de desenvolvimento</span>

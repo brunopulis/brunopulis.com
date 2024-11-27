@@ -50,7 +50,7 @@
     <nav class="navbar navbar-expand-lg d-flex justify-content-center">
       <div class="container">
         <a class="navbar-brand h-card" href="<?php bloginfo('url') ?>/">
-          <img src="<?php echo TEMPLATE_PATH; ?>/assets/images/logo.svg" class="img-fluid" width="50" height="50" alt="">
+          Pulis Studio
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
                 aria-controls="navMain"

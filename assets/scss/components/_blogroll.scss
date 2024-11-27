@@ -6,10 +6,6 @@
   margin-bottom: rem(80);
 
   @extend .list-grid;
-
-  @media(max-width: 630px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 .blogroll__title {
@@ -18,6 +14,10 @@
   margin-block-start: rem(23);
   margin-block-end: rem(23);
   word-break: break-word;
+}
+
+.blogroll__body {
+  @extend .card;
 }
 
 .blogroll__thumbnail {

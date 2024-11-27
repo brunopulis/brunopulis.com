@@ -4,14 +4,14 @@
 
 .services {
   &__headline {
-    font-size: toRem(24);
+    font-size: rem(24);
     font-weight: 500;
-    line-height: toRem(32);
-    padding-top: toRem(32);
+    line-height: rem(32);
+    padding-top: rem(32);
   }
 
   &__content {
-    padding-top: toRem(32);
+    padding-top: rem(32);
   }
 }
 
@@ -23,33 +23,33 @@
 
     .c-card__title {
       color: var(--pulis-color-blue);
-      font-size: toRem(24);
+      font-size: rem(24);
     }
   }
 
   &__icon {
-    height: toRem(54);
-    margin-right: toRem(16);
-    width: toRem(54);
+    height: rem(24);
+    margin-right: rem(16);
+    width: rem(24);
     fill: var(--pulis-color-blue);
   }
-  
+
   .c-card__content {
-    line-height: toRem(19);
-    padding-top: toRem(32);
+    line-height: rem(19);
+    padding-top: rem(32);
 
     a {
       display: inline-block;
-      margin-top: toRem(32);
+      margin-top: rem(32);
     }
   }
 
   &__contact {
     display: block;
-    padding-top: toRem(38);
+    padding-top: rem(38);
     max-width: 557px;
-    font-size: toRem(20);
-    line-height: toRem(29);
+    font-size: rem(20);
+    line-height: rem(29);
     color: var(--pulis-color-grey-light);
   }
 }

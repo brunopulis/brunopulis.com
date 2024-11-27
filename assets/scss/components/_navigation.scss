@@ -32,3 +32,15 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.dropdown-menu {
+  background: var(--pulis-color-blue);
+}
+
+.dropdown-item {
+  color: var(--pulis-color-white);
+}
+
+.post-navigation {
+  padding: 2rem 0 0 0;
+}

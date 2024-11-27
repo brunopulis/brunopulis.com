@@ -1,8 +1,6 @@
 <?php
 /**
- * Template Name: Blogroll
- *
- * The template for displaying Serviços page.
+ * Template Name: Blogroll Archive
  *
  * @package Odin
  * @since 2.2.0
@@ -11,15 +9,18 @@ get_header(); ?>
 
 <main id="content">
   <div class="container">
-    <div class="row mb-3"> 
+    <div class="row mb-3">
       <?php odin_breadcrumbs(); ?>
       <h1 class="entry-title">Blogroll</h1>
-      
-      <p>Antes de os mecanismos de busca se tornarem uma coisa, os blogrolls eram bem comuns. Todo mundo tinha uma seção em seu site dedicada a compartilhar links que eles gostavam. Eu simplesmente adoro essa ideia de curadoria de links, por isso decidi criar por aqui.
+
+      <p>
+        Blogroll é um conceito antigo. Na web da década passada donos de blogs e sites criavam listas pessoais de sites que gostavam.
       </p>
+      <p>Isso ajudou a popularizar muitos sites desconhecidos.</p>
+      <p>Por aqui, você irá encontrar alguns sites bem legais.</p>
     </div>
 
-    <ul class="blogroll__list">
+    <ul class="list-grid blogroll__list">
       <?php
         $args = array(
           'post_type'      => 'blogrolls',
@@ -28,17 +29,17 @@ get_header(); ?>
         );
 
         $blogrolls = new WP_Query( $args );
-        
+
         if ( $blogrolls->have_posts() ) :
           while ( $blogrolls->have_posts() ) : $blogrolls->the_post();
             $blogroll_url = get_field ( 'blogroll_url' );
       ?>
         <li class="blogroll__item">
-          <div class="blogroll__body h-100">
+          <div class="blogroll__body">
             <h3 class="blogroll__title"><?php the_title(); ?></h3>
 
             <?php if( has_post_thumbnail() ): ?>
-              <?php the_post_thumbnail('blogroll-thumbnail', array('class' => 'img-fluid blogroll__thumbnail')); ?>  
+              <?php the_post_thumbnail('blogroll-thumbnail', array('class' => 'img-fluid blogroll__thumbnail')); ?>
             <?php else: ?>
               <img src="" alt="">
             <?php endif; ?>
@@ -48,15 +49,15 @@ get_header(); ?>
         </li>
         <?php endwhile; ?>
         <div class="pagination">
-          
+
         </div>
         <?php wp_reset_postdata(); ?>
         <?php else: ?>
           <p>Nenhum favorito encontrado.</p>
-        <?php endif; ?>  
+        <?php endif; ?>
     </ul>
   </div>
-  <?php require_once('template-parts/newsletter.php'); ?>
+  <?php require_once('template-parts/components/newsletter.php'); ?>
 </main><!-- #main -->
 
 <?php

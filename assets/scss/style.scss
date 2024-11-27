@@ -1,179 +1,46 @@
 // ======================================================
-// Bruno Pulis Style 
+// Bruno Pulis Style
 // ======================================================
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+// Functions
+@import "functions/maths";
+@import "functions/units";
 
-
-/*------------------------------------*\
-    #Apollo: core styles for all browsers
-\*------------------------------------*/
-
-/*------------------------------------*\
-    #Settings
-\*------------------------------------*/
-@import "00-settings/breakpoints";
-@import "00-settings/colors";
-@import "00-settings/debug";
-@import "00-settings/fonts";
-@import "00-settings/typesetting";
-
-
-
-/*------------------------------------*\
-    #Functions
-\*------------------------------------*/
-@import "10-functions/maths";
-@import "10-functions/units";
-
-
-
-/*------------------------------------*\
-    #Mixins
-\*------------------------------------*/
-@import "20-mixins/font-sizes";
-@import "20-mixins/media-query";
-@import "20-mixins/stack";
-
-
-
-/*------------------------------------*\
-    #Base
-
-    Normalize comes first for the cascade
-\*------------------------------------*/
-// @import "../../node_modules/normalize.css/normalize";
-// @import "30-base/animation";
-// @import "30-base/quotes";
-// @import "30-base/body";
-// @import "30-base/box-sizing";
-// @import "30-base/buttons";
-// @import "30-base/focus";
-// @import "30-base/forms";
-// @import "30-base/hide-and-show";
-// @import "30-base/html-elements";
-// @import "30-base/icons";
-// @import "30-base/images";
-// @import "30-base/links";
-// @import "30-base/lists";
-// @import "30-base/skip-link";
-// @import "30-base/details-and-summary";
-// @import "30-base/social";
-// @import "30-base/tables";
-// @import "30-base/typography";
-
-
-
-/*------------------------------------*\
-    #Layouts
-\*------------------------------------*/
-// @import "40-layouts/box";
-// @import "40-layouts/center";
-// @import "40-layouts/cover";
-// @import "40-layouts/cluster";
-// @import "40-layouts/frame";
-// @import "40-layouts/sidebar";
-// @import "40-layouts/switcher";
-
-
-
-/*------------------------------------*\
-    #Core components
-\*------------------------------------*/
-// @import "50-core-components/header";
-// @import "50-core-components/archive-banner";
-// @import "50-core-components/logo";
-// @import "50-core-components/navigation";
-// @import "50-core-components/breadcrumbs";
-// @import "50-core-components/access-control";
-// @import "50-core-components/main";
-// @import "50-core-components/hero";
-// @import "50-core-components/translations";
-// @import "50-core-components/toc";
-// @import "50-core-components/text";
-// @import "50-core-components/quotes";
-// @import "50-core-components/images";
-// @import "50-core-components/video";
-// @import "50-core-components/notes";
-// @import "50-core-components/columns";
-// @import "50-core-components/cards";
-// @import "50-core-components/tag-list";
-// @import "50-core-components/fifty-fifty";
-// @import "50-core-components/evangelists";
-// @import "50-core-components/activity";
-// @import "50-core-components/collapsibles";
-// @import "50-core-components/group-list";
-// @import "50-core-components/members-grid";
-// @import "50-core-components/slide";
-// @import "50-core-components/slider";
-// @import "50-core-components/you-may-also-like";
-// @import "50-core-components/search";
-// @import "50-core-components/meta-info";
-// @import "50-core-components/family-series-list";
-// @import "50-core-components/maturity-levels";
-// @import "50-core-components/pagination";
-// @import "50-core-components/rss";
-// @import "50-core-components/comments";
-// @import "50-core-components/pre-footer";
-// @import "50-core-components/footer";
-
-
-
-/*------------------------------------*\
-    #Templates
-\*------------------------------------*/
-// @import "80-templates/default";
-// @import "80-templates/event";
-// @import "80-templates/home";
-// @import "80-templates/post";
-// @import "80-templates/landing";
-// @import "80-templates/listing";
-// @import "80-templates/profile";
-// @import "80-templates/technical-reports";
-
-/*------------------------------------*\
-    #Utilities
-\*------------------------------------*/
-@import "90-utilities/alignments";
-@import "90-utilities/clearfix";
-@import "90-utilities/layout";
-@import "90-utilities/margins";
-@import "90-utilities/colors";
-
-
-// Variables
-@import "abstracts/variables";
-@import "abstracts/functions";
+// Settings
+@import "settings/colors";
+@import "settings/debug";
+@import "settings/typesetting";
 @import "wordpress/wordpress";
 
 // Base
 @import "base/body";
 @import "base/buttons";
+@import "base/icons";
+@import "base/forms";
 @import "base/lists";
 @import "base/links";
-
-// Utils 
-@import "utils/utils";  
+@import "base/typography";
 
 // Components
+@import "components/accordion";
+@import "components/bookshelf";
+@import "components/bookmarks";
+@import "components/breadcrumbs";
+@import "components/card";
+@import "components/comments";
+@import "components/pagination";
+@import "components/projects";
 @import "components/hero";
 @import "components/home-blog";
-@import "components/help";
-@import "components/comments";
-@import "components/card";
 @import "components/navigation";
-@import "components/breadcrumbs";
-@import "components/bookmarks";
-@import "components/blogroll";
-@import "components/notes";
 @import "components/newsletter";
-@import "components/pill";
+@import "components/testimonials";
+@import "components/related";
 
 // Layout
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/services";
 @import "layouts/footer";
-
-

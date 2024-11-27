@@ -22,11 +22,58 @@
 
         <div class="post-meta__share">
           <p><strong>Compartilhe essa publicação</strong></p>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" rel="nofollow noopener noreferrer" target="_blank">LinkedIn</a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" rel="nofollow noopener noreferrer" target="_blank">Facebook</a>
-          <a href="https://www.threads.net/intent/post?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" rel="nofollow noopener noreferrer" target="_blank">Threads</a>
-          <a href="https://toot.kytta.dev/?text=<?php the_title(); ?>%20por%20@brunopulis@mastodon.social%3A%0A%0A<?php the_permalink() ?>" rel="nofollow noopener noreferrer" target="_blank">Mastodon</a>
-          <a href="mailto:?subject=Seu%20amigo%20compartilhou%20um%20artigo%20com%20você.&body=<?php the_title(); ?>%20<?php the_permalink(); ?>" rel="nofollow noopener noreferrer" target="_blank">E-mail</a>
+
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="mailto:?subject=Seu%20amigo%20compartilhou%20um%20artigo%20com%20você.&body=<?php the_title(); ?>%20<?php the_permalink(); ?>" rel="nofollow noopener noreferrer" target="_blank">
+                <svg aria-hidden="true" class="social__icon">
+                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/regular.svg#envelope">
+                </svg>
+                <span class="visually-hidden">E-mail</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://twitter.com/intent/tweet?url=<?php the_permalink();?>&text=<?php the_title();?>" rel="nofollow noopener noreferrer" target="_blank">
+                <svg aria-hidden="true" class="social__icon">
+                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#x-twitter">
+                </svg>
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" rel="nofollow noopener noreferrer" target="_blank">
+                <svg aria-hidden="true" class="social__icon">
+                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#facebook">
+                </svg>
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            
+            <li class="social__item">
+              <a class="social__link" href="https://www.threads.net/intent/post?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" rel="nofollow noopener noreferrer" target="_blank">
+                <svg aria-hidden="true" class="social__icon">
+                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#threads">
+                </svg>
+                <span class="visually-hidden">Threads</span>   
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://toot.kytta.dev/?text=<?php the_title(); ?>%20por%20@brunopulis@mastodon.social%3A%0A%0A<?php the_permalink() ?>" rel="nofollow noopener noreferrer" target="_blank">
+                <svg aria-hidden="true" class="social__icon">
+                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#mastodon">
+                </svg>
+                <span class="visually-hidden">Mastodon</span>   
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" rel="nofollow noopener noreferrer" target="_blank">
+              <svg aria-hidden="true" class="social__icon">
+                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/brands.svg#linkedin">
+                </svg>
+                <span class="visually-hidden">Linkedin</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
