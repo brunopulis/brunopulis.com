@@ -7,9 +7,9 @@ function cpt_library() {
 	);
 
 	$library->set_labels(
-		array(
+    array(
       'name'                  => __( 'Biblioteca', 'odin' ),
-			'menu_name'             => __( 'Biblioteca', 'odin' ),
+      'menu_name'             => __( 'Biblioteca', 'odin' ),
       'name_admin_bar'        => __( 'Biblioteca', 'odin' ),
       'all_items'             => __( 'Todos livros', 'odin' ),
       'add_new_item'          => __( 'Adicionar livro', 'odin' ),
@@ -27,8 +27,8 @@ function cpt_library() {
 
 	$library->set_arguments(
 		array(
-      'menu_icon' => 'dashicons-book-alt',
-      'taxonomies'    => array( 'category', 'post_tag' ),
+      'menu_icon'  => 'dashicons-book-alt',
+      'taxonomies' => array( 'category', 'post_tag' ),
 		)
 	);
 }

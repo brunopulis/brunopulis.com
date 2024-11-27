@@ -12,7 +12,16 @@ get_header(); ?>
     <div class="row">
       <div class="">
         <h1 class="entry-title" id="letters-title">Blog</h1>
-        <p>Assine meu <a href="<?php bloginfo('url'); ?>/feed">RSS Feed</a></p>
+        <p>Visite também:</p>
+
+        <ul class="blog__list list-unstyled">
+          <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/blogroll" class="blog__link">Sites legais</a></li>
+          <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/notes" class="blog__link">Notas rápidas</a></li>
+          <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/links" class="blog__link">Links</a></li>
+          <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/guestbook" class="blog__link">Livro de visitas</a></li>
+          <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/likes" class="blog__link">Likes</a></li>      
+          <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/livros" class="blog__link">Biblioteca</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -34,27 +43,29 @@ get_header(); ?>
           while ( $blog->have_posts() ) : $blog->the_post();
       ?>
         <article class="home-blog__item col-lg-4">
-          <div class="c-card h-100">
-            <div class="c-card__body">
-              <h3 class="c-card__title">
-                <a href="<?php the_permalink(); ?>" class="c-card__link">
-                  <?php the_title(); ?>
-                </a>
-              </h3>
-              <time class="c-card__meta" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+          <div class="card h-100">
+            <?php
+              $category = get_the_category();
+              $category_name = $category[0]->cat_name;
+            ?>
+            <?php the_post_thumbnail( 'blog-thumbnails', array( 'class' => 'card-img-top' ) ); ?>
+            <div class="card-body">
+              <span class="card-category"><?php echo $category_name; ?></span>
+              <h3 class="card-title card-title--blog"><?php the_title(); ?></h3>
+              <div class="card-text">
+                <p><?php the_excerpt(); ?></p>
+              </div>
+              
+              <time class="card-date c-card__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">
                 <?php echo get_the_date('j F, Y'); ?>
               </time>
-
-              <div class="c-card__content">
-                <p><?php the_excerpt(); ?></p>
-                <a href="<?php the_permalink(); ?>" class="c-card__link">Leia o texto <span class="visually-hidden">sobre: <?php the_title();?></span></a>
-              </div>
+              <a href="<?php the_permalink(); ?>" class="card-link">Leia o texto <span class="visually-hidden">sobre: <?php the_title();?></span></a>
             </div>
           </div>
         </article>
       <?php endwhile; ?>
-      <div class="pagination">
-        <?php wp_pagenavi( array( 'query' => $blog ) ); ?>
+      <div class="d-flex justify-content-start">
+        <?php echo odin_pagination( 2, 1, false, $blog ); ?>
       </div>
       <?php wp_reset_postdata(); ?>
       <?php endif; ?>

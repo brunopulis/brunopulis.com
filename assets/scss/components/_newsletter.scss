@@ -8,36 +8,35 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  min-height: 360px;
-  padding: toRem(30) toRem(32);
-  text-align: center;
+  min-height: 315px;
+  padding: rem(30) rem(32);
 
   @media(max-width: 480px) {
     align-items: flex-start;
     justify-content: flex-start;
-    text-align: left;
   }
 
   &__title {
     font-weight: 700;
-    padding-bottom: toRem(57);
-  }
-}
+    padding-bottom: rem(10);
 
-.newsletter__form {
-  padding: 2rem 0;
-
-  &-field {
-    min-width: 80%;
-
-    &:first-child {
-      padding-right: 1rem;
+    @media(max-width: 1024px) {
+      margin: 0;
+      font-size: rem(20);
     }
+  }
+
+  @media(max-width: 1024px) {
+    align-items: flex-start;
+  }
+
+  @media(max-width: 991px) {
+    min-height: auto;
   }
 }
 
 .newsletter__intro {
-  margin: toRem(16) 0;
+  margin: rem(5) 0;
 }
 
 .c-newsletter {
@@ -45,12 +44,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #E7ECEF; 
-  
+  background: #E7ECEF;
+
   &__title {
     text-align: center;
     margin: 0;
-    padding: toRem(32) 0;
+    padding: rem(32) 0;
   }
 
   &__intro {
@@ -66,9 +65,16 @@
   display: flex;
 }
 
+.c-newsletter__form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .c-newsletter__form-button {
-  background: var(--pulis-color-wheat);
-  color: var(--pulis-color-black);
+  background: var(--pulis-color-blue);
+  color: var(--pulis-color-white);
   font-weight: 600;
 
   &:hover,
@@ -77,5 +83,55 @@
     background: transparent;
     border: 1px solid var(--pulis-color-wheat);
     color: var(--pulis-color-white);
+  }
+
+  @extend .btn;
+}
+
+.newsletter--square {
+  .wpforms-form {
+    flex-direction: row;
+
+    @media(max-width: 1200px) {
+      flex-direction: column;
+    }
+  }
+
+  .wpforms-field {
+    margin-bottom: 0;
+  }
+
+  .wpforms-field-small {
+    max-width: rem(270);
+
+    @media(max-width: 1399px) {
+      max-width: rem(220);
+    }
+
+    @media(max-width: 1200px) {
+      max-width: rem(220) !important;
+    }
+  }
+}
+
+.newsletter__subscribe {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: rem(480);
+  margin: 0 auto;
+
+  .wpforms-form {
+    flex-direction: row;
+    gap: rem(20);
+  }
+}
+
+.letters--mail {
+  margin-top: 4rem;
+
+  @media(max-width: 991px) {
+    margin-top: 0;
   }
 }

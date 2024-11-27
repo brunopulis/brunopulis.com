@@ -1,0 +1,41 @@
+// =========================================================================
+// Blogroll
+// =========================================================================
+
+.blogroll__list {
+  margin-bottom: rem(80);
+
+  @extend .list-grid;
+}
+
+.blogroll__title {
+  color: $main;
+  font-weight: 700;
+  margin-block-start: rem(23);
+  margin-block-end: rem(23);
+  word-break: break-word;
+}
+
+.blogroll__body {
+  @extend .card;
+}
+
+.blogroll__thumbnail {
+  border: 1px solid $bg-border;
+  margin-bottom: rem(13);
+}
+
+.blogroll__text {
+  font-size: rem(16);
+  margin-block-start: rem(19);
+  margin-block-end: rem(19);
+}
+
+.blogroll__link {
+  font-size: rem(14);
+  color: $main;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color .3s ease;
+}
+

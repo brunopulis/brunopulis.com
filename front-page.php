@@ -17,10 +17,13 @@
 get_header(); ?>
 
 <main id="content">
-  <?php get_template_part( 'template-parts/home', 'hero' ); ?>
-  <?php // get_template_part( 'template-parts/home', 'portfolio' ); ?>
-  <?php get_template_part( 'template-parts/home', 'blog' ); ?>
-  <?php get_template_part( 'template-parts/home', 'letters' ); ?>
+  <?php get_template_part( 'template-parts/heros/home', 'hero' ); ?>
+  <?php get_template_part( 'template-parts/components/home', 'about' ); ?>
+  <?php get_template_part( 'template-parts/components/home', 'services' ); ?>
+  <?php get_template_part( 'template-parts/components/home', 'portfolio' ); ?>
+  <?php get_template_part( 'template-parts/components/home', 'testimonials' ); ?>
+  <?php get_template_part( 'template-parts/components/home', 'blog' ); ?>
+  <?php get_template_part( 'template-parts/components/home', 'letters' ); ?>
 </main>
 <?php
 get_footer();

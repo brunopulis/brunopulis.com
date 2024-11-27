@@ -24,7 +24,7 @@ if ( ! function_exists( 'odin_comments_loop' ) ) {
 			default :
 ?>
 				<li <?php comment_class( 'media' ); ?> id="li-comment-<?php comment_ID(); ?>">
-					<article id="div-comment-<?php comment_ID(); ?>" class="comment-body comment-author vcard">
+					<article id="div-comment-<?php comment_ID(); ?>" itemprop="author" itemtype="https://schema.org/Person" itemscope class="comment-body comment-author vcard">
 						<div class="media-left">
 							<?php echo str_replace( "class='avatar", "class='media-object avatar", get_avatar( $comment, 64 ) ); ?>
 						</div>
@@ -32,7 +32,7 @@ if ( ! function_exists( 'odin_comments_loop' ) ) {
 							<footer class="comment-meta">
 								<h5 class="media-heading">
 									<?php echo sprintf( '<strong><span class="fn">%1$s</span></strong>
-														 %2$s <a href="%3$s"><time datetime="%4$s">%5$s %6$s </time></a>
+														 %2$s <a href="%3$s"><time itemprop="datePublished" datetime="%4$s">%5$s %6$s </time></a>
 														 <span class="says"> %7$s</span>',
 														 get_comment_author_link(), __( 'in', 'odin' ),
 														 esc_url( get_comment_link( $comment->comment_ID ) ),

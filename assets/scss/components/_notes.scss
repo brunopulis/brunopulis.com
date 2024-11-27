@@ -3,11 +3,24 @@
 // =========================================================================
 
 .note {
-  width: 100%;
+  background: $bg-border;
+  margin-bottom: rem(16);
   max-width: 55rem;
-  max-width: var(--content-max-width, 55rem);
+  padding: 1rem;
   position: relative;
-  min-height: 100px;
+  width: 100%;
+
+  @extend .card;
+}
+
+.note__text {
+  font-size: rem(20);
+}
+
+.note__date {
+  color: $main;
+  font-size: rem(14);
+  font-weight: 700;
 }
 
 .c-note {

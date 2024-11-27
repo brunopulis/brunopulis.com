@@ -6,7 +6,7 @@
  * Please note that this is the WordPress construct of pages and that other
  * 'pages' on your WordPress site will use a different template.
  *
- * @package Odin
+ * @package Bruno_Pulis
  * @since 2.2.0
  */
 
@@ -15,18 +15,17 @@ get_header(); ?>
 <main id="content">
   <div class="container">
     <div class="row">
-    <div class="col-md-8">
+    <div>
+        <?php odin_breadcrumbs(); ?>
         <?php
           while ( have_posts() ) : the_post();
-            get_template_part( 'content', 'page' );
+            get_template_part( 'template-parts/content/content', 'page' );
           endwhile;
         ?>
       </div>
-      <aside class="col-md-4" style="padding-top: 80px;">
-        <?php the_post_thumbnail(); ?>
-      </aside>
     </div>
   </div>
+  <?php require_once('template-parts/components/newsletter.php'); ?>
 </main>
 
 <?php

@@ -2,121 +2,82 @@
 // Lists
 // ========================================================
 
-// Remove default list styles on lists with a class name (e.g. 'nav-list')
-ol,
-ul {
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: rem(24);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  padding-left: 0;
   list-style: none;
 }
 
-ol[class],
-ul[class] {
-	list-style: none;
-	padding: 0;
+.list__item {
+  display: inline-block;
+  margin-right: rem(16);
 }
 
-ul:not([class]),
-ol:not([class]),
-ol.counter {
-	margin-block-end: 1em;
-	margin-block-start: 1em;
-	padding-inline-start: 0;
+.list-badge {
+  font-size: rem(16);
+  font-weight: 600;
+  display: inline-block;
+  line-height: rem(21);
+  padding: rem(4) rem(8);
 
-	> * + *,
-	li ul,
-	li ol {
-		margin-top: 0.75em;
-	}
+  &--grey {
+    background: var(--pulis-color-grey);
+  }
 }
 
-ol.counter {
-	::marker {
-		content: counters(list-item, ".") ". ";
-	}
+.list-badge a {
+  text-decoration: none !important;
 }
 
-// No bullets or numbering
-.clean-list {
-	li {
-		display: block;
-	}
+.wp-block-list li {
+  margin-bottom: rem(10);
 }
 
-// Description lists / Definition lists
-dl {
-	margin-block-end: 1em;
-	margin-block-start: 1em;
+// Social
+// ========================================================
 
-	dt {
-		font-weight: bold;
-	}
-
-	dd + dt {
-		margin-top: 0.5em;
-	}
-
-	dt + dd,
-	dd + dd {
-		margin-top: 0.25em;
-	}
+.social__list {
+  padding-left: 0;
+  list-style: none;
 }
 
-// display items on the same line (comma-separated)
-dl.inline {
-	div {
-		align-items: baseline;
-		display: flex;
-		flex-wrap: wrap;
-
- 		dt, dd {
-			margin-inline-start: 0;
-		}
-
-		dt::after {
-			content: ":\00a0 ";
-		}
-
-		dd:not(:last-child):after {
-			content: ',\00a0 ';
-		}
-	}
+.social__item {
+  display: inline-block;
+  margin-right: rem(10);
 }
 
-// With a grid layout for a more tabulated feel
-dl.grid {
-	@supports (grid-row-start: auto) {
-		column-gap: 1rem;
-		display: grid;
-		grid-template-columns: max-content;
-		grid-template-rows: 1fr;
-		row-gap: 1rem;
-
-		dd + dt,
-		dt + dd,
-		dd + dd {
-			margin-top: 0;
-		}
-
-		dt {
-			grid-column-start: 1;
-			grid-column-end: 2;
-		}
-
-		dd {
-			grid-column-start: 2;
-			grid-column-end: 3;
-		}
-	}
+.social__link {
+  height: rem(20);
+  width: rem(20);
+  background: var(--pulis-color-grey);
+  padding: 8px;
+  border-radius: 50%;
 }
 
-// Category List
-.category__item {
-  margin-bottom: var(--pulis-block-spacing-vertical);
-  padding: var(--pulis-block-spacing-vertical) var(--pulis-block-spacing-horizontal);
-  border-radius: var(--pulis-border-radius);
-  background: var(--pulis-card-background-color);
-  box-shadow: var(--pulis-card-box-shadow);
+.social__icon {
+  height: rem(20);
+  width: rem(20);
+  color: var(--pulis-color-black);
 }
 
-.category__link {
-  font-size: 1.5rem;
+// Blog
+// ========================================================
+
+.blog__list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.blog__item {
+  display: inline-block;
+  margin-right: rem(10);
 }

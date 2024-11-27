@@ -1,35 +1,46 @@
 // ======================================================
-//
+// Bruno Pulis Style
 // ======================================================
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Variables
-@import "abstracts/variables";
-@import "abstracts/functions";
+// Functions
+@import "functions/maths";
+@import "functions/units";
+
+// Settings
+@import "settings/colors";
+@import "settings/debug";
+@import "settings/typesetting";
 @import "wordpress/wordpress";
 
 // Base
 @import "base/body";
 @import "base/buttons";
-// @import "base/lists";
-
-// Utils 
-@import "utils/utils";  
+@import "base/icons";
+@import "base/forms";
+@import "base/lists";
+@import "base/links";
+@import "base/typography";
 
 // Components
+@import "components/accordion";
+@import "components/bookshelf";
+@import "components/bookmarks";
+@import "components/breadcrumbs";
+@import "components/card";
+@import "components/comments";
+@import "components/pagination";
+@import "components/projects";
 @import "components/hero";
 @import "components/home-blog";
-@import "components/help";
-@import "components/comments";
-@import "components/card";
 @import "components/navigation";
-@import "components/notes";
 @import "components/newsletter";
+@import "components/testimonials";
+@import "components/related";
 
 // Layout
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/services";
 @import "layouts/footer";
-

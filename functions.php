@@ -9,7 +9,7 @@
  * For more information on hooks, actions, and filters,
  * see http://codex.wordpress.org/Plugin_API
  *
- * @package Odin
+ * @package Bruno_Pulis
  * @since 2.2.0
  */
 
@@ -35,12 +35,17 @@ require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
 // require_once get_template_directory() . '/core/classes/class-contact-form.php';
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
-require_once get_template_directory() . '/core/classes/class-user-meta.php';
+// require_once get_template_directory() . '/core/classes/class-user-meta.php';
 require_once get_template_directory() . '/core/classes/class-post-status.php';
 require_once get_template_directory() . '/core/classes/class-term-meta.php';
 
 // CPT
 require_once get_template_directory() . '/inc/functions/cpt.php';
+
+// Remove
+require_once get_template_directory() . '/inc/functions/remove.php';
+
+
 /**
  * Odin Widgets.
  */
@@ -61,19 +66,19 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		register_nav_menus(
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' ),
+        'service-menu' => __( 'Service', 'odin' ),
         'footer-menu' => __( 'Footer', 'odin' )
 			)
 		);
 
-		/*
-		 * Add post_thumbnails suport.
-		 */
-		add_theme_support( 'post-thumbnails' );
-    add_theme_support( 'letter-thumbnails', 440, 250, true );
+    // Add post_thumbnails suport.
+    add_image_size( 'blog-thumbnails', 416, 250, true );
+    add_image_size( 'portfolio-thumb', 440, 235, true );
+    add_image_size( 'letter-thumbnails', 713, 450, true );
+    add_image_size( 'blogroll-thumbnail', 376, 211, true );
+    add_image_size( 'single-thumbnail', 660, 450, true );
 
-		/**
-		 * Add feed link.
-		 */
+    // Add feed link
 		add_theme_support( 'automatic-feed-links' );
 
 		/**
@@ -90,25 +95,24 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		);
 
 		add_theme_support( 'custom-header', $default );
+    add_theme_support( 'blog-thumbnails' );
+    add_theme_support( 'portfolio-thumb' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'letter-thumbnails' );
+    add_theme_support( 'blogroll-thumbnail' );
+    add_theme_support( 'single-thumbnail' );
 
-		/**
-		 * Support Custom Background.
-		 */
+		// Support Custom Background.
 		$defaults = array(
 			'default-color' => '',
 			'default-image' => '',
 		);
-
 		add_theme_support( 'custom-background', $defaults );
 
-		/**
-		 * Support Custom Editor Style.
-		 */
+    // Support Custom Editor Style.
 		add_editor_style( 'assets/css/editor-style.css' );
 
-		/**
-		 * Add support for infinite scroll.
-		 */
+    // Add support for infinite scroll.
 		add_theme_support(
 			'infinite-scroll',
 			array(
@@ -123,15 +127,15 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 
     // Add support for Post Formats.
 		add_theme_support( 'post-formats', array(
-		    'aside',
-		    'gallery',
-		    'link',
-		    'image',
-		    'quote',
-		    'status',
-		    'video',
-		    'audio',
-		    'chat'
+      'aside',
+      'gallery',
+      'link',
+      'image',
+      'quote',
+      'status',
+      'video',
+      'audio',
+      'chat'
 		) );
 
     // Support The Excerpt on pages.
@@ -258,6 +262,28 @@ function odin_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'odin_enqueue_scripts', 1 );
 
 /**
+ * Allow SVG uploads in the Media Library
+ */
+function bp_add_file_types_to_uploads($file_types) {
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	return $file_types;
+}
+
+add_filter( 'upload_mimes', 'bp_add_file_types_to_uploads' );
+
+/**
+ * Disable Dashicons on the front end for unauthenticated users
+ */
+add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
+function bs_dequeue_dashicons() {
+  if ( ! is_user_logged_in() ) {
+    wp_deregister_style( 'dashicons' );
+  }
+}
+
+/**
  * Odin custom stylesheet URI.
  *
  * @since  2.2.0
@@ -326,13 +352,57 @@ if ( is_woocommerce_activated() ) {
 /**
  * Deal with the custom RSS templates.
  */
-add_action('init', 'customRSS');
-function customRSS() 
-{
+add_action( 'init', 'customRSS' );
+function customRSS() {
   add_feed( 'notas', 'customRSSFunc' );
 }
 
-function customRSSFunc()
-{
+function customRSSFunc() {
   get_template_part( 'rss', 'notas' );
 }
+
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+  
+function add_my_post_types_to_query( $query ) {
+  if ( is_home() && $query->is_main_query() )
+    $query->set( 'post_type', array( 'post', 'heros' ) );
+  
+  return $query;
+}
+
+
+/**
+ * Display a nice welcoming message to folks reading posts via RSS.
+ *
+ * Kudos Kev Quirk for the idea!
+ *
+ * @param string $content The current post content.
+ *
+ * @return string
+ */
+ function jeherve_welcome_rss_readers( $content ) {
+    $welcome_messages = array(
+        "💖 O RSS é fantástico, e você também o é por usá-lo. 🎆",
+        "👏 Parabéns por ser um usuário de RSS. 🎉",
+        "🥰 Você está lendo esta postagem por meio do feed RSS. Isso faz de você uma das melhores pessoas da Internet! 🏆",
+        "📰 Usar um leitor de feed é a melhor maneira de ler as publicações do meu blog. Como você é inteligente por saber disso! 🚀",
+        "🌟 Você está lendo esta publicação por meio do feed RSS, seu astro! 🌠",
+        "🪄 Os feeds são maravilhosos, e você é uma pessoa maravilhosa por usá-los. 🔮",
+        "❤️‍🔥 Você está lendo esta publicação por meio do feed RSS. Você está em chamas! 🔥",
+        "🧨 RSS é dinamite! Obrigado por assinar meu blog. 💥",
+        "🤘 Você está inscrito no DanQ.me usando o feed RSS. Você é demais! 🎸",
+        "🕵️ Assinar os feeds RSS do DanQ.me significa que você poderá ver publicações secretas de bônus não divulgadas no site principal. Esperto você! 🧠",
+        "🧡 Eu adoro os feeds RSS. E adoro você por usá-los. 💙",
+        "🎗️ O uso de feeds RSS é uma ótima maneira de se manter atualizado com meu blog. Obrigado por se inscrever! 🤗",
+        "🦸 Você é meu herói! (Por usar o RSS para acompanhar meu blog.) 🥇",
+    );
+
+    $welcome_message = $welcome_messages[ wp_rand( 0, count( $welcome_messages ) - 1 ) ];
+
+    return sprintf(
+        '%1$s<p>%2$s</p>',
+        $content,
+        $welcome_message
+    );
+}
+add_filter( 'the_content_feed', 'jeherve_welcome_rss_readers' );

@@ -14,15 +14,16 @@ get_header();
 <main id="content">
   <div class="container">
     <div class="row" style="padding-top: 80px;">
-      <div class="col-md-7">
+      <div class="col-md-7 pr-5">
+        <?php odin_breadcrumbs(); ?>  
         <?php
           while ( have_posts() ) : the_post();
-            get_template_part( 'content', 'page' );
+            get_template_part( 'template-parts/content/content', 'page' );
           endwhile;
         ?>
       </div>
       <aside class="col-md-5">
-        <?php the_post_thumbnail('img-fluid'); ?>
+        <?php the_post_thumbnail('full', array( 'class' => 'img-fluid' ) ); ?>
       </aside>
     </div>
   </div>

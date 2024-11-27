@@ -20,7 +20,7 @@ get_header(); ?>
         </header>
 
         <div class="category-description">
-          <?php echo get_the_archive_description('', ''); ?>
+          <?php echo get_the_archive_description( ' ', ' ' ); ?>
         </div>
     
         <div class="row mt-5">
@@ -69,5 +69,6 @@ get_header(); ?>
         </div>
     </div>
   </div>
+  <?php require_once('template-parts/components/newsletter.php'); ?>
 </main>
 <?php get_footer(); ?>

@@ -1,17 +1,22 @@
 {
-  "scripts": {
-    "start": "npx sass assets/scss/style.scss assets/css/style.css --watch",
-    "build": "npx sass assets/scss/style.scss assets/css/style.css --style=compressed",
-    "doc": "sassdoc assets/scss -d docs"
-  },
+  "name": "brunopulis",
+  "version": "2.0.0",
+  "description": "My personal website.",
+  "main": "index.php",
   "keywords": ["a11y, accessibil"],
   "author": "Bruno Pulis <hello@brunopulis.com>",
   "license": "ISC",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod",
+    "doc": "sassdoc assets/scss -d docs"
+  },
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.53.0",
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "core-util-is": "^1.0.2"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -28,6 +33,23 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.2.5",
     "sass": "^1.71.1",
-    "serve": "^14.2.1"
+    "serve": "^14.2.1",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.0",
+    "babel-loader": "^8.2.2",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "node-sass": "^8.0.0",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^15.4.1"
   }
 }

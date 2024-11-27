@@ -4,24 +4,32 @@
  *
  * Displays all of the <head> section and everything up till #main div
  *
- * @package Odin
+ * @package Bruno_Pulis
  * @since 2.2.0
  */
 ?><!DOCTYPE html>
 <html class="no-js" lang="pt-br">
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
-    <meta property="fediverse:creator" content="brunopulis@mastodon.social">
-    <link rel="me" href="mailto:hello@brunopulis.com">
-    <link rel="webmention" href="https://webmention.io/brunopulis.com/webmention" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta property="fediverse:creator" content="brunopulis@mastodon.social">
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+  <link rel="webmention" href="https://webmention.io/brunopulis.com/webmention" />
+  <link rel="pingback" href="https://webmention.io/brunopulis.com/xmlrpc" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<link rel="pingback" href="https://webmention.io/brunopulis.com/xmlrpc" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBMVRSBHZR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CBMVRSBHZR');
+  </script>
 	<?php if ( ! get_option( 'site_icon' ) ) : ?>
 		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 	<?php endif; ?>
@@ -41,7 +49,9 @@
   <header class="site-header">
     <nav class="navbar navbar-expand-lg d-flex justify-content-center">
       <div class="container">
-        <a class="navbar-brand h-card" href="<?php bloginfo('url') ?>/" rel="me">Bruno Pulis</a>
+        <a class="navbar-brand h-card" href="<?php bloginfo('url') ?>/">
+          Pulis Studio
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
                 aria-controls="navMain"
                 aria-expanded="false"
@@ -55,12 +65,16 @@
                 'theme_location' => 'main-menu',
                 'depth'          => 2,
                 'container'      => false,
-                'menu_class'     => 'navbar-nav',
+                'menu_class'     => 'nav navbar-nav',
                 'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
                 'walker'         => new Odin_Bootstrap_Nav_Walker()
               )
             );
           ?>
+
+          <div class="button-cta ml-3">
+            <a href="<?php echo bloginfo( 'url' ); ?>/orcamento" class="button button--blue">orçamento</a>
+          </div>
         </div>
       </div>
     </nav>

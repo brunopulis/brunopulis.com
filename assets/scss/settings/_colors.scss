@@ -1,0 +1,37 @@
+// =========================================================================
+// Colors
+// =========================================================================
+
+:root {
+  --pulis-color-white: #ffffff;
+  --pulis-color-black: #0a0a0a;
+  --pulis-color-blue: #274c77;
+  --pulis-color-grey: #e7ecef;
+  --pulis-color-grey-light: #707070;
+  --pulis-color-pink: #E6427E;
+  --pulis-color-magenta: #782761;
+  --transition: all ease-in .3s;
+  --pulis-color-tiny-blue: #6096ba;
+  --pulis-color-orange: #ea9010;
+  --pulis-color-orange-light: #EF980E;
+  --pulis-font-family-roboto: Roboto;
+  --pulis-font-style-normal: normal;
+  --pulis-font-weight-600: 600;
+  --pulis-font-weight-900: 900;
+  --pulis-font-size-54: 54px;
+  --bs-nav-link-color: --color-white;
+  --instagram: #e1306c;
+  --linkedin: #0077b5;
+  --twitter: #1da1f2;
+  --whatsapp: #25d366;
+  --mastodon: #2C90DC;
+  --youtube: #ff0000;
+  --rss: #E99010;
+}
+
+// Theme colors
+$bg-border: #e7ecef;
+$body-color: $white;
+$text-color: #0a0a0a;
+$main: #274c78;
+$link-footer: #707070;

@@ -1,30 +1,21 @@
 <?php
 /**
- * Template Name: Biblioteca
+ * Template Name: Biblioteca Archive
  *
- * The template for displaying Livros page.
- *
- * @package Odin
+ * @package Bruno_Pulis
  * @since 2.2.0
  */
 get_header(); ?>
 
 <main id="content">
-  <section class="services" id="blog" aria-labelledby="blog-section">
-    <div class="container">
+  <div class="container">
+    <div class="row">
+      <?php odin_breadcrumbs(''); ?>
+      <h1 class="entry-title" id="bookshelf-section">Biblioteca pessoal</h1>
+    </div>
+
+    <div class="bookshelf">
       <div class="row">
-        <div class="col-md-6">
-          <h1 class="entry-title"><?php the_title(); ?></h1>
-          <?php odin_breadcrumbs(''); ?>
-          <div class="services__headline">
-            <p>
-              Minha biblioteca pessoal.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row services__content">
         <?php
           $args = array(
             'post_type'      => 'biblioteca',
@@ -33,38 +24,38 @@ get_header(); ?>
           );
 
           $reading = new WP_Query( $args );
-
+          
           if ( $reading->have_posts() ) :
             while ( $reading->have_posts() ) : $reading->the_post();
-            
-            $cover = get_field( 'book_cover' );
-            $author = get_field( 'book_author' );
-        ?>
-          <div class="col-lg-4 mb-4">
-            <article class="">
-              <article class="book">
-                <figure class="book__cover">
-                  <a href="#">
-                    <img src="<?php echo $cover; ?>" alt="" class="img-fluid" />
-                  </a>
-                </figure>
 
-                <div class="book__info">
-                  <h3 class="book__title"><?php the_title(); ?></h3>
-                  <p class="book__author"><?php echo $author; ?></p>
-                  <ul class="book__rating">
-                    <li></li>
-                  </ul>
-                </div>
-              </article>
-            </article>
+            $cover        = get_field( 'book_cover' );
+            $author       = get_field( 'book_author' );
+            $current_year = get_the_time('Y');
+
+            $this_year = get_the_time('Y');
+            if( $this_year!=$current_year ):
+            $current_year = $this_year;
+            echo '<h2 class="current-year">'.$current_year.'</h2>';
+            endif;
+        ?>
+          <div class="col-lg-2 book" data-filter="">
+            <a href="#" class="book__cover">
+              <img src="<?php echo $cover; ?>" width="180" height="270" loading="lazy" class="img-fluid" alt="">
+            </a>
+
+            <div class="book__info">
+              <h3 class="book__title"><?php the_title(); ?></h3>
+              <p class="book__subtitle">Book subtitle</p>
+              <p class="book__author"><?php echo $author; ?></p>
+            </div>
           </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
         <?php endif; ?>
       </div>
     </div>
-  </section>
+  </div>
+  <?php require_once('template-parts/components/newsletter.php'); ?>
 </main>
 <?php
 get_footer();

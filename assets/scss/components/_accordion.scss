@@ -1,0 +1,16 @@
+// =========================================================================
+// Accordion
+// =========================================================================
+
+.accordion-item {
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--pulis-color-blue);
+  color: var(--pulis-color-white);
+}
+
+.accordion-header {
+  margin: 0;
+  
+}

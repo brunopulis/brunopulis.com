@@ -5,8 +5,7 @@
  *
  * @since 2.2.0
  */
-function odin_enqueue_scripts()
-{
+function odin_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
 	// Loads Odin main stylesheet.
@@ -33,11 +32,8 @@ add_action( 'wp_enqueue_scripts', 'odin_enqueue_scripts', 1 );
  *
  * @return string      New URI.
  */
-function odin_stylesheet_uri( $uri, $dir )
-{
+function odin_stylesheet_uri( $uri, $dir ) {
 	$template_url = get_template_directory_uri();
 
 	return $dir . '/assets/css/style.css';
 }
-
-add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );

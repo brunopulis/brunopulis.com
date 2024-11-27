@@ -1,0 +1,26 @@
+
+.project {
+  align-items: center;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: rem(64);
+}
+
+.project__name {
+  font-size: rem(32);
+  font-weight: 700;
+  line-height: rem(41);
+  margin-bottom: rem(5);
+}
+
+.project__icon {
+  height: rem(15);
+  width: rem(15);
+  margin-left: rem(8);
+  fill: var(--pulis-color-black);
+}
+
+.project__link {
+  margin-top: rem(32);
+}
