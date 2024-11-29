@@ -11,6 +11,10 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="">
+        <div class="d-flex justify-content-start align-items-baseline">
+          <p style="padding-right: 10px">Você está em:</p>
+          <?php odin_breadcrumbs(); ?>
+        </div>
         <h1 class="entry-title" id="letters-title">Blog</h1>
         <p>Visite também:</p>
 
@@ -18,7 +22,6 @@ get_header(); ?>
           <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/blogroll" class="blog__link">Sites legais</a></li>
           <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/notes" class="blog__link">Notas rápidas</a></li>
           <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/links" class="blog__link">Links</a></li>
-          <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/guestbook" class="blog__link">Livro de visitas</a></li>
           <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/likes" class="blog__link">Likes</a></li>      
           <li class="blog__item"><a href="<?php bloginfo ( 'url' ); ?>/livros" class="blog__link">Biblioteca</a></li>
         </ul>
@@ -51,7 +54,9 @@ get_header(); ?>
             <?php the_post_thumbnail( 'blog-thumbnails', array( 'class' => 'card-img-top' ) ); ?>
             <div class="card-body">
               <span class="card-category"><?php echo $category_name; ?></span>
-              <h3 class="card-title card-title--blog"><?php the_title(); ?></h3>
+              <h3 class="card-title card-title--blog">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h3>
               <div class="card-text">
                 <p><?php the_excerpt(); ?></p>
               </div>
@@ -59,7 +64,6 @@ get_header(); ?>
               <time class="card-date c-card__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">
                 <?php echo get_the_date('j F, Y'); ?>
               </time>
-              <a href="<?php the_permalink(); ?>" class="card-link">Leia o texto <span class="visually-hidden">sobre: <?php the_title();?></span></a>
             </div>
           </div>
         </article>

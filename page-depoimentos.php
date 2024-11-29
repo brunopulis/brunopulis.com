@@ -15,6 +15,11 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mb-5">
+        <div class="d-flex justify-content-start align-items-baseline">
+          <p style="padding-right: 10px">Você está em:</p>
+          <?php odin_breadcrumbs(); ?>
+        </div>
+        
         <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
       </div>

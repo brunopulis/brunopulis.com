@@ -12,8 +12,10 @@ get_header(); ?>
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <?php odin_breadcrumbs(); ?>
-          <span class="tagline">Insights valiosos sobre acessibilidade, Obsidian e organização digital.</span>
+          <div class="d-flex justify-content-start align-items-baseline">
+            <p style="padding-right: 10px">Você está em:</p>
+            <?php odin_breadcrumbs(); ?>
+          </div>
           <h1>Assine a Pulis Letters</h1>
           <p>Junte-se a mais de 300 assinantes e receba dicas sobre acessibilidade, <br> Obsidian e organização digital toda quinta-feira de manhã.</p>
           <?php echo do_shortcode( '[wpforms id="1048"]' );  ?>

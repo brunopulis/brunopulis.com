@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Notes Archive
+ * Template Name: Like Archive
  *
  * The template for displaying Serviços page.
  *
@@ -16,7 +16,7 @@ get_header(); ?>
         <p style="padding-right: 10px">Você está em:</p>
         <?php odin_breadcrumbs(); ?>
       </div>
-      <h1 class="entry-title">Notas</h1>
+      <h1 class="entry-title">Likes</h1>
       <p>As notas são minhas postagens curtas, como se fossem meu pequeno microblog. <br> Elas têm seu próprio <a href="<?php bloginfo('url') ?>/notas/feed/">feed RSS</a> e são automaticamente distribuídas.</p>
     </div>
 
@@ -24,7 +24,7 @@ get_header(); ?>
       <div class="">
         <?php
           $args = array(
-            'post_type'      => 'indieblocks_note',
+            'post_type'      => 'indieblocks_like',
             'posts_per_page' => 10,
             'order'          => 'DESC'
           );

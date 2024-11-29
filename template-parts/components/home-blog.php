@@ -31,7 +31,9 @@
             <?php the_post_thumbnail( 'blog-thumbnails', array( 'class' => 'card-img-top' ) ); ?>
             <div class="card-body">
               <span class="card-category"><?php echo $category_name; ?></span>
-              <h3 class="card-title card-title--blog"><?php the_title(); ?></h3>
+              <h3 class="card-title card-title--blog">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </h3>
               <div class="card-text">
                 <p><?php the_excerpt(); ?></p>
               </div>
@@ -39,7 +41,6 @@
               <time class="card-date c-card__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">
                 <?php echo get_the_date('j F, Y'); ?>
               </time>
-              <a href="<?php the_permalink(); ?>" class="card-link">Leia o texto <span class="visually-hidden">sobre: <?php the_title();?></span></a>
             </div>
           </div>
         </article>

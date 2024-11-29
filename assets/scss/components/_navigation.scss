@@ -23,6 +23,10 @@
   }
 }
 
+.nav-link.active {
+  text-decoration: underline;
+}
+
 .navbar-toggler {
   background-color: var(--pulis-color-wheat);
 }

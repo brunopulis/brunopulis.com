@@ -11,7 +11,10 @@ get_header(); ?>
 <main id="content">
   <div class="container">
     <div class="row mb-4">
-      <?php odin_breadcrumbs(); ?>
+      <div class="d-flex justify-content-start align-items-baseline">
+        <p style="padding-right: 10px">Você está em:</p>
+        <?php odin_breadcrumbs(); ?>
+      </div>
       <h1 class="entry-title">Links</h1>
       <p>Links interessantes que coletei ao longo da semana ou gostei.</p>
     </div>

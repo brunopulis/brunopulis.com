@@ -10,7 +10,10 @@ get_header(); ?>
 <main id="content">
   <div class="container">
     <div class="row mb-3">
-      <?php odin_breadcrumbs(); ?>
+      <div class="d-flex justify-content-start align-items-baseline">
+        <p style="padding-right: 10px">Você está em:</p>
+        <?php odin_breadcrumbs(); ?>
+      </div>
       <h1 class="entry-title">Blogroll</h1>
 
       <p>
@@ -36,7 +39,7 @@ get_header(); ?>
       ?>
         <li class="blogroll__item">
           <div class="blogroll__body">
-            <h3 class="blogroll__title"><?php the_title(); ?></h3>
+            <h2 class="blogroll__title"><?php the_title(); ?></h2>
 
             <?php if( has_post_thumbnail() ): ?>
               <?php the_post_thumbnail('blogroll-thumbnail', array('class' => 'img-fluid blogroll__thumbnail')); ?>

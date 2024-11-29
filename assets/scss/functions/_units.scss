@@ -11,10 +11,14 @@ $browser-context: 16; // Default
 
 
 /**
- #rem
- */
+* #rem
+*
+* @example rem(20px, 16px)   
+*/
 @function rem($pixels, $context: $browser-context) {
 	@return calc($pixels/$context) + rem;
+
+  // 1.5rem
 }
 
 

@@ -11,7 +11,10 @@ get_header(); ?>
   <section>
     <div class="container">
       <div class="row">
-        <?php odin_breadcrumbs(); ?>
+        <div class="d-flex justify-content-start align-items-baseline">
+          <p style="padding-right: 10px">Você está em:</p>
+          <?php odin_breadcrumbs(); ?>
+        </div>
         <h1 class="entry-title">Portfólio</h1>
         <p>Confira alguns trabalhos que desenvolvi.</p>
       </div>

@@ -5,6 +5,8 @@
 // TODO: Refactor this
 .card {
   --bs-card-border-color: #e7ecef;
+  --bs-card-spacer-y: 2rem;
+  --bs-card-spacer-x: 2rem;
 
   &-title {
     //color: $main;
@@ -25,19 +27,26 @@
   &-category {
     display: block;
     padding: rem(24) 0 0 0;
+    color: var(--pulis-color-blue);
+    font-weight: 700;
+  }
+
+  &--grey {
+    background: var(--pulis-color-grey);
+  }
+
+  &--blue {
+    background: var(--pulis-color-blue);
   }
 }
 
 .card__letter {
-  --bs-card-border-color: #e7ecef;
-
   @extend .card;
-}
 
-.card__letter--small {
-  min-height: rem(150);
+  &--small {
+    min-height: rem(150);
+  }
 }
-
 
 .c-card {
   margin-bottom: var(--vs-block-spacing-vertical);
@@ -52,18 +61,6 @@
     box-shadow: none;
     padding: 0;
   }
-}
-
-.c-card__category {
-  position: absolute;
-  top: 803px;
-  left: 93px;
-  width: 27px;
-  height: 137px;
-  background: var(--vs-color-blue) 0% 0% no-repeat padding-box;
-  background: #274C78 0% 0% no-repeat padding-box;
-  border-radius: 4px 4px 0px 0px;
-  opacity: 1;
 }
 
 .c-card__title {
@@ -145,5 +142,38 @@
     font-size: rem(22);
     font-weight: 700;
     line-height: rem(29);
+  }
+}
+
+.talk {
+  @extend .card;
+  @extend .card--grey;
+
+  .card-title {
+    color: var(--pulis-color-blue);
+    font-weight: 700;
+    min-height: rem(53);
+  }
+
+  &__list {
+    @extend .list-unstyled;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__icon {
+    margin-right: rem(10);
+
+    &--blue {
+      color: var(--pulis-color-blue);
+    }
+  }
+
+  &__date {
+    text-transform: capitalize;
   }
 }
